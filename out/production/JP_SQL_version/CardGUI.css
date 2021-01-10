@@ -1,0 +1,76 @@
+.label{
+    -fx-background-color: #7CAFC2;
+    -fx-font-size: 16px;
+    -fx-min-width: 60px;
+    -fx-min-height: 25px;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+}
+
+
+.text{
+    -fx-font-smoothing-type: gray;
+}
+
+.card-class{
+	-fx-background-color: #7CAFC2;
+	-fx-background-radius: 6;
+
+    -fx-padding: 0 30 0 30;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    /*-fx-font-family: "UD Digi Kyokasho NP-R Standard";*/
+    -fx-font-style: normal;
+}
+
+.card-class-noun{
+	-fx-background-color: linear-gradient(#7CAFC2, blue);
+	-fx-background-radius: 6;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-style: normal;
+}
+
+.card-class-verb{
+	-fx-background-color: linear-gradient(#7CAFC2, yellow);
+	-fx-background-radius: 6;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-style: normal;
+}
+
+.card-class-adjective{
+	-fx-background-color: linear-gradient(#7CAFC2, lime);
+	-fx-background-radius: 6;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-style: normal;
+
+}
+
+.card-class-other{
+	-fx-background-color: linear-gradient(#7CAFC2, orange);
+	-fx-background-radius: 6;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-style: normal;
+}
+
+.card-class-kanji{
+	-fx-background-color: linear-gradient(#7CAFC2, red);
+	-fx-background-radius: 6;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-style: normal;
+}

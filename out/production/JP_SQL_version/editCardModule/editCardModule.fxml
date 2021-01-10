@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="520.0" prefWidth="1846.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="223.0" layoutY="16.0" prefHeight="475.0" prefWidth="1341.0" spacing="20.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="282.0" AnchorPane.topAnchor="16.0">
+               <children>
+                  <AnchorPane fx:id="leftCardHolder" prefHeight="450.0" prefWidth="650.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <AnchorPane fx:id="leftCard" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox layoutX="14.0" layoutY="14.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextArea fx:id="j1_T" prefHeight="225.0" promptText="jap ">
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextArea fx:id="j2_T" layoutX="15.0" layoutY="15.0" prefHeight="225.0" promptText="jap comment (optional) ">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="leftCard_kanji" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextArea fx:id="kanji_T" prefHeight="450.0" promptText="kanji">
+                                       <VBox.margin>
+                                          <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="rightCardHolder" prefHeight="450.0" prefWidth="650.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <AnchorPane fx:id="rightCard" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextArea fx:id="e1_T" prefHeight="225.0" promptText="eng ">
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextArea fx:id="e2_T" layoutX="15.0" layoutY="15.0" prefHeight="225.0" promptText="eng comment (optional) ">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="rightCard_kanji" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextArea fx:id="translation_T" prefHeight="205.0" promptText="translation">
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextArea fx:id="kun_T" prefHeight="100.0" promptText="kun:">
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextArea fx:id="on_T" layoutX="10.0" layoutY="120.0" prefHeight="100.0" promptText="on:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </TextArea>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <VBox layoutX="1585.0" layoutY="16.0" prefHeight="490.0" prefWidth="241.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+               <children>
+                  <ComboBox fx:id="cardType_ComboBox" onAction="#onAction_ComboBox" prefWidth="150.0" />
+                  <Button layoutX="15.0" layoutY="50.0" mnemonicParsing="false" onAction="#onAction_cancel" prefHeight="25.0" prefWidth="150.0" text="Cancel" />
+                  <Button mnemonicParsing="false" onAction="#onAction_ok" prefHeight="25.0" prefWidth="150.0" text="OK" />
+                  <AnchorPane prefHeight="372.0" prefWidth="231.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" right="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox fx:id="specHolder" prefHeight="200.0" prefWidth="231.0" spacing="5.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <Button mnemonicParsing="false" text="stuff" />
+                           </children></VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </children></AnchorPane>
+    </children>
+</fx:root>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox fx:id="hBar" layoutX="14.0" layoutY="14.0" prefHeight="77.0" prefWidth="607.0" spacing="10.0">
+         <padding>
+            <Insets bottom="20.0" left="60.0" right="60.0" top="25.0" />
+         </padding>
+         <children>
+            <Label fx:id="d1" prefHeight="33.0" prefWidth="74.0" text="Title 1:" />
+            <Label fx:id="t1" layoutX="20.0" layoutY="20.0" prefHeight="33.0" prefWidth="74.0" text="nice name">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="d2" layoutX="104.0" layoutY="20.0" prefHeight="33.0" prefWidth="74.0" text="Title 2:" />
+            <Label fx:id="t2" layoutX="20.0" layoutY="20.0" prefHeight="33.0" prefWidth="74.0" text="0">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="d3" layoutX="20.0" layoutY="20.0" prefHeight="33.0" prefWidth="74.0" text="Title 3:" />
+            <Label fx:id="t3" layoutX="20.0" layoutY="20.0" prefHeight="33.0" prefWidth="74.0" text="0">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <VBox fx:id="vBar" layoutX="14.0" layoutY="88.0" prefHeight="298.0" prefWidth="100.0" spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Button fx:id="b1" mnemonicParsing="false" prefHeight="25.0" prefWidth="425.0" text="Button" />
+            <Button fx:id="b2" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="425.0" text="Button" />
+            <Button fx:id="b3" layoutX="20.0" layoutY="55.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="425.0" text="Button" />
+            <Button fx:id="b4" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="425.0" text="Button" />
+            <Button fx:id="b5" layoutX="20.0" layoutY="125.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="425.0" text="Button" />
+         </children>
+      </VBox>
+      <AnchorPane layoutX="200.0" layoutY="149.0" prefHeight="258.0" prefWidth="562.0">
+         <children>
+            <HBox fx:id="cardTable1" layoutX="14.0" layoutY="14.0" prefHeight="258.0" prefWidth="562.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox fx:id="card_1" prefHeight="200.0" prefWidth="200.0" spacing="30.0">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <TextArea fx:id="leftText_1" prefHeight="81.0" prefWidth="200.0" promptText="Kanji" />
+                        <TextArea fx:id="leftText_2" layoutX="10.0" layoutY="10.0" prefHeight="95.0" prefWidth="200.0" promptText="jap 2" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="card_2" layoutX="25.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <TextArea fx:id="rightText_1" prefHeight="81.0" prefWidth="200.0" promptText="translation" />
+                        <TextArea fx:id="rightText_2" layoutX="10.0" layoutY="10.0" prefHeight="62.0" prefWidth="200.0" promptText="kun:" />
+                        <TextArea fx:id="rightText_3" layoutX="10.0" layoutY="106.0" prefHeight="62.0" prefWidth="200.0" promptText="on:" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" layoutY="447.0" prefHeight="258.0" prefWidth="562.0">
+         <children>
+            <HBox fx:id="cardTable2" layoutX="14.0" layoutY="14.0" prefHeight="258.0" prefWidth="562.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox fx:id="card_3" prefHeight="200.0" prefWidth="200.0" spacing="20.0">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="leftLabel_1" prefHeight="229.0" prefWidth="200.0" text="悲" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="card_4" layoutX="25.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="rightLabel_1" prefHeight="96.0" prefWidth="205.0" text="sad" />
+                        <Label fx:id="rightLabel_2" layoutX="10.0" layoutY="10.0" prefHeight="96.0" prefWidth="205.0" text="kana (ca)" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

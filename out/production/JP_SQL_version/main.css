@@ -1,0 +1,439 @@
+
+/* comment */
+.shadow-simple {
+    -fx-effect: innershadow(gaussian, #030303, 20, 0.08, 0, 0);
+}
+
+.mainPane {
+    -fx-background-color: #fff2c2;
+    -fx-effect: innershadow(gaussian, #030303, 20, 0.08, 0, 0);
+}
+
+.TopBar-generic {
+    -fx-background-color: #fff2c2;
+    -fx-border-color: #ffeeb3;
+    -fx-border-width: 5;
+    -fx-effect: innershadow(one-pass-box, #aeae8b, 10, 0.08, 0, 0);
+}
+
+#image-topBar {
+    -fx-background-image: url("rsrc/TopBar.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: 600 50;
+}
+
+#image-topBar_paper {
+    -fx-background-image: url("rsrc/TopBar_paper.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: 600 50;
+
+}
+
+#image-CardTable {
+    -fx-background-image: url("rsrc/CardTable.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+
+}
+
+#image-sideBar {
+    -fx-background-image: url("rsrc/SideBar.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: 100 300;
+
+}
+
+/* ================================= table-view ================================= */
+.table-view {
+    -fx-background-color: #663300;
+    -fx-background-radius: 7px 7px 7px 7px;
+
+    /*-fx-border-width: 1;
+    -fx-border-color: black;*/
+    -fx-border-radius: 7px 7px 0px 0px;
+}
+
+.table-view:selected {
+    -fx-background-color: transparent;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-border-radius: 7px 7px 0px 0px;
+}
+
+.table-view .column-header-background {
+    -fx-border-color: transparent;
+    -fx-background-color: linear-gradient(to top, #994d00, #fff2c2, #994d00);
+    -fx-background-radius: 7px 7px 7px 7px;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-border-radius: 7px 7px 7px 7px;
+}
+
+.table-view .column-header-background .label {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: black;
+    -fx-font-size: 20;
+    -fx-font-smoothing-type: gray;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .corner {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell{
+    -fx-background-color: #fff2c2;
+    -fx-table-cell-border-color: black;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: linear-gradient(to bottom, #994d00, #ffe999 20%, #ffe999 80%, #994d00);
+    -fx-background-insets: 0;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #fff2c2;
+    -fx-background-radius: 5px 5px 5px 5px;
+
+    /*-fx-border-color: #ffeeb3;
+    -fx-border-width: 1;
+    -fx-border-radius: 5px 5px 5px 5px;*/
+
+    -fx-effect: innershadow(one-pass-box, #aeae8b, 10, 0.08, 0, 0);
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: #663300;
+    -fx-effect: innershadow(one-pass-box, #994d00, 3, 0.08, 0, 0);
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button{
+    -fx-opacity: 1;
+    -fx-padding: 2;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-arrow,
+.table-view .virtual-flow .scroll-bar .decrement-arrow{
+    -fx-background-color: black;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to right, #994d00, #fff2c2, #994d00);
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-border-radius: 7px 7px 7px 7px;
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to bottom, #994d00, #fff2c2, #994d00);
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-border-radius: 7px 7px 7px 7px;
+}
+
+/* ================================= TabPane ================================= */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane:left {
+    -fx-background-color: #fff2c2;
+    -fx-border-color: #ffeeb3;
+    -fx-border-width: 5;
+    -fx-effect: innershadow(one-pass-box, black, 20, 0.08, 0, 0);
+}
+
+.tab-pane:selected {
+
+}
+
+.tab:left .tab-label {
+
+}
+
+.tab:left {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+
+    -fx-background-color:  linear-gradient(to bottom, #994d00, #fff2c2, #994d00);
+    -fx-background-radius: 7px 7px 7px 7px;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-border-radius: 7px 7px 7px 7px;
+}
+
+.tab:selected {
+    -fx-background-color: linear-gradient(to bottom, #994d00, #ffe999 20%, #ffe999 80%, #994d00);
+}
+
+/* ================================= Button ================================= */
+.button {
+    -fx-font-smoothing-type: gray;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-size: 16;
+
+    -fx-background-color:  linear-gradient(to bottom, #994d00, #fff2c2, #994d00);
+    -fx-background-radius: 7px 7px 7px 7px;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-border-radius: 7px 7px 7px 7px;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #994d00, #ffe999 20%, #ffe999 80%, #994d00);
+}
+/* ================================= RadioButton ================================= */
+.radio-button{
+    -fx-font-smoothing-type: gray;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-size: 16;
+}
+
+.radio-button {
+    -fx-mark-highlight-color: transparent ;
+    -fx-mark-color: black ;
+}
+
+.radio-button .radio{
+    -fx-background-color: #ffe999;
+    -fx-effect: innershadow(one-pass-box, black, 2, 0.08, 0, 0);
+}
+
+
+/* ================================= ComboBox ================================= */
+
+.combo-box-base .arrow {
+    -fx-background-color: black;
+
+}
+
+.combo-box{
+    -fx-font-smoothing-type: gray;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-size: 16;
+
+    -fx-background-color:  linear-gradient(to bottom, #994d00, #fff2c2, #994d00);
+    -fx-background-radius: 7px 7px 7px 7px;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-border-radius: 7px 7px 7px 7px;
+}
+
+.combo-box:selected {
+    -fx-background-color: #ffe999;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-effect: innershadow(one-pass-box, #aeae8b, 10, 0.08, 0, 0);
+    -fx-text-fill: black;
+}
+
+.combo-box .list-view .list-cell {
+    -fx-background-color: #fff2c2;
+}
+
+.combo-box .list-view .list-cell:hover {
+    -fx-background-color: #fff2c2;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-effect: innershadow(one-pass-box, #aeae8b, 10, 0.08, 0, 0);
+    -fx-text-fill: black;
+}
+
+.combo-box .list-view .list-cell:selected {
+    -fx-background-color: #ffe999;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-effect: innershadow(one-pass-box, #aeae8b, 10, 0.08, 0, 0);
+    -fx-text-fill: black;
+}
+
+.combo-box-base .list-view {
+    -fx-background-color: #663300;
+    -fx-background-radius: 7px 7px 7px 7px;
+    -fx-effect: dropshadow(one-pass-box, #aeae8b, 10, 0.08, 0, 0);
+    -fx-padding: 3, 0 0 0 0;
+}
+
+
+
+
+/* ================================= text area ================================= */
+.text-area {
+    -fx-font-smoothing-type: gray;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-size: 40;
+}
+
+.text-area:selected {
+    -fx-font-smoothing-type: gray;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-size: 40;
+}
+
+.text-area .content {
+    -fx-background-color: #fff2c2;
+    -fx-effect: innershadow(gaussian, #030303, 5, 0.08, 0, 0);
+}
+
+/* ================================= card classes ================================= */
+
+.card-class{
+	-fx-background-color: #7CAFC2;
+	-fx-background-radius: 6;
+
+    -fx-padding: 0 30 0 30;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    /*-fx-font-family: "UD Digi Kyokasho NP-R Standard";*/
+    -fx-font-style: normal;
+}
+
+.card-class-kanji{
+	-fx-background-image: url("rsrc/KanjiCard.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+	-fx-background-radius: 6;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-style: normal;
+}
+
+.card-class-noun{
+	-fx-background-image: url("rsrc/NounCard.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+	-fx-background-radius: 6;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-style: normal;
+}
+
+.card-class-verb{
+	-fx-background-image: url("rsrc/VerbCard.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+	-fx-background-radius: 6;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-style: normal;
+}
+
+.card-class-adjective{
+	-fx-background-image: url("rsrc/AdjectiveCard.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+	-fx-background-radius: 6;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-style: normal;
+}
+
+.card-class-other{
+	-fx-background-image: url("rsrc/OtherCard.png");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+	-fx-background-radius: 6;
+
+	-fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-style: normal;
+}
+
+/* ================================= card labels ================================= */
+
+.card-label-single {
+    -fx-font-smoothing-type: gray;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-background-color: #fff2c2;
+    -fx-effect: innershadow(gaussian, #030303, 5, 0.08, 0, 0);
+}
+
+.card-label-single-romaji{
+    -fx-font-smoothing-type: gray;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    /*-fx-font-family: "Comic Sans MS";*/
+    -fx-background-color: #fff2c2;
+    -fx-effect: innershadow(gaussian, #030303, 5, 0.08, 0, 0);
+}
+
+.card-label-kanji {
+    -fx-font-smoothing-type: gray;
+    -fx-text-alignment: center;
+    -fx-alignment:center;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-size: 100 em;
+    -fx-background-color: #fff2c2;
+    -fx-effect: innershadow(gaussian, #030303, 5, 0.08, 0, 0);
+}
+
+.display-label {
+    -fx-font-smoothing-type: gray;
+    -fx-font-family: "UD Digi Kyokasho N-R";
+    -fx-font-size: 20;
+}
+
+
+.clean {
+    -fx-background-color: none;
+    -fx-effect: none;
+}
+
+.clean-effect {
+    -fx-effect: none;
+}
+
+
+
+/*
+-fx-background-repeat: stretch;
+-fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+-fx-background-position: center center;
+-fx-background-size: 900 506;
+
+
+
+
+
+
+
+
+*/

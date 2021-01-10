@@ -1,0 +1,53 @@
+52
+JAP$ENG$null$null$NOUN$0$0$0$0$0$0$
+明​後​日$the day after §tomorrow$あさって$null$NOUN$0$0$0$3$5$3$
+雨$rain$あめ$null$NOUN$0$0$0$3$5$3$
+会​社​員$office worker$かいしゃいん$null$NOUN$0$0$0$4$4$4$
+カメラ$camera$null$null$NOUN$0$0$0$5$5$5$
+カラオケ$karaoke$null$null$NOUN$0$0$0$5$5$5$
+空​気$air$くう​き$null$NOUN$0$0$0$2$4$2$
+今​朝$this morning$けさ$null$NOUN$0$0$0$5$5$5$
+黒​板$blackboard$こくばん$null$NOUN$0$0$0$-4$4$-4$
+今​月$this month$こんげつ$null$NOUN$0$0$0$5$5$5$
+仕​事$job; work; §occupation$しごと$null$NOUN$0$0$0$1$5$1$
+大​学​生$college student$だいがくせい$null$NOUN$0$0$0$4$4$4$
+天​気​予​報$weather forecast$てんきよほう$null$NOUN$0$0$0$0$4$1$
+所$place$ところ$null$NOUN$0$0$0$-1$5$0$
+トマト$tomato$null$null$NOUN$0$0$0$5$5$5$
+夏$summer$なつ$null$NOUN$0$0$0$0$4$1$
+何​か$something$なにか$null$NOUN$0$0$0$1$5$1$
+パーティー$party$null$null$NOUN$0$0$0$5$5$5$
+バーベキュー$barbecue$null$null$NOUN$0$0$0$3$5$3$
+箸$chopsticks$はし$null$NOUN$0$0$0$3$5$3$
+冬$winter$ふゆ$null$NOUN$0$0$0$1$7$2$
+ホームステイ$homestay$null$null$NOUN$0$0$0$5$5$5$
+毎​週$every week$まいしゅう$null$NOUN$0$0$0$5$5$5$
+来​月$next month$らいげつ$null$NOUN$0$0$0$2$4$2$
+上​手$skillful; §good at ...$じょうず(な)$(~が)$ADJECTIVE$0$0$0$4$4$4$
+下​手$clumsy; §poor at ...$へた(な)$(~が)$ADJECTIVE$0$0$0$1$5$0$
+有​名$famous$ゆうめい(な)$(~が)$ADJECTIVE$0$0$0$2$6$2$
+雨が降​る$it rains$あめがふる$[u-verb]$VERB$0$0$0$4$4$4$
+洗​う$to wash$あらう$(~を)$VERB$0$0$0$-2$4$0$
+言​う$to say$いう$null$VERB$0$0$0$0$8$0$
+い​る$to need$null$(~が) [u-verb]$VERB$0$0$0$3$5$0$
+遅​くなる$to be late$おそくなる$[u-verb]$VERB$0$0$0$2$4$0$
+思​う$to think$おもう$null$VERB$0$0$0$4$4$4$
+切​る$to cut$きる$(~を) [u-verb]$VERB$0$0$0$3$5$3$
+作​る$to make$つくる$(~を) [u-verb]$VERB$0$0$0$-4$6$-3$
+持​っ​て​い​く$to take (a thing)$もっ​て​い​く$(~を)$VERB$0$0$0$0$4$0$
+じろじろ見​る$to stare (at ...)$じろじろみる$(~を)$VERB$0$0$0$4$4$4$
+捨​て​る$to throw away$すて​る$(~を)$VERB$0$0$0$-3$5$-1$
+始​め​る$to begin$はじめる$(~を)$VERB$0$0$0$3$5$3$
+運​転する$to drive $うんてんする$(~を)$VERB$0$0$0$1$5$2$
+洗​濯する$to do laundry$せんたくする$(~を)$VERB$0$0$0$2$4$1$
+掃​除する$to clean$そうじする$(~を)$VERB$0$0$0$0$4$0$
+電​話する$to call$でんわする$(~に)$VERB$0$0$0$5$5$5$
+料​理する$to cook$りょうりする$null$VERB$0$0$0$3$5$3$
+いつも$always$null$null$OTHER$0$0$0$5$5$5$
+ううん$uh-uh; no$null$null$OTHER$0$0$0$5$5$5$
+うん$uh-huh; yes$null$null$OTHER$0$0$0$5$5$5$
+乾​杯$Cheers! (a toast)$かんぱい$null$OTHER$0$0$0$4$4$4$
+残​念(ですね)$That's too bad.$ざんねん(ですね)$null$OTHER$0$0$0$1$5$2$
+~について$about...; §concerning...$null$null$OTHER$0$0$0$-1$3$0$
+まだ + negative$not ... yet$null$null$OTHER$0$0$0$4$4$4$
+みんなで$all (of the people) §together$null$null$OTHER$0$0$0$0$4$0$

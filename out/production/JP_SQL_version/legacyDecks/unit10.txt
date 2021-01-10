@@ -1,0 +1,58 @@
+57
+JAP$ENG$null$null$NOUN$0$0$0$0$0$0$
+秋$fall$あき$null$NOUN$0$0$0$-2$6$0$
+医​者$doctor$いしゃ$null$NOUN$0$0$0$6$8$6$
+駅$station$えき$null$NOUN$0$0$0$-2$6$0$
+お金​持​ち$rich person$おかねも​ち$null$NOUN$0$0$0$4$6$4$
+顔$face$かお$null$NOUN$0$0$0$2$6$0$
+季​節$season$きせつ$null$NOUN$0$0$0$-6$6$-6$
+牛​乳$milk$ぎゅうにゅう$null$NOUN$0$0$0$0$6$-1$
+クレジットカード$credit card$null$null$NOUN$0$0$0$4$6$4$
+ケーキ$cake$null$null$NOUN$0$0$0$6$6$6$
+今​年$this year$ことし$null$NOUN$0$0$0$-6$8$-6$
+サッカー$soccer$null$null$NOUN$0$0$0$4$6$2$
+シャツ$shirt$null$null$NOUN$0$0$0$6$6$6$
+新​幹​線$Shinkansen; §"Bullet Train"$しんかんせん$null$NOUN$0$0$0$6$6$6$
+すし$sushi$null$null$NOUN$0$0$0$6$6$6$
+生​活$life; living$せいかつ$null$NOUN$0$0$0$-6$8$-5$
+世​界$world$せかい$null$NOUN$0$0$0$2$6$3$
+地​下​鉄$subway$ちかてつ$null$NOUN$0$0$0$-6$6$-6$
+手​袋$gloves$てぶくろ$null$NOUN$0$0$0$-6$6$-6$
+天​ぷ​ら$tempura$てんぷら$null$NOUN$0$0$0$6$6$6$
+床​屋$barber's$とこや$null$NOUN$0$0$0$-6$6$-6$
+春$spring$はる$null$NOUN$0$0$0$4$6$4$
+パンツ$pants$null$null$NOUN$0$0$0$6$8$6$
+美​容​院$beauty parlor$びよういん$null$NOUN$0$0$0$-2$6$0$
+便$flight$びん$null$NOUN$0$0$0$-6$6$-6$
+船$ship; boat$ふね$null$NOUN$0$0$0$2$6$3$
+野​球$baseball$やきゅう$null$NOUN$0$0$0$-6$6$-6$
+有​名​人$celebrity$ゆうめいじん$null$NOUN$0$0$0$6$6$6$
+予​約$reservation$よやく$null$NOUN$0$0$0$-6$6$-6$
+来​学​期$next semester$らいがっき$null$NOUN$0$0$0$0$8$1$
+りんご$apple$null$null$NOUN$0$0$0$6$6$6$
+暖​か​い$warm$あたたか​い$null$ADJECTIVE$0$0$0$-2$6$-1$
+遅​い$slow; late$おそ​い$null$ADJECTIVE$0$0$0$5$7$5$
+涼​し​い$cool (weather)$すずし​い$null$ADJECTIVE$0$0$0$-6$6$-6$
+冷​た​い$cool (things/ people)$つめた​い$null$ADJECTIVE$0$0$0$-6$6$-6$
+眠​い$sleepy$ねむ​い$null$ADJECTIVE$0$0$0$6$6$6$
+簡​単$easy; simple$かんたん(な)$null$ADJECTIVE$0$0$0$2$6$3$
+か​か​る$to take (amount of time/money)$null$(no particle) [u-verb]$VERB$0$0$0$-6$6$-6$
+泊​ま​る$to stay (at a hotel, etc.)$とま​る$(~に) [u-verb]$VERB$0$0$0$-6$6$-6$
+なる$to become$null$[u-verb]$VERB$0$0$0$4$10$-1$
+払​う$to pay$はら​う$(~を)$VERB$0$0$0$-6$6$-6$
+決​め​る$to decide$き​め​る$(~を)$VERB$0$0$0$-6$6$-6$
+旅​行する$to travel$りょこうする$null$VERB$0$0$0$2$6$1$
+練​習する$to practice$れんしゅうする$(~を)$VERB$0$0$0$4$6$4$
+歩​い​て$on foot$あるい​て$null$OTHER$0$0$0$-6$6$-6$
+一​番$best$いちばん$null$OTHER$0$0$0$2$6$3$
+~か~$or$null$null$OTHER$0$0$0$-6$8$-4$
+~か月$for ... months$~かげつ$null$OTHER$0$0$0$-2$6$-1$
+~後$in ... time; after ...$~ご$null$OTHER$0$0$0$-4$6$-3$
+このごろ$these days$null$null$OTHER$0$0$0$0$6$1$
+~週​間$for ... weeks$~しゅうかん$null$OTHER$0$0$0$2$6$3$
+~で$by (means of transportation); §with (a tool)$null$null$OTHER$0$0$0$2$6$2$
+どうやって$how; by what means$null$null$OTHER$0$0$0$-6$6$-6$
+どちら §§どっち$which$null$(2 options)$OTHER$0$0$0$1$9$2$
+どのぐらい$how much; how long$null$null$OTHER$0$0$0$-2$6$-2$
+~年$... years$~ねん$null$OTHER$0$0$0$4$6$4$
+早​く / 速​く$(do something) early; fast$はやく$null$OTHER$0$0$0$2$6$0$
