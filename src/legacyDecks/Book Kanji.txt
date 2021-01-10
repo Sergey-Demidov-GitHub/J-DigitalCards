@@ -1,0 +1,147 @@
+146
+kanji$kun$translation$on$KANJI$0$0$0$0$0$0$
+一$ひと$one$いち、いっ$KANJI$0$0$0$2$2$2$
+二$ふた$two$に$KANJI$0$0$0$2$2$2$
+三$みっ$three$さん$KANJI$0$0$0$2$2$2$
+四$よん、よ、よっ$four$し$KANJI$0$0$0$2$2$2$
+五$いっ$five$ご$KANJI$0$0$0$2$2$2$
+六$むっ$six$ろく、ろっ$KANJI$0$0$0$2$2$2$
+七$なな$seven$しち$KANJI$0$0$0$2$2$2$
+八$やっ$eight$はち、はっ$KANJI$0$0$0$2$2$2$
+九$ここの$nine$きょう、く$KANJI$0$0$0$2$2$2$
+十$とお$ten$じゅう、じゅっ、じっ$KANJI$0$0$0$1$3$1$
+百$　$hundred$ひゃく、びゃく、ぴゃく$KANJI$0$0$0$2$2$2$
+千$　$thousand$せん、ぜん$KANJI$0$0$0$1$3$1$
+万$　$ten thousand$まん$KANJI$0$0$0$0$4$1$
+円$まる$yen; circle$えん$KANJI$0$0$0$2$2$2$
+時$とき$time$じ$KANJI$0$0$0$2$2$2$
+日$び、ひ、か$day; sun$に、にち、にっ$KANJI$0$0$0$2$2$2$
+本$もと$book; basis$ほん$KANJI$0$0$0$2$2$2$
+人$ひと$person$じん、にん$KANJI$0$0$0$2$2$2$
+月$つき$moon; month$げつ、がつ$KANJI$0$0$0$2$2$2$
+火$ひ、び$fire$か$KANJI$0$0$0$2$2$2$
+水$みず$water$すい$KANJI$0$0$0$2$2$2$
+木$き$tree$もく$KANJI$0$0$0$2$2$2$
+金$かね$gold; money$きん$KANJI$0$0$0$2$2$2$
+土$つち$soil$ど、と$KANJI$0$0$0$2$2$2$
+曜$　$weekday$よう$KANJI$0$0$0$2$2$2$
+上$うえ、のぼ$up$じょう$KANJI$0$0$0$2$2$2$
+下$した、くだ$down$か$KANJI$0$0$0$2$2$2$
+中$なか$middle$ちゅう、じゅう$KANJI$0$0$0$2$2$2$
+半$　$half$はん$KANJI$0$0$0$1$3$1$
+山$やま$mountain$さん$KANJI$0$0$0$2$2$2$
+川$かわ、がわ$river$null$KANJI$0$0$0$2$2$2$
+元$もと$origin$げん、がん$KANJI$0$0$0$1$3$1$
+気$　$spirit$き$KANJI$0$0$0$1$3$1$
+天$　$heaven$てん$KANJI$0$0$0$1$3$1$
+私$わたし$I; private$し$KANJI$0$0$0$-1$1$-1$
+今$いま$now$こん$KANJI$0$0$0$2$2$2$
+田$た、だ$rice field$null$KANJI$0$0$0$2$2$2$
+女$おんな$woman$じょ$KANJI$0$0$0$2$2$2$
+男$おとこ$man$だん$KANJI$0$0$0$2$2$2$
+見$み$to see$けん$KANJI$0$0$0$2$2$2$
+行$い$to go$こう、ぎょう$KANJI$0$0$0$2$2$2$
+食$た$to eat$しょく$KANJI$0$0$0$2$2$2$
+飲$の$to drink$いん$KANJI$0$0$0$2$2$2$
+東$ひがし$east$とう$KANJI$0$0$0$0$6$2$
+西$にし$west$せい、さい$KANJI$0$0$0$1$3$1$
+南$みなみ$south$なん$KANJI$0$0$0$1$3$1$
+北$きた$north$ほく、ほっ$KANJI$0$0$0$1$1$1$
+口$ぐち、くち$mouth$こう$KANJI$0$0$0$2$2$2$
+出$で、だ$to exit$しゅっ、しゅつ$KANJI$0$0$0$2$2$2$
+右$みぎ$right$う、ゆう$KANJI$0$0$0$2$2$2$
+左$ひだり$left$さ$KANJI$0$0$0$2$2$2$
+分$わ$minute; to divide$ふん、ぷん、ぶん$KANJI$0$0$0$1$3$1$
+先$さき$ahead$せん$KANJI$0$0$0$0$4$1$
+生$う$birth$せい、しょう$KANJI$0$0$0$0$2$0$
+大$おお$big$だい、たい$KANJI$0$0$0$2$2$2$
+学$まな$learning$がく、がっ$KANJI$0$0$0$1$3$1$
+外$そと$outside$がい$KANJI$0$0$0$0$4$1$
+国$くに$country$こく、ごく、こっ$KANJI$0$0$0$1$3$1$
+京$　$capital$きょう$KANJI$0$0$0$1$3$1$
+子$こ$child$し$KANJI$0$0$0$2$2$2$
+小$ちい$small$しょう$KANJI$0$0$0$1$1$1$
+会$あ$to meet$かい$KANJI$0$0$0$2$2$2$
+社$　$company$しゃ、じゃ$KANJI$0$0$0$-3$5$-1$
+父$ちち、とう$father$ふ$KANJI$0$0$0$2$2$2$
+母$はは、かあ$mother$ぼ$KANJI$0$0$0$2$2$2$
+高$たか$high$こう$KANJI$0$0$0$2$2$2$
+校$　$school$こう$KANJI$0$0$0$-1$1$-1$
+毎$　$every$まい$KANJI$0$0$0$2$2$2$
+語$　$word$ご$KANJI$0$0$0$2$2$2$
+文$　$sentence$ぶん$KANJI$0$0$0$1$3$1$
+帰$かえ$to return$き$KANJI$0$2$0$0$6$2$
+入$はい、い、いり$to enter$にゅう$KANJI$0$0$0$2$2$2$
+員$　$member$いん$KANJI$0$0$0$0$4$1$
+新$あたら$new$しん$KANJI$0$0$0$-1$3$-1$
+聞$き$to listen$ぶん$KANJI$0$0$0$2$2$2$
+作$つく$to make$さく$KANJI$0$0$0$2$4$2$
+仕$つか$to serve$し$KANJI$0$0$0$1$1$1$
+事$ごと、こと$thing$じ$KANJI$0$0$0$0$8$2$
+電$　$electricity$でん$KANJI$0$0$0$2$2$2$
+車$くるま$car$しゃ$KANJI$0$0$0$2$2$2$
+休$やす$to rest$きゅう$KANJI$0$0$0$2$2$2$
+言$い、こと$to say$げん$KANJI$0$0$0$2$2$2$
+読$よ$to read$どく$KANJI$0$0$0$1$3$1$
+思$おも$to think$し$KANJI$0$0$0$2$2$2$
+次$つぎ$next$じ$KANJI$0$0$0$-1$1$-1$
+何$なに、なん$what$null$KANJI$0$0$0$1$1$1$
+午$　$noon$ご$KANJI$0$0$0$-2$6$1$
+後$あと、うし$after$ご$KANJI$0$0$0$-7$7$-7$
+前$まえ$before$ぜん$KANJI$0$0$0$-4$6$0$
+名$な$name$めい$KANJI$0$0$0$-1$1$-1$
+白$しろ$white$はく$KANJI$0$0$0$2$2$2$
+雨$あめ$rain$う$KANJI$0$0$0$2$2$2$
+書$か$to write$しょ$KANJI$0$0$0$1$3$1$
+友$とも$friend$ゆう$KANJI$0$0$0$0$6$2$
+間$あいだ$between$かん、げん$KANJI$0$0$0$2$2$2$
+家$いえ$house$か$KANJI$0$0$0$0$4$1$
+話$はな、はなし$to speak$わ$KANJI$0$0$0$0$4$1$
+少$すこ、すく$little$しょう$KANJI$0$0$0$-1$3$-1$
+古$ふる$old$こ$KANJI$0$0$0$2$2$2$
+知$し$to know$ち$KANJI$0$0$0$1$7$2$
+来$く、き、こ$to come$らい$KANJI$0$0$0$-1$3$-1$
+住$す$to live$じゅう$KANJI$0$0$0$-1$3$-1$
+正$ただ$right$しょう$KANJI$0$0$0$-4$6$0$
+年$とし$year$ねん$KANJI$0$0$0$2$2$2$
+売$う$to sell$ばい$KANJI$0$0$0$1$3$1$
+買$か$to buy$ばい$KANJI$0$0$0$1$3$1$
+町$まち$town$ちょう$KANJI$0$0$0$2$2$2$
+長$なが$long$ちょう$KANJI$0$0$0$1$1$1$
+道$みち$way$どう$KANJI$0$0$0$-4$6$0$
+雪$ゆき$snow$せつ$KANJI$0$0$0$-1$3$-1$
+立$た$to stand$りつ$KANJI$0$0$0$2$2$2$
+自$　$self$じ$KANJI$0$0$0$-1$3$-1$
+夜$よる、よ$night$や$KANJI$0$0$0$0$6$2$
+朝$あさ$morning$ちょう$KANJI$0$2$0$2$2$2$
+持$も$to hold$じ$KANJI$0$0$0$-1$3$-1$
+手$て$hand$しゅ$KANJI$0$0$0$2$2$2$
+紙$がみ、かみ$paper$し$KANJI$0$0$0$-3$5$0$
+好$す、この$favorite; to like$こう$KANJI$0$0$0$1$3$1$
+近$ちか$near$きん$KANJI$0$0$0$-2$6$1$
+明$あか$bright$めい$KANJI$0$0$0$0$4$1$
+病$　$ill; sick$びょう$KANJI$0$0$0$1$3$1$
+院$　$institution$いん$KANJI$0$0$0$-4$4$-4$
+映$うつ$to reflect$えい$KANJI$0$0$0$-1$5$1$
+画$　$picture$が、かく$KANJI$0$0$0$1$3$1$
+歌$うた$to sing$か$KANJI$0$0$0$2$2$2$
+市$いち$city$し$KANJI$0$0$0$0$6$2$
+所$ところ、どころ$place$じょ、しょ$KANJI$0$0$0$-1$7$2$
+勉$つと$to make efforts$べん$KANJI$0$0$0$-1$7$2$
+強$つよ$strong$きょう、ごう$KANJI$0$0$0$-4$6$0$
+有$あ$to exist$ゆう$KANJI$0$0$0$0$6$2$
+旅$たび$travel$りょ$KANJI$0$0$0$-2$6$0$
+昔$むかし$ancient times$null$KANJI$0$0$0$0$6$2$
+々$々$symbol of kanji repetition$々$KANJI$0$0$0$1$3$1$
+神$かみ$God$じん、しん、こう$KANJI$0$0$0$1$3$1$
+早$はや$early$そう$KANJI$0$0$0$2$2$2$
+起$お$to get up$き$KANJI$0$0$0$-3$7$1$
+牛$うし$cow$ぎゅう$KANJI$0$0$0$0$4$1$
+使$つか$to use$し$KANJI$0$0$0$-4$6$-1$
+働$はたら、ばたら$to work$どう$KANJI$0$0$0$0$6$2$
+連$つ$to link$れん$KANJI$0$0$0$-5$7$-1$
+別$わか$to separate$べつ$KANJI$0$0$0$-6$6$-6$
+度$　$time; degrees$ど$KANJI$0$0$0$-4$6$-1$
+赤$あか$red$せき$KANJI$0$0$0$1$3$1$
+青$あお$blue$せい$KANJI$0$0$0$0$6$2$
+色$いろ$color$しき、しょく$KANJI$0$0$0$1$3$1$

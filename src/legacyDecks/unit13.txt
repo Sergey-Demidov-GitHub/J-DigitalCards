@@ -1,0 +1,59 @@
+58
+JAP$ENG$null$null$NOUN$0$0$0$0$0$0$
+ウェイター$waiter$null$null$NOUN$0$0$0$7$7$7$
+お宅$(someone's) house/home$おたく$null$NOUN$0$0$0$-5$9$0$
+大人$adult$おとな$null$NOUN$0$0$0$-5$7$-2$
+外国語$foreign language$がいこくご$null$NOUN$0$0$0$7$7$7$
+楽器$musical instrument$がっき$null$NOUN$0$0$0$-1$7$1$
+空手$karate$からて$null$NOUN$0$0$0$7$7$7$
+カレー$curry$null$null$NOUN$0$0$0$7$7$7$
+着物$kimono; §Japanese traditional dress$きもの$null$NOUN$0$0$0$7$7$7$
+広告$advertisement$こうこく$null$NOUN$0$0$0$-5$7$-2$
+紅茶$tea (black tea)$こうちゃ$null$NOUN$0$0$0$7$7$7$
+言葉$language$ことば$null$NOUN$0$0$0$-3$7$-2$
+ゴルフ$golf$null$null$NOUN$0$0$0$7$7$7$
+セーター$sweater$null$null$NOUN$0$0$0$5$7$5$
+象$elephant$ぞう$null$NOUN$0$0$0$7$7$7$
+バイオリン$violin$null$null$NOUN$0$0$0$7$7$7$
+バイク$motorcycle$null$null$NOUN$0$0$0$7$7$7$
+物価$(consumer) prices$ぶっか$null$NOUN$0$0$0$-5$9$-2$
+文法$grammar$ぶんぽう$null$NOUN$0$0$0$-1$7$2$
+弁護士$lawyer$べんごし$null$NOUN$0$0$0$7$7$7$
+募集$recruitment$ぼしゅう$null$NOUN$0$0$0$-7$7$-7$
+店$shop; store$みせ$null$NOUN$0$0$0$5$7$1$
+やくざ$yakuza; gangster$null$null$NOUN$0$0$0$7$7$7$
+約束$promise; appointment$やくそく$null$NOUN$0$0$0$7$7$7$
+レポート$(term) paper$null$null$NOUN$0$0$0$7$7$7$
+私$I (formal)$わたくし$null$NOUN$0$0$0$7$7$7$
+うれしい$glad$null$null$ADJECTIVE$0$0$0$5$7$5$
+悲しい$sad$かなしい$null$ADJECTIVE$0$0$0$-5$7$-2$
+辛い$hot and spicy; salty$からい$null$ADJECTIVE$0$0$0$7$7$7$
+厳しい$strict$きびしい$null$ADJECTIVE$0$0$0$3$7$1$
+すごい$incredible; awesome$null$null$ADJECTIVE$0$0$0$7$7$7$
+近い$close; near$ちかい$null$ADJECTIVE$0$0$0$7$7$7$
+いろいろ(な)$various; different kinds of$null$null$ADJECTIVE$0$0$0$7$7$7$
+幸せ$happy (lasting happiness)$しあわせ(な)$null$ADJECTIVE$0$0$0$-5$7$-2$
+だめ(な)$no good$null$null$ADJECTIVE$0$0$0$7$7$7$
+編む$to knit$あむ$(~を) [u-verb]$VERB$0$0$0$7$7$7$
+貸す$to lend; to rent$かす$(person に thing を) [u-verb]$VERB$0$0$0$-3$7$-3$
+頑張る$to do one's best; to try hard$がんばる$[u-verb]$VERB$0$0$0$7$7$7$
+泣く$to cry$なく$[u-verb]$VERB$0$0$0$-7$7$-7$
+磨く$to brush (teeth); to polish $みがく$(~を) [u-verb]$VERB$0$0$0$-7$7$-7$
+約束を守る$to keep a promise$やくそくをまもる$[u-verb]$VERB$0$0$0$7$7$7$
+感動する$to be moved/ touched (by ...)$かんどうする$(~に)$VERB$0$0$0$-5$7$-3$
+いらっしゃいます$(someone honorable) §is present/ home$null$null$OTHER$0$0$0$7$9$3$
+~かい$... times$~回$null$OTHER$0$0$0$-2$8$-3$
+~キロ$... km; ... kg$null$null$OTHER$0$0$0$7$7$7$
+実は$as a matter of fact, ...$じつは$null$OTHER$0$0$0$-3$7$0$
+全部$all$ぜんぶ$null$OTHER$0$0$0$5$7$5$
+~と申します$my name is ...$~ともうします$null$OTHER$0$0$0$3$7$0$
+一日$one day$いちにち$null$OTHER$0$0$0$7$7$7$
+二日$two days$ふつか$null$OTHER$0$0$0$5$7$1$
+三日$three days$みっか$null$OTHER$0$0$0$1$7$1$
+四日$four days$よっか$null$OTHER$0$0$0$7$7$7$
+五日$five days$いつか$null$OTHER$0$0$0$7$7$7$
+六日$six days$むいか$null$OTHER$0$0$0$3$7$4$
+七日$seven days$なのか$null$OTHER$0$0$0$5$7$1$
+八日$eight days$ようか$null$OTHER$0$0$0$3$7$3$
+九日$nine days$ここのか$null$OTHER$0$0$0$7$7$7$
+十日$ten days$とおか$null$OTHER$0$0$0$7$7$7$

@@ -1,0 +1,62 @@
+61
+JAP$ENG$null$null$NOUN$0$0$0$0$0$0$
+姉$(my) older sister$あね$null$NOUN$0$0$0$4$4$4$
+アパート$apartment$null$null$NOUN$0$0$0$5$5$5$
+妹$younger sister$いもうと$null$NOUN$0$0$0$4$4$4$
+歌$song$うた$null$NOUN$0$0$0$4$4$4$
+おじいさ​ん$grandfather; §old man$null$null$NOUN$0$0$0$4$4$4$
+弟$younger brother$おとうと$null$NOUN$0$0$0$2$4$0$
+男​の​人$man$おとこのひと$null$NOUN$0$0$0$4$4$4$
+お兄​さ​ん$older brother$おにいさ​ん$null$NOUN$0$0$0$4$4$4$
+お姉​さ​ん$older sister$おねえさ​ん$null$NOUN$0$0$0$4$4$4$
+おばあさん$grandmother; §old woman$null$null$NOUN$0$0$0$4$4$4$
+女​の​人$woman$おんなのひと$null$NOUN$0$0$0$5$5$5$
+会​社$company$かいしゃ$null$NOUN$0$0$0$4$4$4$
+家​族$family$かぞく$null$NOUN$0$0$0$4$4$4$
+髪$hair$かみ$null$NOUN$0$0$0$5$5$5$
+兄​弟$brothers and sisters$きょうだい$null$NOUN$0$0$0$-5$7$-2$
+口$mouth$くち$null$NOUN$0$0$0$4$4$4$
+国$country; §place of origin$くに$null$NOUN$0$0$0$4$4$4$
+車$car$くるま$null$NOUN$0$0$0$5$5$5$
+ゲーム$game$null$null$NOUN$0$0$0$4$4$4$
+コンビニ$convenience store$null$null$NOUN$0$0$0$4$4$4$
+サークル$club activity$null$null$NOUN$0$0$0$4$4$4$
+食​堂$cafeteria; §dining commons$しょくどう$null$NOUN$0$0$0$2$4$0$
+父$(my) father$ちち$null$NOUN$0$0$0$4$4$4$
+ディーブイディー$DVD$null$null$NOUN$0$0$0$1$5$2$
+母$(my) mother$はは$null$NOUN$0$0$0$4$4$4$
+目$eye$め$null$NOUN$0$0$0$4$4$4$
+眼​鏡$glasses$めがね$null$NOUN$0$0$0$4$4$4$
+頭がいい$bright; smart; clever$あたまがいい$(conjugates like いい)$ADJECTIVE$0$0$0$4$4$4$
+かわいい$cute$null$null$ADJECTIVE$0$0$0$4$4$4$
+背​が​高​い$tall (stature)$せがたかい$null$ADJECTIVE$0$0$0$2$4$0$
+背​が​低い$short (stature)$せがひくい$null$ADJECTIVE$0$0$0$4$4$4$
+長​い$long$ながい$null$ADJECTIVE$0$0$0$4$4$4$
+速​い$fast$はやい$null$ADJECTIVE$0$0$0$4$4$4$
+短​い$short (length)$みじかい$null$ADJECTIVE$0$0$0$0$4$0$
+親​切$kind$しんせつ(な)$null$ADJECTIVE$0$0$0$-4$4$-4$
+便​利$convenient$べんり(な)$null$ADJECTIVE$0$0$0$-2$4$-2$
+歌​う$to sing $うたう$(~を)$VERB$0$0$0$4$4$4$
+かぶる$to put on (a hat)$null$(~を) [u-verb]$VERB$0$0$0$4$4$4$
+知​る$to get to know$し​る$(~を) [u-verb]$VERB$0$0$0$4$4$4$
+知​っています$I know$しっています$(conjugated)$VERB$0$0$0$4$4$4$
+知りません$I do not know$しりません$(conjugated)$VERB$0$0$0$4$6$4$
+住​む$to live $すむ$(~に +    て-Form )$VERB$0$0$0$4$4$4$
+はく$to put on (below waist)$null$(~を)$VERB$0$0$0$4$4$4$
+太​る$to gain weight$ふとる$[u-verb]$VERB$0$0$0$4$4$4$
+太っています$to be on the heavy side$ふとっています$(conjugated)$VERB$0$0$0$5$5$5$
+(めがねを)かける$to put on glasses$null$null$VERB$0$0$0$4$4$4$
+着​る$to put on (above waist)$き​る$(~を)$VERB$0$0$0$0$4$0$
+勤​め​る$to work for$つとめる$(~に+     て-Form)$VERB$0$0$0$3$5$3$
+やせる$to lose weight$null$null$VERB$0$0$0$4$4$4$
+やせています$to be thin$null$(conjugated)$VERB$0$0$0$2$4$0$
+結​婚する$to get married$けっこんする$(~と)$VERB$0$0$0$4$4$4$
+~が$..., but$null$null$OTHER$0$0$0$0$6$-2$
+何​も$not ... anything$なに​も + negative$null$OTHER$0$0$0$2$4$2$
+~人$[counter for people]$~にん$null$OTHER$0$0$0$3$5$0$
+一​人$one person$ひとり$null$OTHER$0$0$0$-1$5$-1$
+二​人$two people$ふたり$null$OTHER$0$0$0$-2$4$-2$
+別​に$nothing in particular$べつに + negative$null$OTHER$0$0$0$0$6$-1$
+もしもし$Hello? (on the phone)$null$null$OTHER$0$0$0$5$5$5$
+もちろん$of course$null$null$OTHER$0$0$0$1$5$0$
+よかったら$if you like$null$null$OTHER$0$0$0$-4$4$-4$
