@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root type="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="root" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="559.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -21,7 +21,7 @@
                            <children>
                               <VBox prefHeight="400.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                                  <children>
-                                    <GridPane prefHeight="77.0" prefWidth="340.0">
+                                    <GridPane fx:id="shortFormGrid" prefHeight="77.0" prefWidth="340.0">
                                       <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
@@ -41,7 +41,7 @@
                                           <Label layoutX="382.0" layoutY="10.0" prefHeight="25.0" prefWidth="150.0" text="short Form" />
                                        </children>
                                     </GridPane>
-                                    <GridPane prefHeight="77.0" prefWidth="340.0">
+                                    <GridPane fx:id="longFormGrid" prefHeight="77.0" prefWidth="340.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
@@ -61,7 +61,7 @@
                                           <Label prefHeight="25.0" prefWidth="150.0" text="long Form" />
                                        </children>
                                     </GridPane>
-                                    <GridPane prefHeight="77.0" prefWidth="340.0">
+                                    <GridPane fx:id="taiGrid" prefHeight="77.0" prefWidth="340.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
@@ -81,7 +81,7 @@
                                           <Label prefHeight="25.0" prefWidth="150.0" text="たい-Form" />
                                        </children>
                                     </GridPane>
-                                    <GridPane layoutX="10.0" layoutY="204.0" prefHeight="30.0" prefWidth="340.0">
+                                    <GridPane fx:id="teGrid" layoutX="10.0" layoutY="204.0" prefHeight="30.0" prefWidth="340.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
@@ -106,7 +106,7 @@
                            <children>
                               <VBox prefHeight="400.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
                                  <children>
-                                    <GridPane prefHeight="77.0" prefWidth="340.0">
+                                    <GridPane fx:id="shortPotGrid" prefHeight="77.0" prefWidth="340.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
@@ -126,7 +126,7 @@
                                           <Label layoutX="382.0" layoutY="10.0" prefHeight="25.0" prefWidth="150.0" text="short potential Form" />
                                        </children>
                                     </GridPane>
-                                    <GridPane prefHeight="77.0" prefWidth="340.0">
+                                    <GridPane fx:id="longPotGrid" prefHeight="77.0" prefWidth="340.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
@@ -146,7 +146,7 @@
                                           <Label prefHeight="25.0" prefWidth="150.0" text="long potential Form" />
                                        </children>
                                     </GridPane>
-                                    <GridPane layoutX="10.0" layoutY="204.0" prefHeight="30.0" prefWidth="340.0">
+                                    <GridPane fx:id="potTeGrid" layoutX="10.0" layoutY="204.0" prefHeight="30.0" prefWidth="340.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
@@ -159,7 +159,7 @@
                                           <Label prefHeight="25.0" prefWidth="150.0" text="potential て-Form:" />
                                        </children>
                                     </GridPane>
-                                    <GridPane layoutX="10.0" layoutY="107.0" prefHeight="60.0" prefWidth="340.0">
+                                    <GridPane fx:id="volGrid" layoutX="10.0" layoutY="107.0" prefHeight="60.0" prefWidth="340.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />

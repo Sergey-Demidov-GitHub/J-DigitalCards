@@ -2,13 +2,13 @@ package trainDeck_Stage;
 
 import cardGui.CardGuiManager;
 import cardPackage.Score;
-import main.MainController;
 import filterModule.FilterModule;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import main.MainController;
 import verbConjugationDisplayModule.VerbConjugationDisplayModule;
 
 import java.net.URL;
