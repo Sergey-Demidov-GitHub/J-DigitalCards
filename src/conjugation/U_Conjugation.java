@@ -7,7 +7,7 @@ public class U_Conjugation extends Conjugation{
     private String indicator;
     private EndingMapper endingMapper;
 
-    U_Conjugation(String infinitive) {
+    public U_Conjugation(String infinitive) {
         super(infinitive);
         endingMapper = new EndingMapper();
         genStem();

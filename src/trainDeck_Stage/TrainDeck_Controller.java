@@ -1,7 +1,10 @@
 package trainDeck_Stage;
 
 import cardGui.CardGuiManager;
+import cardPackage.Card;
 import cardPackage.Score;
+import cardPackage.VerbCard;
+import conjugation.Conjugation;
 import filterModule.FilterModule;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -58,10 +61,6 @@ public class TrainDeck_Controller implements Initializable {
         this.filterModule.setMainController(mainController);
         this.filterModule.setTrainDeckController(this);
         filterModuleHolder.getChildren().add(this.filterModule);
-
-        this.verbConjugationDisplayModule = new VerbConjugationDisplayModule();
-        this.verbConjugationDisplayModule.setTrainDeckController(this);
-        this.conjugationHolder.getChildren().add(verbConjugationDisplayModule);
 
         this.keyEventHandler = new KeyEventHandler(this);
         this.keyEventHandler.applyFilterOnNode(root);
@@ -155,6 +154,8 @@ public class TrainDeck_Controller implements Initializable {
         cardGuiManager.setReversed(reversed_b);
         cardGuiManager.setMainController(mainController);
         cardGuiManagerHolder.getChildren().add(cardGuiManager);
+
+        buildConjugationDisplay();
     }
 
     private void correctAnswer() {
@@ -199,6 +200,19 @@ public class TrainDeck_Controller implements Initializable {
 
     public boolean isReversed_b() {
         return reversed_b;
+    }
+
+    public void buildConjugationDisplay() {
+        this.conjugationHolder.getChildren().clear();
+        Card card = mainController.getSession().getCurrentCard();
+
+        if (card instanceof VerbCard){
+            Conjugation conjugation = ((VerbCard) card).getConjugation();
+            this.verbConjugationDisplayModule = new VerbConjugationDisplayModule(conjugation);
+            this.verbConjugationDisplayModule.setTrainDeckController(this);
+            this.conjugationHolder.getChildren().add(verbConjugationDisplayModule);
+        }
+
     }
 
 }

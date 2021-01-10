@@ -3,8 +3,6 @@ package main;
 import cardPackage.BasicCard;
 import cardPackage.CardType;
 import cardPackage.Score;
-import conjugation.RU_Conjugation;
-import conjugation.U_Conjugation;
 import dbUtils.DBComm;
 import dbUtils.DBCommInterface;
 import dbUtils.SQLUtility;
@@ -95,8 +93,8 @@ public class Main extends Application {
         //test_DBComm_addDeck();
         //test_DBComm_getDeck();
 
-        RU_Conjugation.testRuConjugation();
-        U_Conjugation.testUConjugation();
+        //RU_Conjugation.testRuConjugation();
+        //U_Conjugation.testUConjugation();
 
     }
 

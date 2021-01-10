@@ -1,6 +1,9 @@
 package cardPackage;
 
 import cardGui.VerbCardGui;
+import conjugation.Conjugation;
+import conjugation.RU_Conjugation;
+import conjugation.U_Conjugation;
 import javafx.collections.ObservableList;
 
 public class VerbCard extends BasicCard{
@@ -38,6 +41,29 @@ public class VerbCard extends BasicCard{
 
     public static VerbCardGui getVerbCardGui(VerbCard card) {
         return new VerbCardGui(card);
+    }
+
+    public Conjugation getConjugation() {
+        Conjugation conjugation = null;
+        switch (this.type){
+            case RU: {
+                conjugation = new RU_Conjugation(this.getJap2());
+                break;
+            }
+            case U: {
+                conjugation = new U_Conjugation(this.getJap2());
+                break;
+            }
+            case IRREGULAR: {
+                break;
+            }
+            case UNKNOWN: {
+                break;
+            }
+
+        }
+
+        return conjugation;
     }
 
     public VerbType getType() {

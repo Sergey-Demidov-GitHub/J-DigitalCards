@@ -6,7 +6,7 @@ public class RU_Conjugation extends Conjugation {
 
     private String RARE = "られ";
 
-    RU_Conjugation(String infinitive) {
+    public RU_Conjugation(String infinitive) {
         super(infinitive);
         endingMapper = new EndingMapper();
         genStem();

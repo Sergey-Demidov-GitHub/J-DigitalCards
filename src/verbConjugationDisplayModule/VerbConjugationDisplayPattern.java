@@ -12,22 +12,22 @@ public class VerbConjugationDisplayPattern extends AnchorPane {
     private TrainDeck_Controller trainDeckController;
 
     @FXML
-    private GridPane shortFormGrid;
+    protected GridPane shortFormGrid;
     @FXML
-    private GridPane longFormGrid;
+    protected GridPane longFormGrid;
     @FXML
-    private GridPane taiGrid;
+    protected GridPane taiGrid;
     @FXML
-    private GridPane teGrid;
+    protected GridPane teGrid;
 
     @FXML
-    private GridPane shortPotGrid;
+    protected GridPane shortPotGrid;
     @FXML
-    private GridPane longPotGrid;
+    protected GridPane longPotGrid;
     @FXML
-    private GridPane potTeGrid;
+    protected GridPane potTeGrid;
     @FXML
-    private GridPane volGrid;
+    protected GridPane volGrid;
 
     public VerbConjugationDisplayPattern() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("verbConjugationDisplayPattern.fxml"));
