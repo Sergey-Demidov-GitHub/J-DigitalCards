@@ -13,6 +13,40 @@ package conjugation;
 public class Conjugation {
     protected String infinitive;
 
+    public static final String IF_POS_PRESENT_NAME = "short present";
+    public static final String IF_NEG_PRESENT_NAME = "short negative present";
+    public static final String IF_POS_PAST_NAME = "short past";
+    public static final String IF_NEG_PAST_NAME = "short negative past";
+
+    public static final String F_POS_PRESENT_NAME = "long present";
+    public static final String F_NEG_PRESENT_NAME = "long negative present";
+    public static final String F_POS_PAST_NAME = "long past";
+    public static final String F_NEG_PAST_NAME = "long negative past";
+
+    public static final String TE_FORM = "て-Form";
+
+    public static final String TAI_POS_PRESENT_NAME = "たい present";
+    public static final String TAI_NEG_PRESENT_NAME = "たい negative present";
+    public static final String TAI_POS_PAST_NAME = "たい past";
+    public static final String TAI_NEG_PAST_NAME = "たい negative past";
+
+    public static final String IF_POT_POS_PRESENT_NAME = "short potential present";
+    public static final String IF_POT_NEG_PRESENT_NAME = "short potential negative present";
+    public static final String IF_POT_POS_PAST_NAME = "short potential past";
+    public static final String IF_POT_NEG_PAST_NAME = "short potential negative past";
+
+    public static final String F_POT_POS_PRESENT_NAME = "long potential present";
+    public static final String F_POT_NEG_PRESENT_NAME = "long potential negative present";
+    public static final String F_POT_POS_PAST_NAME = "long potential past";
+    public static final String F_POT_NEG_PAST_NAME = "long potential negative past";
+
+    public static final String POT_TE_FORM = "potential て-Form";
+
+    public static final String IF_VOL_FORM = "short volitional form";
+    public static final String F_VOL_FORM = "long volitional form";
+
+
+
     protected String ifPosPresent;
     protected String ifNegPresent;
     protected String ifPosPast;
