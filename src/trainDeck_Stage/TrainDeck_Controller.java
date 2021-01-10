@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import verbConjugationDisplayModule.VerbConjugationDisplayModule;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,9 +30,12 @@ public class TrainDeck_Controller implements Initializable {
     private AnchorPane cardGuiManagerHolder;
     @FXML
     private AnchorPane filterModuleHolder;
+    @FXML
+    private AnchorPane conjugationHolder;
 
     private CardGuiManager cardGuiManager;
     private FilterModule filterModule;
+    private VerbConjugationDisplayModule verbConjugationDisplayModule;
     @FXML
     private Label deckName_L, absoluteScore_L, relativeScore_L, cardsLeft_L;
 
@@ -54,6 +58,10 @@ public class TrainDeck_Controller implements Initializable {
         this.filterModule.setMainController(mainController);
         this.filterModule.setTrainDeckController(this);
         filterModuleHolder.getChildren().add(this.filterModule);
+
+        this.verbConjugationDisplayModule = new VerbConjugationDisplayModule();
+        this.verbConjugationDisplayModule.setTrainDeckController(this);
+        this.conjugationHolder.getChildren().add(verbConjugationDisplayModule);
 
         this.keyEventHandler = new KeyEventHandler(this);
         this.keyEventHandler.applyFilterOnNode(root);

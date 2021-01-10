@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="559.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane prefHeight="559.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Common">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="400.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <children>
+                                    <GridPane prefHeight="77.0" prefWidth="340.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="22.0" prefWidth="50.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="105.0" text="Positive" GridPane.columnIndex="1" />
+                                          <Label layoutX="110.0" layoutY="10.0" prefHeight="47.0" prefWidth="105.0" text="Present" GridPane.rowIndex="1" />
+                                          <Label layoutX="10.0" layoutY="40.0" prefHeight="47.0" prefWidth="105.0" text="Past" GridPane.rowIndex="2" />
+                                          <Label layoutX="10.0" layoutY="70.0" prefHeight="47.0" prefWidth="105.0" text="Negative" GridPane.columnIndex="3" />
+                                          <Label layoutX="382.0" layoutY="10.0" prefHeight="25.0" prefWidth="150.0" text="short Form" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane prefHeight="77.0" prefWidth="340.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="22.0" prefWidth="50.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="105.0" text="Positive" GridPane.columnIndex="1" />
+                                          <Label layoutX="110.0" layoutY="10.0" prefHeight="47.0" prefWidth="105.0" text="Present" GridPane.rowIndex="1" />
+                                          <Label layoutX="10.0" layoutY="40.0" prefHeight="47.0" prefWidth="105.0" text="Past" GridPane.rowIndex="2" />
+                                          <Label layoutX="10.0" layoutY="70.0" prefHeight="47.0" prefWidth="105.0" text="Negative" GridPane.columnIndex="3" />
+                                          <Label prefHeight="25.0" prefWidth="150.0" text="long Form" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane prefHeight="77.0" prefWidth="340.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="22.0" prefWidth="50.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="105.0" text="Positive" GridPane.columnIndex="1" />
+                                          <Label layoutX="110.0" layoutY="10.0" prefHeight="47.0" prefWidth="105.0" text="Present" GridPane.rowIndex="1" />
+                                          <Label layoutX="10.0" layoutY="40.0" prefHeight="47.0" prefWidth="105.0" text="Past" GridPane.rowIndex="2" />
+                                          <Label layoutX="10.0" layoutY="70.0" prefHeight="47.0" prefWidth="105.0" text="Negative" GridPane.columnIndex="3" />
+                                          <Label prefHeight="25.0" prefWidth="150.0" text="たい-Form" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="10.0" layoutY="204.0" prefHeight="30.0" prefWidth="340.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="150.0" text="て-Form:" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Advanced">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="400.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <children>
+                                    <GridPane prefHeight="77.0" prefWidth="340.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="22.0" prefWidth="50.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="105.0" text="Positive" GridPane.columnIndex="1" />
+                                          <Label layoutX="110.0" layoutY="10.0" prefHeight="47.0" prefWidth="105.0" text="Present" GridPane.rowIndex="1" />
+                                          <Label layoutX="10.0" layoutY="40.0" prefHeight="47.0" prefWidth="105.0" text="Past" GridPane.rowIndex="2" />
+                                          <Label layoutX="10.0" layoutY="70.0" prefHeight="47.0" prefWidth="105.0" text="Negative" GridPane.columnIndex="3" />
+                                          <Label layoutX="382.0" layoutY="10.0" prefHeight="25.0" prefWidth="150.0" text="short potential Form" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane prefHeight="77.0" prefWidth="340.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="22.0" prefWidth="50.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="105.0" text="Positive" GridPane.columnIndex="1" />
+                                          <Label layoutX="110.0" layoutY="10.0" prefHeight="47.0" prefWidth="105.0" text="Present" GridPane.rowIndex="1" />
+                                          <Label layoutX="10.0" layoutY="40.0" prefHeight="47.0" prefWidth="105.0" text="Past" GridPane.rowIndex="2" />
+                                          <Label layoutX="10.0" layoutY="70.0" prefHeight="47.0" prefWidth="105.0" text="Negative" GridPane.columnIndex="3" />
+                                          <Label prefHeight="25.0" prefWidth="150.0" text="long potential Form" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="10.0" layoutY="204.0" prefHeight="30.0" prefWidth="340.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="150.0" text="potential て-Form:" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="10.0" layoutY="107.0" prefHeight="60.0" prefWidth="340.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="-Infinity" prefWidth="200.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="22.0" prefWidth="50.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="105.0" GridPane.columnIndex="1" />
+                                          <Label layoutX="110.0" layoutY="10.0" prefHeight="26.0" prefWidth="150.0" text="long volitional Form" GridPane.rowIndex="1" />
+                                          <Label prefHeight="25.0" prefWidth="150.0" text="short volitional Form" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>
