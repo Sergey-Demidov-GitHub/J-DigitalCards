@@ -40,14 +40,17 @@ public class VerbCard extends BasicCard{
     }
 
     public static VerbCardGui getVerbCardGui(VerbCard card) {
+        System.out.println(card.type);
         return new VerbCardGui(card);
     }
 
     public Conjugation getConjugation() {
         Conjugation conjugation = null;
+
         switch (this.type){
             case RU: {
                 conjugation = new RU_Conjugation(this.getJap2());
+                System.out.println(conjugation.toString());
                 break;
             }
             case U: {

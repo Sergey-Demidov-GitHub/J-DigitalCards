@@ -2,6 +2,7 @@ package verbConjugationDisplayModule;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import trainDeck_Stage.TrainDeck_Controller;
@@ -12,22 +13,22 @@ public class VerbConjugationDisplayPattern extends AnchorPane {
     private TrainDeck_Controller trainDeckController;
 
     @FXML
-    protected GridPane shortFormGrid;
+    private GridPane shortFormGrid;
     @FXML
-    protected GridPane longFormGrid;
+    private GridPane longFormGrid;
     @FXML
-    protected GridPane taiGrid;
+    private GridPane taiGrid;
     @FXML
-    protected GridPane teGrid;
+    private GridPane teGrid;
 
     @FXML
-    protected GridPane shortPotGrid;
+    private GridPane shortPotGrid;
     @FXML
-    protected GridPane longPotGrid;
+    private GridPane longPotGrid;
     @FXML
-    protected GridPane potTeGrid;
+    private GridPane potTeGrid;
     @FXML
-    protected GridPane volGrid;
+    private GridPane volGrid;
 
     public VerbConjugationDisplayPattern() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("verbConjugationDisplayPattern.fxml"));
@@ -42,6 +43,17 @@ public class VerbConjugationDisplayPattern extends AnchorPane {
 
     public void setTrainDeckController(TrainDeck_Controller trainDeckController){
         this.trainDeckController = trainDeckController;
+    }
+
+    /*  Grid filling pattern:
+     *      node1   node2
+     *      node3   node4
+     */
+    protected void setShortFormGrid(Node node1, Node node2, Node node3, Node node4) {
+        shortFormGrid.add(node1, 1, 1);
+        shortFormGrid.add(node2, 2, 1);
+        shortFormGrid.add(node3, 1, 2);
+        shortFormGrid.add(node4, 2, 2);
     }
 
 
