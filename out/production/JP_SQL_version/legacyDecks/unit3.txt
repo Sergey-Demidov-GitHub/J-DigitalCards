@@ -1,0 +1,56 @@
+55
+JAP$ENG$null$null$NOUN$0$0$0$0$0$0$
+映​画$movie$えいが$null$NOUN$0$0$0$4$6$3$
+音​楽$music$おんがく$null$NOUN$0$0$0$4$6$3$
+雑​誌$magazine$ざっし$null$NOUN$0$0$0$6$6$6$
+スポーツ$sports$null$null$NOUN$0$0$0$4$6$4$
+デート$date (romantic)$null$null$NOUN$0$0$0$6$6$6$
+テニス$tennis$null$null$NOUN$0$0$0$4$6$3$
+テレビ$TV$null$null$NOUN$0$0$0$6$6$6$
+アイスクリーム$ice cream$null$null$NOUN$0$0$0$6$6$6$
+朝​ご​飯$breakfast$あさ​ごはん$null$NOUN$0$0$0$6$6$6$
+お酒$sake; alcohol$おさけ$null$NOUN$0$0$0$6$6$6$
+お茶$green tea$おちゃ$null$NOUN$0$0$0$7$7$7$
+コーヒー$coffee$null$null$NOUN$0$0$0$7$7$7$
+晩​ご​飯$dinner$ばん​ご​はん$null$NOUN$0$0$0$3$5$3$
+ハンバーガー$hamburger$null$null$NOUN$0$0$0$6$6$6$
+昼​ご​飯$lunch$ひる​ごはん$null$NOUN$0$0$0$4$6$3$
+水$water$みず$null$NOUN$0$0$0$7$7$7$
+家$home; house$いえ$null$NOUN$0$0$0$4$6$4$
+家$home; house; my place$うち$null$NOUN$0$0$0$6$6$6$
+学​校$school$がっこう$null$NOUN$0$0$0$2$6$2$
+朝$morning$あさ$null$NOUN$0$0$0$6$6$6$
+明​日$tomorrow$あした$null$NOUN$0$0$0$6$6$6$
+いつ$when$null$null$OTHER$0$0$0$2$6$0$
+今日$today$きょう$null$NOUN$0$0$0$6$6$6$
+~ごろ$at about ...$null$null$OTHER$0$0$0$6$6$6$
+今​晩$tonight$こんばん$null$NOUN$0$0$0$4$6$3$
+週​末$weekend$しゅうまつ$null$NOUN$0$0$0$0$6$-1$
+土​曜​日$Saturday$どようび$null$NOUN$0$0$0$6$6$6$
+日​曜​日$Sunday$にちようび$null$NOUN$0$0$0$4$6$0$
+毎​日$every day$まいにち$null$NOUN$0$0$0$6$6$6$
+毎晩$every night$まいばん$null$NOUN$0$0$0$4$6$3$
+行​く$to go$いく$(destination に/へ)$VERB$0$0$0$6$6$6$
+帰​る$to go back; to return$かえる$(destination に/へ) [u-verb]$VERB$0$0$0$6$6$6$
+聞​く$to listen; to hear$き​く$(~を)$VERB$0$0$0$4$6$0$
+飲​む$to drink$のむ$(~を)$VERB$0$0$0$6$6$6$
+話​す$to speak; to talk$はな​す$(language を/で)$VERB$0$0$0$6$6$6$
+読​む$to read$よむ$(~を)$VERB$0$0$0$6$6$6$
+起​き​る$to get up$お​き​る$null$VERB$0$0$0$4$8$2$
+食​べ​る$to eat$たべ​る$(~を)$VERB$0$0$0$6$6$6$
+寝​る$to sleep; to go to sleep$ね​る$null$VERB$0$0$0$-2$10$-2$
+見​る$to see; to look at; to watch$みる$(~を)$VERB$0$0$0$5$5$5$
+来​る$to come$く​る$(destination に/へ) [irregular]$VERB$0$0$0$4$6$4$
+する$to do$null$(~を) [irregular]$VERB$0$0$0$6$6$6$
+勉​強する$to study$べんきょうする$(~を)$VERB$0$0$0$4$6$3$
+いい$good$null$null$ADJECTIVE$0$0$0$6$6$6$
+早​い$early$はや​い$null$ADJECTIVE$0$0$0$6$6$6$
+あまり + negative$not much$null$null$OTHER$0$0$0$6$6$6$
+全​然$not at all$ぜんぜん §+ negative$null$OTHER$0$0$0$6$6$6$
+たいてい$usually$null$null$OTHER$0$0$0$6$6$6$
+ちょっと$a little$null$null$OTHER$0$0$0$4$6$3$
+時​々$sometimes$ときどき$null$OTHER$0$0$0$4$6$2$
+よく$often; much$null$null$OTHER$0$0$0$6$6$6$
+そうですね$That's right.; Let me see.$null$null$OTHER$0$0$0$4$6$3$
+でも$but$null$null$OTHER$0$0$0$6$6$6$
+どうですか$How about ...?; How is ...?$null$null$OTHER$0$0$0$-6$6$-6$

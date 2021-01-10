@@ -1,0 +1,53 @@
+52
+JAP$ENG$null$null$NOUN$0$0$0$0$0$0$
+お金$money$おかね$null$NOUN$0$0$0$6$6$6$
+お風​呂$bath$おふろ$null$NOUN$0$0$0$6$6$6$
+漢​字$kanji §Chinese character$かんじ$null$NOUN$0$0$0$6$6$6$
+教​科​書$textbook$きょうかしょ$null$NOUN$0$0$0$-6$6$-6$
+今​週$this week$こんしゅう$null$NOUN$0$0$0$6$6$6$
+シーディー$CD$null$null$NOUN$0$0$0$6$6$6$
+市​民病​院$municipal hospital$しみんびょういん$null$NOUN$0$0$0$2$6$3$
+シャワー$shower$null$null$NOUN$0$0$0$6$6$6$
+次$next$つぎ$null$NOUN$0$0$0$6$6$6$
+電​気$electricity$でんき$null$NOUN$0$0$0$6$6$6$
+電​車$train$でんしゃ$null$NOUN$0$0$0$6$6$6$
+荷​物$baggage$にもつ$null$NOUN$0$0$0$4$6$4$
+パソコン$personal computer$null$null$NOUN$0$0$0$3$5$3$
+ページ$page$null$null$NOUN$0$0$0$6$6$6$
+窓$window$まど$null$NOUN$0$0$0$6$6$6$
+夜$night$よる$null$NOUN$0$0$0$2$6$2$
+来​週$next week$らいしゅう$null$NOUN$0$0$0$6$6$6$
+来​年$next year$らいねん$null$NOUN$0$0$0$4$6$2$
+大​変$tough (situation)$たいへん(な)$null$ADJECTIVE$0$0$0$6$8$6$
+遊​ぶ$to play; §to spend time pleasantly$あそぶ$null$VERB$0$0$0$5$5$5$
+急​ぐ$to hurry$いそぐ$null$VERB$0$0$0$4$6$4$
+お風​呂に入​る$to take a bath$おふろにはいる$[u-verb]$VERB$0$0$0$6$6$6$
+返​す$to return (a thing)$かえす$(person に thing を)$VERB$0$0$0$0$8$-1$
+消​す$to turn off; to erase$けす$(~を)$VERB$0$0$0$-3$9$-2$
+死​ぬ$to die$​しぬ$null$VERB$0$0$0$5$5$5$
+座​る$to sit down$すわる$(seat に) [u-verb]$VERB$0$0$0$5$5$5$
+立​つ$to stand up$たつ$null$VERB$0$0$0$5$5$5$
+たばこを吸​う$to smoke$たばこをすう$null$VERB$0$0$0$5$5$5$
+使​う$to use$つかう$(~を)$VERB$0$0$0$1$5$0$
+手​伝​う$to help$てつだう$(person/task を)$VERB$0$0$0$3$5$3$
+入​る$to enter $はいる$(~に) [u-verb]$VERB$0$0$0$5$5$5$
+持​つ$to carry; to hold$もつ$(~を)$VERB$0$0$0$3$5$3$
+休​む$(1) to absent (from ...) (~を)$やすむ$(2) to rest$VERB$0$0$0$5$5$5$
+開​け​る$to open (something)$あけ​る$(~を)$VERB$0$0$0$5$5$5$
+教​え​る$to teach; to instruct$おしえ​る$(person に thing を)$VERB$0$0$0$3$5$3$
+降​り​る$to get off$おり​る$(~を)$VERB$0$0$0$-5$5$-5$
+借​り​る$to borrow$かり​る$(person に thing を)$VERB$0$0$0$-1$5$-1$
+閉​め​る$to close (something)$しめ​る$(~を)$VERB$0$0$0$3$5$3$
+シャワーを浴​び​る$to take a shower$シャワーをあ​び​る$null$VERB$0$0$0$1$5$2$
+つけ​る$to turn on$null$(~を)$VERB$0$0$0$3$5$3$
+電​話をかける$to make a phone call$でんわをかける$(~に)$VERB$0$0$0$5$5$5$
+忘​れ​る$to forget; to leave behind$わす​れ​る$(~を)$VERB$0$0$0$1$5$0$
+連​れ​て​く​る$to bring (a person)$つ​れ​て​くる$(~を) [irregular]$VERB$0$0$0$-3$5$-1$
+持​っ​て​く​る$to bring (a thing)$もっ​て​く​る$(~を) [irregular]$VERB$0$0$0$3$5$3$
+後​で$later on$あとで$null$OTHER$0$0$0$3$5$1$
+遅​く$(do something) late$おそ​く$null$OTHER$0$0$0$-1$5$0$
+~から$because ...$null$null$OTHER$0$0$0$3$5$3$
+結​構です$That would be fine.; §That wouldn't be necessary.$けっこうです$null$OTHER$0$0$0$-5$5$-5$
+すぐ$right away$null$null$OTHER$0$0$0$-3$5$-2$
+本​当ですか$Really?$ほんとうですか$null$OTHER$0$0$0$3$5$3$
+ゆっくり$slowly; leisurely; §unhurriedly$null$null$OTHER$0$0$0$-5$5$-5$
