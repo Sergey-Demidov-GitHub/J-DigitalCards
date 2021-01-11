@@ -11,10 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.AnchorPane;
@@ -92,10 +89,8 @@ public class ChooseDeck_Controller implements Initializable {
     public void onAction_remove(ActionEvent event) {
         if (selectedTableIndex != -1 && selectedDeckIndex != -1) {
             String deckName = dBCommunicator.getDeckName(selectedDeckIndex);
-            //MessageModule m = new MessageModule("You are about to delete " + deckName + ". ");
-            //m.onAction_cancel();
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Do you really want to delete " + deckName + "? ", ButtonType.YES, ButtonType.NO);
-            alert.setHeaderText("headerText");
+            alert.setHeaderText(null);
             ButtonType result = alert.showAndWait().orElse(ButtonType.NO);
             if (ButtonType.YES.equals(result)) {
                 removeDeck();
@@ -131,18 +126,15 @@ public class ChooseDeck_Controller implements Initializable {
 
         this.deckName_col.setCellValueFactory(new PropertyValueFactory<DeckForTableView, String>("name"));
         this.deckName_col.setCellFactory(TextFieldTableCell.forTableColumn());
-        this.wordCount_col.setCellValueFactory(new PropertyValueFactory<DeckForTableView, String>("wordCount"));
+        this.wordCount_col.setCellValueFactory(new PropertyValueFactory<DeckForTableView, Integer>("wordCount"));
 
         this.tableView.setItems(deckTableData);
         this.tableView.setEditable(true);
-        //System.out.println("[INFO] 'loadTableView' triggered");
-
     }
 
     private void updateSelection() {
         this.selectedTableIndex = tableView.getSelectionModel().getSelectedIndex();
         this.selectedDeckIndex = deckTableData.get(selectedTableIndex).getId();
-        //System.out.println("[INFO] selectedTableIndex: " + selectedTableIndex + " deck_id: " + selectedDeckIndex);
     }
 
     private void addNewDeck() {
@@ -152,19 +144,28 @@ public class ChooseDeck_Controller implements Initializable {
 
     private void removeDeck() {
         if (selectedTableIndex != -1 && selectedDeckIndex != -1) {
-            //tableView.getItems().remove(selectedTableIndex);
             dBCommunicator.removeDeck(selectedDeckIndex);
             loadTableView();
-
-            //selectedTableIndex = -1;
-            //selectedDeckIndex = -1;
         }
     }
 
     private void switchToTrainPane(){
         if (selectedTableIndex != -1) {
-            mainController.updateSession(selectedDeckIndex);
-            this.mainController.transition_ChooseDeck_TrainDeck();
+            Integer wordCount = ((DeckForTableView) tableView.getSelectionModel().getSelectedItem()).getWordCount();
+            if (wordCount > 0) {
+                mainController.updateSession(selectedDeckIndex);
+                this.mainController.transition_ChooseDeck_TrainDeck();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setGraphic(null);
+                alert.setContentText("Deck is empty!");
+                ButtonType ok_BT = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
+                alert.getButtonTypes().setAll(ok_BT);
+                alert.showAndWait().ifPresent(buttonType -> {
+
+                });
+            }
         }
     }
 
