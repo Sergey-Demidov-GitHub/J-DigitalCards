@@ -195,9 +195,6 @@ public class EditDeck_Controller implements Initializable {
         if (!isNew) {
             this.mainController.getSession().addChangedIds(card.getId());
             System.out.println("[TRIGGER] EditDeck_Controller.processCardChange()");
-        } else {
-            CardTableElement cardTableElement = new CardTableElement(card);
-            fancyTableView.addElementToTable(cardTableElement);
         }
 
         mainController.getSession().addNewCardToDeck(card);     // overrides if card exists

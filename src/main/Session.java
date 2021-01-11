@@ -13,7 +13,7 @@ public class Session {
     private Deck deck;
     private static DBCommInterface dBCommunicator = new DBComm();
 
-
+    // not the most elegant way, will do for now
     private Set<Integer> changedIds = new HashSet<Integer>();    // for db update
     private Set<Integer> changedTypes = new HashSet<>();
     private Set<Integer> deletedIds = new HashSet<Integer>();

@@ -128,6 +128,7 @@ public class DBComm implements DBCommInterface {
         SQLUtility.update_typeVerb_eng1(card.getId(), card.getEng1());
         SQLUtility.update_typeVerb_eng2(card.getId(), card.getEng2());
         SQLUtility.update_typeVerb_type(card.getId(), card.getType().value());
+
     }
 
     private void updateAdjectiveCard_content(AdjectiveCard card) {

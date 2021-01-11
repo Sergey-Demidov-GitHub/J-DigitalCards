@@ -108,7 +108,7 @@ public class EditCardModule extends AnchorPane {
             if (card instanceof VerbCard){
                 VerbType verbType =  ((VerbCard) card).getType();
                 this.verbType = verbType;
-                //System.out.println("verbType: " + verbType);
+                System.out.println("verbType: " + verbType);
                 updateForm(verbType);
             }
             if (card instanceof AdjectiveCard) {
@@ -130,8 +130,8 @@ public class EditCardModule extends AnchorPane {
     }
 
     public void updateForm(CardType cardType) {
+        //System.out.println("voluntary? " + voluntaryCardTypeChange);
         cardType_ComboBox.setValue(cardType.value());
-
 
         if (cardType == CardType.NOUN){
             updateFormNoun();
@@ -290,10 +290,10 @@ public class EditCardModule extends AnchorPane {
         if (currentCard_id == null) {
             currentCard_id = mainController.getSession().addNewIds();
         } else {
-            if (prevCardType != ((Card) mainController.getSession().getDeck().getCardMap().get(currentCard_id)).getCardType()){
+            if (prevCardType != currentCardType){
                 mainController.getSession().addChangedTypes(currentCard_id);
                 prevCardType = null;
-                System.out.println("addChangedTypes: " + currentCard_id);
+                //System.out.println("addChangedTypes: " + currentCard_id);
             }
         }
 
@@ -302,7 +302,7 @@ public class EditCardModule extends AnchorPane {
                 card = new NounCard(currentCard_id, j1, j2, e1, e2);
                 break;
             case VERB:
-                //System.out.println("[DEBUG] verbType: " + verbType);
+                System.out.println("[DEBUG] verbType: " + verbType);
                 card = new VerbCard(currentCard_id, j1, j2, e1, e2, verbType);
                 break;
             case ADJECTIVE:
@@ -343,7 +343,11 @@ public class EditCardModule extends AnchorPane {
 
     private void setForm(Card card) {
         CardType cardType = card.getCardType();
+        prevCardType = cardType;
+        currentCardType = cardType;
+        //voluntaryCardTypeChange = false;
         updateForm(cardType);
+        //voluntaryCardTypeChange = true;
         updateFormSpecs();
         if (card instanceof KanjiCard){
             kanji_T.setText(((KanjiCard) card).getKanji());
