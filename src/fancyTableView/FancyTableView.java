@@ -162,7 +162,14 @@ public class FancyTableView extends AnchorPane {
     }
 
     public void removeSelectedElementFromTable(){
+        int tempIndex = selectedTableIndex;
         tableView.getItems().remove(selectedTableIndex);
+        if (tempIndex != 0) {
+            selectedTableIndex = tempIndex - 1;
+            tableView.getSelectionModel().select(selectedTableIndex);
+            tableView.getSelectionModel().focus(selectedTableIndex);
+            selectedCardIndex = deckTableData.get(selectedTableIndex).getCard_id();
+        }
     }
 
     public int getSelectedCardIndex() {
