@@ -50,10 +50,43 @@ public class VerbConjugationDisplayPattern extends AnchorPane {
      *      node3   node4
      */
     protected void setShortFormGrid(Node node1, Node node2, Node node3, Node node4) {
-        shortFormGrid.add(node1, 1, 1);
-        shortFormGrid.add(node2, 2, 1);
-        shortFormGrid.add(node3, 1, 2);
-        shortFormGrid.add(node4, 2, 2);
+        set9erGrid(shortFormGrid, node1, node2, node3, node4);
+    }
+
+    protected void setLongFormGrid(Node node1, Node node2, Node node3, Node node4) {
+        set9erGrid(longFormGrid, node1, node2, node3, node4);
+    }
+
+    protected void setTaiGrid(Node node1, Node node2, Node node3, Node node4) {
+        set9erGrid(taiGrid, node1, node2, node3, node4);
+    }
+
+    protected void setShortPotGrid(Node node1, Node node2, Node node3, Node node4) {
+        set9erGrid(shortPotGrid, node1, node2, node3, node4);
+    }
+
+    protected void setLongPotGrid(Node node1, Node node2, Node node3, Node node4) {
+        set9erGrid(longPotGrid, node1, node2, node3, node4);
+    }
+
+    protected void setTeGrid(Node node) {
+        teGrid.add(node, 1, 0);
+    }
+
+    protected void setPotTeGrid(Node node) {
+        potTeGrid.add(node, 1, 0);
+    }
+
+    protected void setVolGrid(Node node1, Node node2) {
+        volGrid.add(node1, 1, 0);
+        volGrid.add(node2, 1, 1);
+    }
+
+    private void set9erGrid(GridPane grid, Node node1, Node node2, Node node3, Node node4) {
+        grid.add(node1, 1, 1);
+        grid.add(node2, 3, 1);
+        grid.add(node3, 1, 2);
+        grid.add(node4, 3, 2);
     }
 
 

@@ -153,6 +153,6 @@
             <Button layoutX="111.0" layoutY="13.0" mnemonicParsing="false" onAction="#onAction_flip" prefWidth="100.0" text="flip" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <AnchorPane fx:id="conjugationHolder" layoutX="920.0" layoutY="661.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="920.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="661.0" />
+      <AnchorPane fx:id="conjugationHolder" layoutX="920.0" layoutY="661.0" prefHeight="400.0" prefWidth="800.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="920.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="661.0" />
    </children>
 </AnchorPane>

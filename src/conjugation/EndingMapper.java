@@ -66,7 +66,7 @@ public class EndingMapper {
         ua_LevelMap.put("つ", "た");
         ua_LevelMap.put("ぬ", "な");
         ua_LevelMap.put("ふ", "は");      // x
-        ua_LevelMap.put("む", "み");
+        ua_LevelMap.put("む", "ま");
         ua_LevelMap.put("ゆ", "や");      // x
         ua_LevelMap.put("る", "ら");
         ua_LevelMap.put("ぐ", "が");
