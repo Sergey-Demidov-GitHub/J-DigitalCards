@@ -50,7 +50,6 @@ public class VerbCard extends BasicCard{
         switch (this.type){
             case RU: {
                 conjugation = new RU_Conjugation(this.getJap2());
-                System.out.println(conjugation.toString());
                 break;
             }
             case U: {
