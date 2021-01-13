@@ -1,13 +1,14 @@
 package main;
 
 import cardPackage.Card;
+import cardPackage.VerbCard;
+import dbUtils.DBComm;
 import dbUtils.DBCommInterface;
 import deckPackage.Deck;
-import dbUtils.DBComm;
 import misc.Shuffle;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Stream;
 
 public class Session {
     private Deck deck;
@@ -23,6 +24,10 @@ public class Session {
 
     private Integer[] callMask = null;             // specifies the call/display order
     private int callMaskIndex = 0;
+
+    private Set<Integer> verbIds;
+    private boolean isNext_b = true;               // next/previous card when iterating
+    private boolean idChanged = true;              // card id changed when iterating callMask
 
     public Session(Deck deck) {
         this.deck = deck;
@@ -57,6 +62,9 @@ public class Session {
         callMaskIndex = 0;
     }
 
+    /*
+     * allows creation of filtered callMask (manly for FilterModule)
+     */
     public void initCustomCallMask(HashSet<Integer> customCardIndex_Set) {
         if (customCardIndex_Set.isEmpty()){
             System.out.println("[INFO] No cards meet filtering conditions.");
@@ -65,6 +73,31 @@ public class Session {
             this.callMask = customCardIndex_Set.toArray(this.callMask);
         }
         callMaskIndex = 0;
+    }
+
+    /*
+     * multiplies each id occurrence of specified type (manly for TrainConfigurationManager)
+     */
+    public void extendCallMask(int verbMultiplier,int adjectiveMultiplier) {
+        List<Integer> extension = new ArrayList<>();
+        verbIds = new HashSet<>();
+        for (int i = 0; i < callMask.length; i++) {
+            if (deck.getCardMap().get(callMask[i]) instanceof VerbCard){
+                verbIds.add(callMask[i]);
+
+                for (int j = 1; j < verbMultiplier; j++) {
+                    extension.add(callMask[i]);
+                }
+            }
+        }
+
+
+        // create new callMask with extension appended
+        //Integer[] newCallMask = new Integer[callMask.length + extension.size()];
+        Integer[] extensionArray = (Integer[]) extension.toArray(new Integer[extension.size()]);
+        Integer[] newCallMask = Stream.concat(Arrays.stream(callMask), Arrays.stream(extensionArray)).toArray(Integer[]::new);
+        callMask = newCallMask;
+        //System.out.println(Arrays.toString(callMask));
     }
 
     public Card getCurrentCard() {
@@ -76,17 +109,35 @@ public class Session {
     }
 
     public void nextCallMaskIndex() {
+        int prevId = callMask[callMaskIndex];
+
         if (callMaskIndex + 1 == callMask.length)
             callMaskIndex = 0;
         else
             callMaskIndex++;
+
+        idChanged = prevId != callMask[callMaskIndex];
+        isNext_b = true;
     }
 
     public void previousCallMaskIndex() {
+        int prevId = callMask[callMaskIndex];
+
         if (callMaskIndex - 1 < 0)
             callMaskIndex = callMask.length - 1;
         else
             callMaskIndex--;
+
+        idChanged = prevId != callMask[callMaskIndex];
+        isNext_b = false;
+    }
+
+    public boolean getIsNext() {
+        return isNext_b;
+    }
+
+    public boolean getIdChanged() {
+        return idChanged;
     }
 
     // ==================================== session changes ====================================
@@ -197,6 +248,15 @@ public class Session {
     }
 
     public void resetTempId() { tempId = -1;}
+
+    public Integer[] getCallMaskCopy(){
+        Integer[] copy = Arrays.copyOf(callMask, callMask.length);
+        return copy;
+    }
+
+    public Set<Integer> getVerbIds() {
+        return verbIds;
+    }
 
     // ==================================== misc ====================================
 

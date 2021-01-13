@@ -70,4 +70,8 @@ public class VerbConjugationDisplayModule extends VerbConjugationDisplayPattern 
         super.setVolGrid(volForm_L1, volForm_L2);
 
     }
+
+    public Conjugation getConjugation() {
+        return conjugation;
+    }
 }

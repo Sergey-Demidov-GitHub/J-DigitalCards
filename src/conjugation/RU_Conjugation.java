@@ -34,6 +34,7 @@ public class RU_Conjugation extends Conjugation {
             genPotTeForm();
             genIFVolForm();
             genFVolForm();
+            fillLookUpMap();
         }
     }
 

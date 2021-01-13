@@ -35,6 +35,7 @@ public class U_Conjugation extends Conjugation{
             genPotTeForm();
             genIFVolForm();
             genFVolForm();
+            fillLookUpMap();
         }
     }
 

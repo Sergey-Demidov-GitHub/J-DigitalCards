@@ -3,7 +3,7 @@ package trainConfig;
 public class TrainConfig {
     private VerbConfig verbConfig;
 
-    TrainConfig() {
+    public TrainConfig() {
         verbConfig = new VerbConfig();
     }
 

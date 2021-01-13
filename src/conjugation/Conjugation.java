@@ -1,4 +1,8 @@
 package conjugation;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /*
  * IF   - Informal
  * F    - Formal
@@ -79,10 +83,51 @@ public class Conjugation {
     protected String fVolForm;
     protected String ifVolForm;
 
+    Map<String, String> lookUpMap;
+
 
     Conjugation(String infinitive) {
         this.infinitive = infinitive;
         ifPosPresent = infinitive;
+    }
+
+    public void fillLookUpMap() {
+        lookUpMap = new HashMap<String, String>();
+        lookUpMap.put("ifPosPresent", ifPosPresent);
+        lookUpMap.put("ifNegPresent", ifNegPresent);
+        lookUpMap.put("ifPosPast", ifPosPast);
+        lookUpMap.put("ifNegPast", ifNegPast);
+
+        lookUpMap.put("fPosPresent", fPosPresent);
+        lookUpMap.put("fNegPresent", fNegPresent);
+        lookUpMap.put("fPosPast", fPosPast);
+        lookUpMap.put("fNegPast", fNegPast);
+
+        lookUpMap.put("teForm", teForm);
+
+        lookUpMap.put("taiPosPresent", taiPosPresent);
+        lookUpMap.put("taiNegPresent", taiNegPresent);
+        lookUpMap.put("taiPosPast", taiPosPast);
+        lookUpMap.put("taiNegPast", taiNegPast);
+
+        lookUpMap.put("fPotPosPresent", fPotPosPresent);
+        lookUpMap.put("fPotNegPresent", fPotNegPresent);
+        lookUpMap.put("fPotPosPast", fPotPosPast);
+        lookUpMap.put("fPotNegPast", fPotNegPast);
+
+        lookUpMap.put("ifPotPosPresent", ifPotPosPresent);
+        lookUpMap.put("ifPotNegPresent", ifPotNegPresent);
+        lookUpMap.put("ifPotPosPast", ifPotPosPast);
+        lookUpMap.put("ifPotNegPast", ifPotNegPast);
+
+        lookUpMap.put("potTeForm", potTeForm);
+
+        lookUpMap.put("fVolForm", fVolForm);
+        lookUpMap.put("ifVolForm", ifVolForm);
+    }
+
+    public String getLookUpMapValue(String key) {
+        return lookUpMap.get(key);
     }
 
     public String getFPosPresent() {

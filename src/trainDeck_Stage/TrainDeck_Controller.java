@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import main.MainController;
+import trainConfig.TrainConfig;
 import verbConjugationDisplayModule.VerbConjugationDisplayModule;
 
 import java.net.URL;
@@ -24,6 +25,8 @@ public class TrainDeck_Controller implements Initializable {
     private boolean locked_b = false;
 
     private KeyEventHandler keyEventHandler;
+    private TrainConfig trainConfig;
+    private TrainConfigManager trainConfigManager;
 
 
     //private AnchorPane pane;
@@ -64,6 +67,9 @@ public class TrainDeck_Controller implements Initializable {
 
         this.keyEventHandler = new KeyEventHandler(this);
         this.keyEventHandler.applyFilterOnNode(root);
+
+        trainConfig = new TrainConfig();
+        trainConfigManager = new TrainConfigManager(mainController, this, trainConfig);
 
         reloadCurrentCard();
         reloadScore();
@@ -156,6 +162,7 @@ public class TrainDeck_Controller implements Initializable {
         cardGuiManagerHolder.getChildren().add(cardGuiManager);
 
         buildConjugationDisplay();
+        trainConfigManager.setCard(mainController.getSession().getCurrentCard());
     }
 
     private void correctAnswer() {
@@ -200,6 +207,10 @@ public class TrainDeck_Controller implements Initializable {
 
     public boolean isReversed_b() {
         return reversed_b;
+    }
+
+    public Conjugation getCurrentConjugation() {
+        return verbConjugationDisplayModule.getConjugation();
     }
 
     public void buildConjugationDisplay() {
