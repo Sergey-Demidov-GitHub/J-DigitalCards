@@ -24,10 +24,9 @@ public class Session {
 
     private Integer[] callMask = null;             // specifies the call/display order
     private int callMaskIndex = 0;
+    private int overflowCounter = 0;
 
     private Set<Integer> verbIds;
-    private boolean isNext_b = true;               // next/previous card when iterating
-    private boolean idChanged = true;              // card id changed when iterating callMask
 
     public Session(Deck deck) {
         this.deck = deck;
@@ -109,36 +108,35 @@ public class Session {
     }
 
     public void nextCallMaskIndex() {
-        int prevId = callMask[callMaskIndex];
 
-        if (callMaskIndex + 1 == callMask.length)
+        if (callMaskIndex + 1 == callMask.length){
             callMaskIndex = 0;
-        else
+            overflowCounter++;
+        } else
             callMaskIndex++;
-
-        idChanged = prevId != callMask[callMaskIndex];
-        isNext_b = true;
     }
 
     public void previousCallMaskIndex() {
-        int prevId = callMask[callMaskIndex];
 
-        if (callMaskIndex - 1 < 0)
+        if (callMaskIndex - 1 < 0){
             callMaskIndex = callMask.length - 1;
-        else
+            overflowCounter--;
+        } else
             callMaskIndex--;
-
-        idChanged = prevId != callMask[callMaskIndex];
-        isNext_b = false;
     }
 
-    public boolean getIsNext() {
-        return isNext_b;
+    public int getCallMaskIndex() {
+        return callMaskIndex;
     }
 
-    public boolean getIdChanged() {
-        return idChanged;
+    public int getOverflowCounter() {
+        return overflowCounter;
     }
+
+
+
+
+
 
     // ==================================== session changes ====================================
 

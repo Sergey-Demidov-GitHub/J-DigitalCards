@@ -40,7 +40,7 @@ public class VerbCard extends BasicCard{
     }
 
     public static VerbCardGui getVerbCardGui(VerbCard card) {
-        System.out.println(card.type);
+        //System.out.println(card.type);
         return new VerbCardGui(card);
     }
 

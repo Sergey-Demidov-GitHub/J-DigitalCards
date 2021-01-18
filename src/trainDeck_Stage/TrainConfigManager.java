@@ -21,22 +21,22 @@ public class TrainConfigManager {
         this.trainDeckController = trainDeckController;
         this.trainConfig = trainConfig;
 
-        int verbMultiplier = trainConfig.getVerbConfig().getCount();
-        mainController.getSession().extendCallMask(verbMultiplier, 4);
-        verbIds = mainController.getSession().getVerbIds();
-
-        setupConjugationMap();
+        if (!trainConfig.getVerbConfig().getDefaultMode()) {
+            int verbMultiplier = trainConfig.getVerbConfig().getCount();
+            mainController.getSession().extendCallMask(verbMultiplier, 4);
+            verbIds = mainController.getSession().getVerbIds();
+            setupConjugationMap();
+        }
     }
 
     public void setCard(Card card) {
         this.card = card;
-
         //System.out.println(card.getId());
         lookUpForm();
     }
 
     private void setupConjugationMap() {
-        // (id -> leftConjugations as lookUpStrings) later: lookUpStrings -> actual conjugation
+        // (id -> leftConjugations as template) later: template -> actually conjugated verb
         conjugationMap = new HashMap<>();
         for (Integer verbId : verbIds) {
             ConjugationTemplateProvider conjugationTemplateProvider =
@@ -47,36 +47,36 @@ public class TrainConfigManager {
         conjugationMap.keySet().forEach(key -> System.out.println("key: " + key + " value: " + conjugationMap.get(key).toString()));
     }
 
-
+    /* execution on loading new card
+     * verbFormTemplate -> verbForm
+     */
     private void lookUpForm() {
         int id = card.getId();
-        if (!trainConfig.getVerbConfig().getDefaultMode() &&
-            verbIds.contains(id)) {
-
-            //TODO: fix display order
-            String verbFormTemplate = null;
-            if (!mainController.getSession().getIdChanged()){
-                if (mainController.getSession().getIsNext()) {
-                    verbFormTemplate = conjugationMap.get(id).getNextTemplate();
-                } else {
-                    verbFormTemplate = conjugationMap.get(id).getPreviousTemplate();
-                }
-            } else {
-                verbFormTemplate = conjugationMap.get(id).getCurrentTemplate();
-            }
+        if (verbIds.contains(id) && !trainConfig.getVerbConfig().getDefaultMode()) {
+            int newCallMaskPosition = mainController.getSession().getCallMaskIndex();
+            int overflowCounter = mainController.getSession().getOverflowCounter();
+            conjugationMap.get(id).updateCallMaskPosition(overflowCounter, newCallMaskPosition);
+            String verbFormTemplate = conjugationMap.get(id).getCurrentTemplate();
 
             String verbForm = trainDeckController.getCurrentConjugation().getLookUpMapValue(verbFormTemplate);
 
-            System.out.println("template: " + verbFormTemplate + " | verbForm: " + verbForm);
+            System.out.println(id + " | " + conjugationMap.get(id).toString());
         }
     }
 
 }
-
+/*
+ * Creates ArrayList with verbFormTemplates in a random order.
+ * Synchronises the retrieval of verbFormTemplates with the
+ * requested viewing direction from the TrainDeck_Controller.
+ */
 class ConjugationTemplateProvider {
-    ArrayList<String> verbFormTemplates;
-    int index;
-    int maxIndex;
+    private ArrayList<String> verbFormTemplates;
+    private int index;
+    private int maxIndex;
+
+    private int callMaskPosition = -1;       // last callMask position of card with said id
+    private int overflowCounter = 0;
 
     public ConjugationTemplateProvider(VerbConfig verbConfig) {
         Map<String, Boolean> verbConfigMap = verbConfig.getConfigMap();
@@ -95,28 +95,49 @@ class ConjugationTemplateProvider {
 
     }
 
+
     public String getCurrentTemplate() {
         return verbFormTemplates.get(index);
     }
 
-    public String getPreviousTemplate() {
+    private void previousIndex() {
         if (index > 0){
             index--;
         } else {
             index = maxIndex;
         }
 
-        return verbFormTemplates.get(index);
     }
 
-    public String getNextTemplate() {
+    private void nextIndex() {
         if (index < maxIndex){
             index++;
         } else {
             index = 0;
         }
+    }
 
-        return verbFormTemplates.get(index);
+
+    public void updateCallMaskPosition(int overflowCounter, int callMaskPosition) {
+
+        if (this.callMaskPosition == -1) {
+            this.callMaskPosition = callMaskPosition;
+            this.overflowCounter = overflowCounter;
+        } else {
+            if ((this.callMaskPosition < callMaskPosition && this.overflowCounter == overflowCounter)
+                    || this.overflowCounter < overflowCounter) {
+                //System.out.println("isRightOverflow: " + session.isRightOverflow());
+                nextIndex();
+            }
+            if ((this.callMaskPosition > callMaskPosition && this.overflowCounter == overflowCounter)
+                    || this.overflowCounter > overflowCounter) {
+                //System.out.println("isLeftOverflow: " + session.isLeftOverflow());
+                previousIndex();
+            }
+
+            this.overflowCounter = overflowCounter;
+            this.callMaskPosition = callMaskPosition;
+        }
     }
 
     @Override
