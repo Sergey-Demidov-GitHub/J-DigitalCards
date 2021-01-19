@@ -2,6 +2,7 @@ package main;
 
 import cardPackage.Card;
 import cardPackage.VerbCard;
+import cardPackage.VerbType;
 import dbUtils.DBComm;
 import dbUtils.DBCommInterface;
 import deckPackage.Deck;
@@ -81,7 +82,9 @@ public class Session {
         List<Integer> extension = new ArrayList<>();
         verbIds = new HashSet<>();
         for (int i = 0; i < callMask.length; i++) {
-            if (deck.getCardMap().get(callMask[i]) instanceof VerbCard){
+            if (deck.getCardMap().get(callMask[i]) instanceof VerbCard &&
+                    ((VerbCard) deck.getCardMap().get(callMask[i])).getType() != VerbType.UNKNOWN &&
+                    ((VerbCard) deck.getCardMap().get(callMask[i])).getType() != VerbType.IRREGULAR){
                 verbIds.add(callMask[i]);
 
                 for (int j = 1; j < verbMultiplier; j++) {
