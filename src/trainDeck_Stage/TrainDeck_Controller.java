@@ -155,14 +155,12 @@ public class TrainDeck_Controller implements Initializable {
     }
 
     public void reloadCurrentCard() {
-        cardGuiManager = new CardGuiManager();
+        buildConjugationDisplay();
+
+        cardGuiManager = trainConfigManager.buildCardGuiManager(mainController.getSession().getCurrentCard());       // -> lookUpForm()
         cardGuiManager.setLocked(locked_b);
         cardGuiManager.setReversed(reversed_b);
-        cardGuiManager.setMainController(mainController);
         cardGuiManagerHolder.getChildren().add(cardGuiManager);
-
-        buildConjugationDisplay();
-        trainConfigManager.setCard(mainController.getSession().getCurrentCard());
     }
 
     private void correctAnswer() {

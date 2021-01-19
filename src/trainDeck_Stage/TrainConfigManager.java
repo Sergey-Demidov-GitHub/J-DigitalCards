@@ -1,6 +1,9 @@
 package trainDeck_Stage;
 
+import cardGui.CardGuiManager;
+import cardPackage.BasicCard;
 import cardPackage.Card;
+import cardPackage.VerbCard;
 import main.MainController;
 import trainConfig.TrainConfig;
 import trainConfig.VerbConfig;
@@ -29,10 +32,24 @@ public class TrainConfigManager {
         }
     }
 
-    public void setCard(Card card) {
+    /** Entry point for dynamic processing:
+     *
+     */
+    public CardGuiManager buildCardGuiManager(Card card) {
+        CardGuiManager cardGuiManager = null;
         this.card = card;
         //System.out.println(card.getId());
-        lookUpForm();
+
+
+        if (!trainConfig.getVerbConfig().getDefaultMode() && verbIds.contains(card.getId())) {
+            String[] verbFormInfo = lookUpForm();
+            VerbCard conjugatedVerbCard = buildVerbCard(verbFormInfo[0], verbFormInfo[1]);
+            cardGuiManager = new CardGuiManager(mainController, conjugatedVerbCard);
+        } else {
+            cardGuiManager = new CardGuiManager(mainController);
+        }
+
+        return cardGuiManager;
     }
 
     private void setupConjugationMap() {
@@ -49,22 +66,54 @@ public class TrainConfigManager {
 
     /* execution on loading new card
      * verbFormTemplate -> verbForm
+     * returns [verbFormTemplate, verbForm]
      */
-    private void lookUpForm() {
+    private String[] lookUpForm() {
         int id = card.getId();
-        if (verbIds.contains(id) && !trainConfig.getVerbConfig().getDefaultMode()) {
-            int newCallMaskPosition = mainController.getSession().getCallMaskIndex();
-            int overflowCounter = mainController.getSession().getOverflowCounter();
-            conjugationMap.get(id).updateCallMaskPosition(overflowCounter, newCallMaskPosition);
-            String verbFormTemplate = conjugationMap.get(id).getCurrentTemplate();
 
-            String verbForm = trainDeckController.getCurrentConjugation().getLookUpMapValue(verbFormTemplate);
+        int newCallMaskPosition = mainController.getSession().getCallMaskIndex();
+        int overflowCounter = mainController.getSession().getOverflowCounter();
+        conjugationMap.get(id).updateCallMaskPosition(overflowCounter, newCallMaskPosition);
+        String verbFormTemplate = conjugationMap.get(id).getCurrentTemplate();
 
-            System.out.println(id + " | " + conjugationMap.get(id).toString());
-        }
+        String verbForm = trainDeckController.getCurrentConjugation().getLookUpMapValue(verbFormTemplate);
+
+        System.out.println(id + " | " + conjugationMap.get(id).toString());
+        return new String[]{verbFormTemplate, verbForm};
+
+    }
+
+    private VerbCard buildVerbCard(String verbFormTemplate, String verbForm){
+        VerbCard tempCard = (VerbCard) card;
+        boolean hasJap2 = BasicCard.hasJap2(tempCard);
+        VerbCard conjugatedCard = null;
+        /*if (hasJap2) {
+            String newJap2 = tempCard.getJap2() + "\n" + verbFormTemplate;
+            conjugatedCard = new VerbCard(tempCard.getId(), tempCard.getJap1(), newJap2,
+                    verbForm, tempCard.getEng2(), tempCard.getType());
+
+        } else {
+            String newJap1 = tempCard.getJap1() + "\n" + verbFormTemplate;
+            conjugatedCard = new VerbCard(tempCard.getId(), newJap1, tempCard.getJap2(),
+                    verbForm, tempCard.getEng2(), tempCard.getType());
+        }*/
+
+        /*
+        String newJap2 = tempCard.getJap2() + "\n" + verbFormTemplate;
+        conjugatedCard = new VerbCard(tempCard.getId(), tempCard.getJap1(), newJap2,
+                verbForm, tempCard.getEng2(), tempCard.getType());*/
+
+        String newJap2 = verbForm;
+        String newEng2 = tempCard.getEng2() + "\n" + verbFormTemplate;
+        conjugatedCard = new VerbCard(tempCard.getId(), tempCard.getJap1(), newJap2,
+                tempCard.getEng1(), newEng2, tempCard.getType());
+
+
+        return conjugatedCard;
     }
 
 }
+
 /*
  * Creates ArrayList with verbFormTemplates in a random order.
  * Synchronises the retrieval of verbFormTemplates with the

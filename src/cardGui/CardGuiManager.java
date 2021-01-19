@@ -13,6 +13,7 @@ import java.io.IOException;
 public class CardGuiManager extends AnchorPane {
     private MainController mainController;
     private CardGui cardGui;
+    private Card card;
 
     private boolean reverse_b;       //TODO: reversed can't be handled in this class
     private boolean locked_b;          //TODO: lock can't be handled in this class
@@ -31,7 +32,7 @@ public class CardGuiManager extends AnchorPane {
     public static int cardDisplayHeight = 528; // TODO: find actual size for flexibility
     public static int cardDisplayWidth = 1350; // TODO: find actual size for flexibility
 
-    public CardGuiManager() {
+    public CardGuiManager(MainController mainController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cardGui.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -42,23 +43,36 @@ public class CardGuiManager extends AnchorPane {
             AnchorPane.setLeftAnchor(root, 0.0);
             AnchorPane.setRightAnchor(root, 0.0);
             hBox.getStylesheets().add("main.css");
-            //cardDisplayWidth = (int) root.getWidth() - HBOX_SPACING;
-            //cardDisplayHeight = (int) root.getPrefHeight();
-            //System.out.println("cardDisplayWidth: " + root.getWidth());
+            this.mainController = mainController;
+            this.card = mainController.getSession().getCurrentCard();
+            displayCard();
         } catch (IOException exception) {
             exception.printStackTrace();
         }
 
     }
 
-    public void setMainController(MainController mainController) {
-        this.mainController = mainController;
-        displayCard();
+    public CardGuiManager(MainController mainController, Card card) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cardGui.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+        try {
+            fxmlLoader.load();
+            AnchorPane.setBottomAnchor(root, 0.0);
+            AnchorPane.setTopAnchor(root, 0.0);
+            AnchorPane.setLeftAnchor(root, 0.0);
+            AnchorPane.setRightAnchor(root, 0.0);
+            hBox.getStylesheets().add("main.css");
+            this.mainController = mainController;
+            this.card = card;
+            displayCard();
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+
     }
 
     private void displayCard() {
-        Card card = mainController.getSession().getCurrentCard();
-
         if (card instanceof NounCard) {
             cardGui = NounCard.getNounCardGui((NounCard) card);
         }
