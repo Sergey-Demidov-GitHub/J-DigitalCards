@@ -132,6 +132,9 @@ public class CardGuiManager extends AnchorPane {
         this.reverse_b = reversed_b;
     }
 
+    public void reload(){
+        displayCard();
+    }
 
 
 }

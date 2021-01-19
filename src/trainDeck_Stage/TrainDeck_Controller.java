@@ -160,6 +160,7 @@ public class TrainDeck_Controller implements Initializable {
         cardGuiManager = trainConfigManager.buildCardGuiManager(mainController.getSession().getCurrentCard());       // -> lookUpForm()
         cardGuiManager.setLocked(locked_b);
         cardGuiManager.setReversed(reversed_b);
+        cardGuiManager.reload();
         cardGuiManagerHolder.getChildren().add(cardGuiManager);
     }
 
