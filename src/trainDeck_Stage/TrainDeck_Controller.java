@@ -5,6 +5,7 @@ import cardPackage.Card;
 import cardPackage.Score;
 import cardPackage.VerbCard;
 import conjugation.Conjugation;
+import conjugation.ConjugationExceptionsManager;
 import filterModule.FilterModule;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,6 +28,7 @@ public class TrainDeck_Controller implements Initializable {
     private KeyEventHandler keyEventHandler;
     private TrainConfig trainConfig;
     private TrainConfigManager trainConfigManager;
+    private ConjugationExceptionsManager conjugationExceptionsManager;
 
 
     //private AnchorPane pane;
@@ -67,6 +69,8 @@ public class TrainDeck_Controller implements Initializable {
 
         this.keyEventHandler = new KeyEventHandler(this);
         this.keyEventHandler.applyFilterOnNode(root);
+
+        this.conjugationExceptionsManager = new ConjugationExceptionsManager();
 
         trainConfig = new TrainConfig();
         trainConfigManager = new TrainConfigManager(mainController, this, trainConfig);
@@ -218,6 +222,12 @@ public class TrainDeck_Controller implements Initializable {
 
         if (card instanceof VerbCard){
             Conjugation conjugation = ((VerbCard) card).getConjugation();
+            if (conjugationExceptionsManager.isException(((VerbCard) card).getJap1())) {
+                conjugationExceptionsManager.updateConjugation(((VerbCard) card).getJap1(), conjugation);
+            }
+            if (conjugationExceptionsManager.isException(((VerbCard) card).getJap2())) {
+                conjugationExceptionsManager.updateConjugation(((VerbCard) card).getJap2(), conjugation);
+            }
             this.verbConjugationDisplayModule = new VerbConjugationDisplayModule(conjugation);
             this.verbConjugationDisplayModule.setTrainDeckController(this);
             this.conjugationHolder.getChildren().add(verbConjugationDisplayModule);

@@ -126,104 +126,116 @@ public class Conjugation {
         lookUpMap.put("ifVolForm", ifVolForm);
     }
 
+    public void changeLookUpMap(String key, String value) {
+        lookUpMap.put(key, value);
+        System.out.println("=========================================================");
+        System.out.println(lookUpMap.get("ifNegPresent"));
+        System.out.println("=========================================================");
+    }
+
+    public void setIfNegPresent(String value) {
+        ifNegPresent = value;
+        System.out.println(lookUpMap.get("ifNegPresent"));
+    }
+
     public String getLookUpMapValue(String key) {
         return lookUpMap.get(key);
     }
 
     public String getFPosPresent() {
-        return fPosPresent;
+        return lookUpMap.get("fPosPresent");
     }
 
     public String getIFPosPresent() {
-        return ifPosPresent;
+        return lookUpMap.get("ifPosPresent");
     }
 
     public String getFNegPresent() {
-        return fNegPresent;
+        return lookUpMap.get("fNegPresent");
     }
 
     public String getIFNegPresent() {
-        return ifNegPresent;
+        return lookUpMap.get("ifNegPresent");
     }
 
     public String getFPosPast() {
-        return fPosPast;
+        return lookUpMap.get("fPosPast");
     }
 
     public String getIFPosPast() {
-        return ifPosPast;
+        return lookUpMap.get("ifPosPast");
     }
 
     public String getFNegPast() {
-        return fNegPast;
+        return lookUpMap.get("fNegPast");
     }
 
     public String getIFNegPast() {
-        return ifNegPast;
+        return lookUpMap.get("ifNegPast");
     }
 
     public String getTeForm() {
-        return teForm;
+        return lookUpMap.get("teForm");
     }
 
     public String getTaiPosPresent() {
-        return taiPosPresent;
+        return lookUpMap.get("taiPosPresent");
     }
 
     public String getTaiNegPresent() {
-        return taiNegPresent;
+        return lookUpMap.get("taiNegPresent");
     }
 
     public String getTaiPosPast() {
-        return taiPosPast;
+        return lookUpMap.get("taiPosPast");
     }
 
     public String getTaiNegPast() {
-        return taiNegPast;
+        return lookUpMap.get("taiNegPast");
     }
 
     public String getFPotPosPresent() {
-        return fPotPosPresent;
+        return lookUpMap.get("fPotPosPresent");
     }
 
     public String getFPotNegPresent() {
-        return fPotNegPresent;
+        return lookUpMap.get("fPotNegPresent");
     }
 
     public String getFPotPosPast() {
-        return fPotPosPast;
+        return lookUpMap.get("fPotPosPast");
     }
 
     public String getFPotNegPast() {
-        return fPotNegPast;
+        return lookUpMap.get("fPotNegPast");
     }
 
     public String getIFPotPosPresent() {
-        return ifPotPosPresent;
+        return lookUpMap.get("ifPotPosPresent");
     }
 
     public String getIFPotNegPresent() {
-        return ifPotNegPresent;
+        return lookUpMap.get("ifPotNegPresent");
     }
 
     public String getIFPotPosPast() {
-        return ifPotPosPast;
+        return lookUpMap.get("ifPotPosPast");
     }
 
     public String getIFPotNegPast() {
-        return ifPotNegPast;
+        return lookUpMap.get("ifPotNegPast");
     }
 
     public String getPotTeForm() {
-        return potTeForm;
+        return lookUpMap.get("potTeForm");
     }
 
     public String getFVolForm() {
-        return fVolForm;
+        return lookUpMap.get("fVolForm");
     }
 
     public String getIFVolForm() {
-        return ifVolForm;
+        return lookUpMap.get("ifVolForm");
     }
 
     @Override
