@@ -26,6 +26,7 @@ public class TrainConfigManager {
 
         if (!trainConfig.getVerbConfig().getDefaultMode()) {
             int verbMultiplier = trainConfig.getVerbConfig().getCount();
+            //System.out.println("[TrainConfigManager] constructor verbMultiplier: " + verbMultiplier);
             mainController.getSession().extendCallMask(verbMultiplier, 4);
             verbIds = mainController.getSession().getVerbIds();
             setupConjugationMap();

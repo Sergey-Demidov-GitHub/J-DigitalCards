@@ -7,7 +7,6 @@ import cardPackage.VerbCard;
 import conjugation.Conjugation;
 import conjugation.ConjugationExceptionsManager;
 import filterModule.FilterModule;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
@@ -86,12 +85,12 @@ public class TrainDeck_Controller implements Initializable {
     }
 
     @FXML
-    public void onAction_back(ActionEvent event) {
+    public void onAction_back() {
         saveChanges();
         mainController.transition_TrainDeck_ChooseDeck();
     }
     @FXML
-    public void onAction_default(ActionEvent event) {
+    public void onAction_default() {
         //mainController.reload_TrainDeck();
         defaultDeck();
         reloadCurrentCard();
@@ -245,11 +244,12 @@ public class TrainDeck_Controller implements Initializable {
     }
 
     private void buildSettingsModule() {
-        settingsModule = new SettingsModule(mainController, this);
+
 
         final Stage settingsWindow = new Stage();
         settingsWindow.initModality(Modality.APPLICATION_MODAL);
         settingsWindow.initOwner(mainController.getStage());
+        settingsModule = new SettingsModule(settingsWindow, mainController, this);
         Scene settingsScene = new Scene(settingsModule);
         settingsWindow.setScene(settingsScene);
         settingsWindow.show();
@@ -258,6 +258,14 @@ public class TrainDeck_Controller implements Initializable {
 
     public TrainConfig getTrainConfig() {
         return trainConfig;
+    }
+
+    public void reloadConfiguration() {
+        mainController.getSession().initCallMask();
+        trainConfigManager = new TrainConfigManager(mainController, this, trainConfig);
+        reloadCurrentCard();
+        reloadScore();
+        setCardsLeft();
     }
 
 }
