@@ -61,7 +61,7 @@ public class TrainConfigManager {
 
             conjugationMap.put(verbId, conjugationTemplateProvider);
         }
-        conjugationMap.keySet().forEach(key -> System.out.println("key: " + key + " value: " + conjugationMap.get(key).toString()));
+        //conjugationMap.keySet().forEach(key -> System.out.println("key: " + key + " value: " + conjugationMap.get(key).toString()));
     }
 
     /* execution on loading new card
@@ -78,7 +78,7 @@ public class TrainConfigManager {
 
         String verbForm = trainDeckController.getCurrentConjugation().getLookUpMapValue(verbFormTemplate);
 
-        System.out.println(id + " | " + conjugationMap.get(id).toString());
+        //System.out.println(id + " | " + conjugationMap.get(id).toString());
         return new String[]{verbFormTemplate, verbForm};
 
     }
@@ -140,7 +140,7 @@ class ConjugationTemplateProvider {
         Collections.shuffle(verbFormTemplates, new Random());
         maxIndex = verbFormTemplates.size() - 1;
         index = 0;
-        System.out.println(verbFormTemplates.size());
+        //System.out.println(verbFormTemplates.size());
 
     }
 

@@ -36,6 +36,5 @@ public class ConjugationExceptionsManager {
     private void ある_exceptions(Conjugation conjugation) {
         conjugation.changeLookUpMap("ifNegPresent", "ない");
         conjugation.changeLookUpMap("ifNegPast", "なかった");
-        System.out.println(conjugation.toString());
     }
 }

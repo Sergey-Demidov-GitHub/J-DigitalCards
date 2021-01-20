@@ -128,14 +128,6 @@ public class Conjugation {
 
     public void changeLookUpMap(String key, String value) {
         lookUpMap.put(key, value);
-        System.out.println("=========================================================");
-        System.out.println(lookUpMap.get("ifNegPresent"));
-        System.out.println("=========================================================");
-    }
-
-    public void setIfNegPresent(String value) {
-        ifNegPresent = value;
-        System.out.println(lookUpMap.get("ifNegPresent"));
     }
 
     public String getLookUpMapValue(String key) {
