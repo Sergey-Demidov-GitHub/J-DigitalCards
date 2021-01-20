@@ -219,6 +219,10 @@ public class MainController {
         timeline.play();
     }
 
+    public Stage getStage() {
+        return stage;
+    }
+
 
 
 

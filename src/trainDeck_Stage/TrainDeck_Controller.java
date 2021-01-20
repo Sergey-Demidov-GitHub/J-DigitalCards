@@ -10,10 +10,14 @@ import filterModule.FilterModule;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import main.MainController;
 import trainConfig.TrainConfig;
+import trainDeck_Stage.settingsModule.SettingsModule;
 import verbConjugationDisplayModule.VerbConjugationDisplayModule;
 
 import java.net.URL;
@@ -44,6 +48,7 @@ public class TrainDeck_Controller implements Initializable {
     private CardGuiManager cardGuiManager;
     private FilterModule filterModule;
     private VerbConjugationDisplayModule verbConjugationDisplayModule;
+    private SettingsModule settingsModule;
     @FXML
     private Label deckName_L, absoluteScore_L, relativeScore_L, cardsLeft_L;
 
@@ -106,6 +111,10 @@ public class TrainDeck_Controller implements Initializable {
     @FXML
     public void onAction_lock() {
         toggleLock();
+    }
+    @FXML
+    public void onAction_settings() {
+        buildSettingsModule();
     }
     @FXML
     public void onAction_left() {
@@ -233,6 +242,22 @@ public class TrainDeck_Controller implements Initializable {
             this.conjugationHolder.getChildren().add(verbConjugationDisplayModule);
         }
 
+    }
+
+    private void buildSettingsModule() {
+        settingsModule = new SettingsModule(mainController, this);
+
+        final Stage settingsWindow = new Stage();
+        settingsWindow.initModality(Modality.APPLICATION_MODAL);
+        settingsWindow.initOwner(mainController.getStage());
+        Scene settingsScene = new Scene(settingsModule);
+        settingsWindow.setScene(settingsScene);
+        settingsWindow.show();
+        settingsModule.getStylesheets().add("main.css");
+    }
+
+    public TrainConfig getTrainConfig() {
+        return trainConfig;
     }
 
 }
