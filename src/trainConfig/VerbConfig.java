@@ -1,7 +1,6 @@
 package trainConfig;
 
 import java.util.HashMap;
-import java.util.Map;
 
 /*
  * configuration setting the parameters for training verbs
@@ -11,17 +10,17 @@ public class VerbConfig {
 
     private boolean ifPosPresent = false, ifNegPresent = false, ifPosPast = false, ifNegPast = false;
     private boolean fPosPresent = false, fNegPresent = false, fPosPast = false, fNegPast = false;
-    private boolean teForm = true;
-    private boolean taiPosPresent = true, taiNegPresent = true, taiPosPast = true, taiNegPast = true;
+    private boolean teForm = false;
+    private boolean taiPosPresent = false, taiNegPresent = false, taiPosPast = false, taiNegPast = false;
     private boolean fPotPosPresent = false, fPotNegPresent = false, fPotPosPast = false, fPotNegPast = false;
     private boolean ifPotPosPresent = false, ifPotNegPresent = false, ifPotPosPast = false, ifPotNegPast = false;
     private boolean potTeForm = false;
     private boolean fVolForm = false, ifVolForm = false;
 
-    private Map<String, Boolean> configMap;
+    private HashMap<String, Boolean> configMap;
 
     public VerbConfig() {
-        defaultMode = false;
+        defaultMode = true;
         fillConfigMap();
     }
 
@@ -60,12 +59,20 @@ public class VerbConfig {
         configMap.put("ifVolForm", ifVolForm);
     }
 
-    public Map<String, Boolean> getConfigMap() {
+    public HashMap<String, Boolean> getConfigMap() {
         return configMap;
+    }
+
+    public void putAllConfigMap(HashMap<String, Boolean> configMap) {
+        this.configMap.putAll(configMap);
     }
 
     public boolean getDefaultMode() {
         return defaultMode;
+    }
+
+    public void setDefaultMode(boolean defaultMode){
+        this.defaultMode = defaultMode;
     }
 
     /*

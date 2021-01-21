@@ -3,13 +3,9 @@ package verbConjugationDisplayModule;
 import javafx.scene.control.RadioButton;
 import trainConfig.VerbConfig;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class VerbConjugationSettingsModule extends VerbConjugationDisplayPattern {
-    private VerbConfig verbConfig;
-    private Map<String, Boolean> tempConfigMap;
-    private Map<String, Boolean> oldConfigMap;
+    private VerbConfig oldVerbConfig;
+    private VerbConfig tempVerbConfig;
 
     private RadioButton shortForm_L1, shortForm_L2, shortForm_L3, shortForm_L4;
     private RadioButton longForm_L1, longForm_L2, longForm_L3, longForm_L4;
@@ -20,12 +16,12 @@ public class VerbConjugationSettingsModule extends VerbConjugationDisplayPattern
     private RadioButton potTeForm_L1;
     private RadioButton volForm_L1, volForm_L2;
 
-    public VerbConjugationSettingsModule(VerbConfig verbConfig) {
+    public VerbConjugationSettingsModule(VerbConfig oldVerbConfig) {
         super();
-        this.verbConfig = verbConfig;
-        this.oldConfigMap = verbConfig.getConfigMap();
-        this.tempConfigMap = new HashMap<String, Boolean>();
-        this.tempConfigMap.putAll(oldConfigMap);
+        this.oldVerbConfig = oldVerbConfig;
+
+        this.tempVerbConfig = new VerbConfig();
+        this.tempVerbConfig.putAllConfigMap(oldVerbConfig.getConfigMap());
         setRadioButtons();
         loadConfig();
         fillGrids();
@@ -67,37 +63,37 @@ public class VerbConjugationSettingsModule extends VerbConjugationDisplayPattern
     }
 
     private void loadConfig() {
-        shortForm_L1.setSelected(tempConfigMap.get("ifPosPresent"));
-        shortForm_L2.setSelected(tempConfigMap.get("ifNegPresent"));
-        shortForm_L3.setSelected(tempConfigMap.get("ifPosPast"));
-        shortForm_L4.setSelected(tempConfigMap.get("ifNegPast"));
+        shortForm_L1.setSelected(tempVerbConfig.getConfigMap().get("ifPosPresent"));
+        shortForm_L2.setSelected(tempVerbConfig.getConfigMap().get("ifNegPresent"));
+        shortForm_L3.setSelected(tempVerbConfig.getConfigMap().get("ifPosPast"));
+        shortForm_L4.setSelected(tempVerbConfig.getConfigMap().get("ifNegPast"));
 
-        longForm_L1.setSelected(tempConfigMap.get("fPosPresent"));
-        longForm_L2.setSelected(tempConfigMap.get("fNegPresent"));
-        longForm_L3.setSelected(tempConfigMap.get("fPosPast"));
-        longForm_L4.setSelected(tempConfigMap.get("fNegPast"));
+        longForm_L1.setSelected(tempVerbConfig.getConfigMap().get("fPosPresent"));
+        longForm_L2.setSelected(tempVerbConfig.getConfigMap().get("fNegPresent"));
+        longForm_L3.setSelected(tempVerbConfig.getConfigMap().get("fPosPast"));
+        longForm_L4.setSelected(tempVerbConfig.getConfigMap().get("fNegPast"));
 
-        taiForm_L1.setSelected(tempConfigMap.get("taiPosPresent"));
-        taiForm_L2.setSelected(tempConfigMap.get("taiNegPresent"));
-        taiForm_L3.setSelected(tempConfigMap.get("taiPosPast"));
-        taiForm_L4.setSelected(tempConfigMap.get("taiNegPast"));
+        taiForm_L1.setSelected(tempVerbConfig.getConfigMap().get("taiPosPresent"));
+        taiForm_L2.setSelected(tempVerbConfig.getConfigMap().get("taiNegPresent"));
+        taiForm_L3.setSelected(tempVerbConfig.getConfigMap().get("taiPosPast"));
+        taiForm_L4.setSelected(tempVerbConfig.getConfigMap().get("taiNegPast"));
 
-        teForm_L1.setSelected(tempConfigMap.get("teForm"));
+        teForm_L1.setSelected(tempVerbConfig.getConfigMap().get("teForm"));
 
-        shortPot_L1.setSelected(tempConfigMap.get("ifPotPosPresent"));
-        shortPot_L2.setSelected(tempConfigMap.get("ifPotNegPresent"));
-        shortPot_L3.setSelected(tempConfigMap.get("ifPotPosPast"));
-        shortPot_L4.setSelected(tempConfigMap.get("ifPotNegPast"));
+        shortPot_L1.setSelected(tempVerbConfig.getConfigMap().get("ifPotPosPresent"));
+        shortPot_L2.setSelected(tempVerbConfig.getConfigMap().get("ifPotNegPresent"));
+        shortPot_L3.setSelected(tempVerbConfig.getConfigMap().get("ifPotPosPast"));
+        shortPot_L4.setSelected(tempVerbConfig.getConfigMap().get("ifPotNegPast"));
 
-        longPot_L1.setSelected(tempConfigMap.get("fPotPosPresent"));
-        longPot_L2.setSelected(tempConfigMap.get("fPotNegPresent"));
-        longPot_L3.setSelected(tempConfigMap.get("fPotPosPast"));
-        longPot_L4.setSelected(tempConfigMap.get("fPotNegPast"));
+        longPot_L1.setSelected(tempVerbConfig.getConfigMap().get("fPotPosPresent"));
+        longPot_L2.setSelected(tempVerbConfig.getConfigMap().get("fPotNegPresent"));
+        longPot_L3.setSelected(tempVerbConfig.getConfigMap().get("fPotPosPast"));
+        longPot_L4.setSelected(tempVerbConfig.getConfigMap().get("fPotNegPast"));
 
-        potTeForm_L1.setSelected(tempConfigMap.get("potTeForm"));
+        potTeForm_L1.setSelected(tempVerbConfig.getConfigMap().get("potTeForm"));
 
-        volForm_L1.setSelected(tempConfigMap.get("ifVolForm"));
-        volForm_L2.setSelected(tempConfigMap.get("fVolForm"));
+        volForm_L1.setSelected(tempVerbConfig.getConfigMap().get("ifVolForm"));
+        volForm_L2.setSelected(tempVerbConfig.getConfigMap().get("fVolForm"));
     }
 
     private void fillGrids() {
@@ -115,91 +111,107 @@ public class VerbConjugationSettingsModule extends VerbConjugationDisplayPattern
 
     private void setOnActionMethods() {
         shortForm_L1.setOnAction(e -> {
-            tempConfigMap.put("ifPosPresent", shortForm_L1.isSelected());
+            tempVerbConfig.getConfigMap().put("ifPosPresent", shortForm_L1.isSelected());
         });
         shortForm_L2.setOnAction(e -> {
-            tempConfigMap.put("ifNegPresent", shortForm_L2.isSelected());
+            tempVerbConfig.getConfigMap().put("ifNegPresent", shortForm_L2.isSelected());
         });
         shortForm_L3.setOnAction(e -> {
-            tempConfigMap.put("ifPosPast", shortForm_L3.isSelected());
+            tempVerbConfig.getConfigMap().put("ifPosPast", shortForm_L3.isSelected());
         });
         shortForm_L4.setOnAction(e -> {
-            tempConfigMap.put("ifNegPast", shortForm_L4.isSelected());
+            tempVerbConfig.getConfigMap().put("ifNegPast", shortForm_L4.isSelected());
         });
         //==========================================================================
         longForm_L1.setOnAction(e -> {
-            tempConfigMap.put("fPosPresent", longForm_L1.isSelected());
+            tempVerbConfig.getConfigMap().put("fPosPresent", longForm_L1.isSelected());
         });
         longForm_L2.setOnAction(e -> {
-            tempConfigMap.put("fNegPresent", longForm_L2.isSelected());
+            tempVerbConfig.getConfigMap().put("fNegPresent", longForm_L2.isSelected());
         });
         longForm_L3.setOnAction(e -> {
-            tempConfigMap.put("fPosPast", longForm_L3.isSelected());
+            tempVerbConfig.getConfigMap().put("fPosPast", longForm_L3.isSelected());
         });
         longForm_L4.setOnAction(e -> {
-            tempConfigMap.put("fNegPast", longForm_L4.isSelected());
+            tempVerbConfig.getConfigMap().put("fNegPast", longForm_L4.isSelected());
         });
         //==========================================================================
         taiForm_L1.setOnAction(e -> {
-            tempConfigMap.put("taiPosPresent", taiForm_L1.isSelected());
+            tempVerbConfig.getConfigMap().put("taiPosPresent", taiForm_L1.isSelected());
         });
         taiForm_L2.setOnAction(e -> {
-            tempConfigMap.put("taiNegPresent", taiForm_L2.isSelected());
+            tempVerbConfig.getConfigMap().put("taiNegPresent", taiForm_L2.isSelected());
         });
         taiForm_L3.setOnAction(e -> {
-            tempConfigMap.put("taiPosPast", taiForm_L3.isSelected());
+            tempVerbConfig.getConfigMap().put("taiPosPast", taiForm_L3.isSelected());
         });
         taiForm_L4.setOnAction(e -> {
-            tempConfigMap.put("taiNegPast", taiForm_L4.isSelected());
+            tempVerbConfig.getConfigMap().put("taiNegPast", taiForm_L4.isSelected());
         });
         //==========================================================================
         teForm_L1.setOnAction(e -> {
-            tempConfigMap.put("teForm", teForm_L1.isSelected());
+            tempVerbConfig.getConfigMap().put("teForm", teForm_L1.isSelected());
         });
         //==========================================================================
         shortPot_L1.setOnAction(e -> {
-            tempConfigMap.put("ifPotPosPresent", shortPot_L1.isSelected());
+            tempVerbConfig.getConfigMap().put("ifPotPosPresent", shortPot_L1.isSelected());
         });
         shortPot_L2.setOnAction(e -> {
-            tempConfigMap.put("ifPotNegPresent", shortPot_L2.isSelected());
+            tempVerbConfig.getConfigMap().put("ifPotNegPresent", shortPot_L2.isSelected());
         });
         shortPot_L3.setOnAction(e -> {
-            tempConfigMap.put("ifPotPosPast", shortPot_L3.isSelected());
+            tempVerbConfig.getConfigMap().put("ifPotPosPast", shortPot_L3.isSelected());
         });
         shortPot_L4.setOnAction(e -> {
-            tempConfigMap.put("ifPotNegPast", shortPot_L4.isSelected());
+            tempVerbConfig.getConfigMap().put("ifPotNegPast", shortPot_L4.isSelected());
         });
         //==========================================================================
         longPot_L1.setOnAction(e -> {
-            tempConfigMap.put("fPotPosPresent", longPot_L1.isSelected());
+            tempVerbConfig.getConfigMap().put("fPotPosPresent", longPot_L1.isSelected());
         });
         longPot_L2.setOnAction(e -> {
-            tempConfigMap.put("fPotNegPresent", longPot_L2.isSelected());
+            tempVerbConfig.getConfigMap().put("fPotNegPresent", longPot_L2.isSelected());
         });
         longPot_L3.setOnAction(e -> {
-            tempConfigMap.put("fPotPosPast", longPot_L3.isSelected());
+            tempVerbConfig.getConfigMap().put("fPotPosPast", longPot_L3.isSelected());
         });
         longPot_L4.setOnAction(e -> {
-            tempConfigMap.put("fPotNegPast", longPot_L4.isSelected());
+            tempVerbConfig.getConfigMap().put("fPotNegPast", longPot_L4.isSelected());
         });
         //==========================================================================
         potTeForm_L1.setOnAction(e -> {
-            tempConfigMap.put("potTeForm", potTeForm_L1.isSelected());
+            tempVerbConfig.getConfigMap().put("potTeForm", potTeForm_L1.isSelected());
         });
         //==========================================================================
         volForm_L1.setOnAction(e -> {
-            tempConfigMap.put("ifVolForm", volForm_L1.isSelected());
+            tempVerbConfig.getConfigMap().put("ifVolForm", volForm_L1.isSelected());
         });
         volForm_L2.setOnAction(e -> {
-            tempConfigMap.put("fVolForm", volForm_L2.isSelected());
+            tempVerbConfig.getConfigMap().put("fVolForm", volForm_L2.isSelected());
         });
     }
 
-    public Map<String, Boolean> getTempConfigMap() {
-        return tempConfigMap;
+    public VerbConfig getOldConfig() {
+        oldVerbConfig.setDefaultMode(isOldConfigDefault());
+        return oldVerbConfig;
     }
 
-    public Map<String, Boolean> getOldConfigMap() {
-        return oldConfigMap;
+    public VerbConfig getTempConfig() {
+        tempVerbConfig.setDefaultMode(isTempConfigDefault());
+        return tempVerbConfig;
     }
+
+    public boolean isOldConfigDefault() {
+        return isDefaultVerbConfig(oldVerbConfig);
+    }
+
+    public boolean isTempConfigDefault() {
+        return isDefaultVerbConfig(tempVerbConfig);
+    }
+
+    private boolean isDefaultVerbConfig(VerbConfig verbConfig) {
+        return verbConfig.getCount() == 0;
+    }
+
+
 }

@@ -10,4 +10,8 @@ public class TrainConfig {
     public VerbConfig getVerbConfig() {
         return verbConfig;
     }
+
+    public void setVerbConfig(VerbConfig verbConfig){
+        this.verbConfig = verbConfig;
+    }
 }

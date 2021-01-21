@@ -44,14 +44,14 @@ public class SettingsModule extends AnchorPane {
 
     @FXML
     private void onAction_apply() {
-        trainConfig.getVerbConfig().getConfigMap().putAll(verbConjugationSettingsModule.getTempConfigMap());
+        trainConfig.setVerbConfig(verbConjugationSettingsModule.getTempConfig());
         trainDeckController.reloadConfiguration();
         stage.close();
 
     }
 
     @FXML void onAction_cancel() {
-        trainConfig.getVerbConfig().getConfigMap().putAll(verbConjugationSettingsModule.getOldConfigMap());
+        trainConfig.setVerbConfig(verbConjugationSettingsModule.getOldConfig());
         trainDeckController.reloadConfiguration();
         stage.close();
     }
