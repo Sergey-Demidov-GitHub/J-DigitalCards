@@ -6,7 +6,7 @@
 
 .mainPane {
     -fx-background-color: #fff2c2;
-    -fx-effect: innershadow(gaussian, #030303, 20, 0.08, 0, 0);
+    /*-fx-effect: innershadow(gaussian, #030303, 20, 0.08, 0, 0);*/
 }
 
 .TopBar-generic {
