@@ -170,6 +170,13 @@
     -fx-effect: innershadow(one-pass-box, black, 20, 0.08, 0, 0);
 }
 
+.tab-pane:top {
+    -fx-background-color: #fff2c2;
+    /*-fx-border-color: #ffeeb3;
+    -fx-border-width: 5;
+    -fx-effect: innershadow(one-pass-box, black, 20, 0.08, 0, 0);*/
+}
+
 .tab-pane:selected {
 
 }
@@ -179,6 +186,17 @@
 }
 
 .tab:left {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+
+    -fx-background-color:  linear-gradient(to bottom, #994d00, #fff2c2, #994d00);
+    -fx-background-radius: 7px 7px 7px 7px;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-border-radius: 7px 7px 7px 7px;
+}
+
+.tab:top {
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
 

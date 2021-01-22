@@ -32,6 +32,7 @@ public class SettingsModule extends AnchorPane {
         fxmlLoader.setController(this);
         try {
             fxmlLoader.load();
+            root.setStyle("-fx-background-color: #fff2c2;");
             this.stage = stage;
             this.mainController = mainController;
             this.trainDeckController = trainDeckController;
@@ -51,8 +52,6 @@ public class SettingsModule extends AnchorPane {
     }
 
     @FXML void onAction_cancel() {
-        trainConfig.setVerbConfig(verbConjugationSettingsModule.getOldConfig());
-        trainDeckController.reloadConfiguration();
         stage.close();
     }
 

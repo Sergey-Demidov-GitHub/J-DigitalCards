@@ -247,6 +247,7 @@ public class TrainDeck_Controller implements Initializable {
 
 
         final Stage settingsWindow = new Stage();
+        settingsWindow.setTitle("Settings");
         settingsWindow.initModality(Modality.APPLICATION_MODAL);
         settingsWindow.initOwner(mainController.getStage());
         settingsModule = new SettingsModule(settingsWindow, mainController, this);
