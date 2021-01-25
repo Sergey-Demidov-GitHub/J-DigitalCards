@@ -14,6 +14,8 @@ public class ConjugationExceptionsManager {
     public ConjugationExceptionsManager() {
         exceptions = new ArrayList<String>();
         exceptions.add("ある");
+        exceptions.add("いく");
+        exceptions.add("行く");
         //exceptions.add("する");
     }
 
@@ -30,6 +32,14 @@ public class ConjugationExceptionsManager {
         switch (infinitive) {
             case "ある": {
                 ある_exceptions(conjugation);
+                break;
+            }
+            case "いく": {
+                いく_exceptions(conjugation);
+                break;
+            }
+            case "行く": {
+                行く_exceptions(conjugation);
                 break;
             }
             case "する": {
@@ -60,6 +70,16 @@ public class ConjugationExceptionsManager {
     private void ある_exceptions(Conjugation conjugation) {
         conjugation.changeLookUpMap("ifNegPresent", "ない");
         conjugation.changeLookUpMap("ifNegPast", "なかった");
+    }
+
+    private void いく_exceptions(Conjugation conjugation) {
+        conjugation.changeLookUpMap("ifPosPast", "いった");
+        conjugation.changeLookUpMap("teForm", "いって");
+    }
+
+    private void 行く_exceptions(Conjugation conjugation) {
+        conjugation.changeLookUpMap("ifPosPast", "行った");
+        conjugation.changeLookUpMap("teForm", "行って");
     }
 
     private void する_exceptions(Conjugation conjugation) {
