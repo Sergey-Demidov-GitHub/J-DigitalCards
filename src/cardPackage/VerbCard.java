@@ -2,6 +2,7 @@ package cardPackage;
 
 import cardGui.VerbCardGui;
 import conjugation.Conjugation;
+import conjugation.IRR_Conjugation;
 import conjugation.RU_Conjugation;
 import conjugation.U_Conjugation;
 import javafx.collections.ObservableList;
@@ -57,6 +58,7 @@ public class VerbCard extends BasicCard{
                 break;
             }
             case IRREGULAR: {
+                conjugation = new IRR_Conjugation(this.getJap2());
                 break;
             }
             case UNKNOWN: {

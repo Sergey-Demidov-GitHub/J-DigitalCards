@@ -8,7 +8,7 @@ public class U_Conjugation extends Conjugation{
     private EndingMapper endingMapper;
 
     public U_Conjugation(String infinitive) {
-        super(infinitive);
+        super(infinitive.trim());
         endingMapper = new EndingMapper();
         genStem();
         if (stem != null && indicator != null) {

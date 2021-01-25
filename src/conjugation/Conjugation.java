@@ -91,7 +91,7 @@ public class Conjugation {
         ifPosPresent = infinitive;
     }
 
-    public void fillLookUpMap() {
+    protected void fillLookUpMap() {
         lookUpMap = new HashMap<String, String>();
         lookUpMap.put("ifPosPresent", ifPosPresent);
         lookUpMap.put("ifNegPresent", ifNegPresent);

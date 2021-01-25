@@ -14,6 +14,7 @@ public class ConjugationExceptionsManager {
     public ConjugationExceptionsManager() {
         exceptions = new ArrayList<String>();
         exceptions.add("ある");
+        //exceptions.add("する");
     }
 
     public boolean isException(String infinitive) {
@@ -29,6 +30,29 @@ public class ConjugationExceptionsManager {
         switch (infinitive) {
             case "ある": {
                 ある_exceptions(conjugation);
+                break;
+            }
+            case "する": {
+                する_exceptions(conjugation);
+                break;
+            }
+            case "来る": {
+                break;
+            }
+            case "くる": {
+                break;
+            }
+            case "連れてくる": {
+                break;
+            }
+            case "つれてくる": {
+                break;
+            }
+            case "持ってくる": {
+                break;
+            }
+            case "もってくる": {
+                break;
             }
         }
     }
@@ -37,4 +61,11 @@ public class ConjugationExceptionsManager {
         conjugation.changeLookUpMap("ifNegPresent", "ない");
         conjugation.changeLookUpMap("ifNegPast", "なかった");
     }
+
+    private void する_exceptions(Conjugation conjugation) {
+
+
+    }
+
+
 }

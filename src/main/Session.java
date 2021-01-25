@@ -19,7 +19,7 @@ public class Session {
     private Set<Integer> changedIds = new HashSet<Integer>();    // for db update
     private Set<Integer> changedTypes = new HashSet<>();
     private Set<Integer> deletedIds = new HashSet<Integer>();
-    private Set<Integer> newIds = new HashSet<>();         // temp id for working on Cards while in cache are negative
+    private Set<Integer> newIds = new HashSet<>();         // temp id for working on Cards while in cache (negative)
     private Set<Integer> newRelations = new HashSet<>();
     private int tempId = -1;
 
@@ -83,8 +83,7 @@ public class Session {
         verbIds = new HashSet<>();
         for (int i = 0; i < callMask.length; i++) {
             if (deck.getCardMap().get(callMask[i]) instanceof VerbCard &&
-                    ((VerbCard) deck.getCardMap().get(callMask[i])).getType() != VerbType.UNKNOWN &&
-                    ((VerbCard) deck.getCardMap().get(callMask[i])).getType() != VerbType.IRREGULAR){
+                    ((VerbCard) deck.getCardMap().get(callMask[i])).getType() != VerbType.UNKNOWN){
                 verbIds.add(callMask[i]);
 
                 for (int j = 1; j < verbMultiplier; j++) {
