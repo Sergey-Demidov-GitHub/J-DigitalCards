@@ -6,18 +6,8 @@ import java.util.HashMap;
  * configuration setting the parameters for training verbs
  */
 public class VerbConfig {
-    private boolean defaultMode;
-
-    private boolean ifPosPresent = false, ifNegPresent = false, ifPosPast = false, ifNegPast = false;
-    private boolean fPosPresent = false, fNegPresent = false, fPosPast = false, fNegPast = false;
-    private boolean teForm = false;
-    private boolean taiPosPresent = false, taiNegPresent = false, taiPosPast = false, taiNegPast = false;
-    private boolean fPotPosPresent = false, fPotNegPresent = false, fPotPosPast = false, fPotNegPast = false;
-    private boolean ifPotPosPresent = false, ifPotNegPresent = false, ifPotPosPast = false, ifPotNegPast = false;
-    private boolean potTeForm = false;
-    private boolean fVolForm = false, ifVolForm = false;
-
-    private HashMap<String, Boolean> configMap;
+    private boolean defaultMode;                    // display cards as they were created originally
+    private HashMap<String, Boolean> configMap;     // which custom forms shall be part of the training process
 
     public VerbConfig() {
         defaultMode = true;
@@ -26,37 +16,37 @@ public class VerbConfig {
 
     private void fillConfigMap() {
         configMap = new HashMap<String, Boolean>();
-        configMap.put("ifPosPresent", ifPosPresent);
-        configMap.put("ifNegPresent", ifNegPresent);
-        configMap.put("ifPosPast", ifPosPast);
-        configMap.put("ifNegPast", ifNegPast);
+        configMap.put("ifPosPresent", false);
+        configMap.put("ifNegPresent", false);
+        configMap.put("ifPosPast", false);
+        configMap.put("ifNegPast", false);
 
-        configMap.put("fPosPresent", fPosPresent);
-        configMap.put("fNegPresent", fNegPresent);
-        configMap.put("fPosPast", fPosPast);
-        configMap.put("fNegPast", fNegPast);
+        configMap.put("fPosPresent", false);
+        configMap.put("fNegPresent", false);
+        configMap.put("fPosPast", false);
+        configMap.put("fNegPast", false);
 
-        configMap.put("teForm", teForm);
+        configMap.put("teForm", false);
 
-        configMap.put("taiPosPresent", taiPosPresent);
-        configMap.put("taiNegPresent", taiNegPresent);
-        configMap.put("taiPosPast", taiPosPast);
-        configMap.put("taiNegPast", taiNegPast);
+        configMap.put("taiPosPresent", false);
+        configMap.put("taiNegPresent", false);
+        configMap.put("taiPosPast", false);
+        configMap.put("taiNegPast", false);
 
-        configMap.put("fPotPosPresent", fPotPosPresent);
-        configMap.put("fPotNegPresent", fPotNegPresent);
-        configMap.put("fPotPosPast", fPotPosPast);
-        configMap.put("fPotNegPast", fPotNegPast);
+        configMap.put("fPotPosPresent", false);
+        configMap.put("fPotNegPresent", false);
+        configMap.put("fPotPosPast", false);
+        configMap.put("fPotNegPast", false);
 
-        configMap.put("ifPotPosPresent", ifPotPosPresent);
-        configMap.put("ifPotNegPresent", ifPotNegPresent);
-        configMap.put("ifPotPosPast", ifPotPosPast);
-        configMap.put("ifPotNegPast", ifPotNegPast);
+        configMap.put("ifPotPosPresent", false);
+        configMap.put("ifPotNegPresent", false);
+        configMap.put("ifPotPosPast", false);
+        configMap.put("ifPotNegPast", false);
 
-        configMap.put("potTeForm", potTeForm);
+        configMap.put("potTeForm", false);
 
-        configMap.put("fVolForm", fVolForm);
-        configMap.put("ifVolForm", ifVolForm);
+        configMap.put("fVolForm", false);
+        configMap.put("ifVolForm", false);
     }
 
     public HashMap<String, Boolean> getConfigMap() {
@@ -75,8 +65,9 @@ public class VerbConfig {
         this.defaultMode = defaultMode;
     }
 
-    /*
+    /**
      * counts positive Templates
+     * @return number of positive Templates
      */
     public int getCount(){
         int i = 0;
@@ -86,39 +77,5 @@ public class VerbConfig {
             }
         }
         return i;
-    }
-
-
-
-
-    @Override
-    public String toString() {
-        return "VerbConfig{" +
-                "defaultMode=" + defaultMode +
-                ", ifPosPresent=" + ifPosPresent +
-                ", ifNegPresent=" + ifNegPresent +
-                ", ifPosPast=" + ifPosPast +
-                ", ifNegPast=" + ifNegPast + "\n" +
-                ", fPosPresent=" + fPosPresent +
-                ", fNegPresent=" + fNegPresent +
-                ", fPosPast=" + fPosPast +
-                ", fNegPast=" + fNegPast + "\n" +
-                ", teForm=" + teForm + "\n" +
-                ", taiPosPresent=" + taiPosPresent +
-                ", taiNegPresent=" + taiNegPresent +
-                ", taiPosPast=" + taiPosPast +
-                ", taiNegPast=" + taiNegPast + "\n" +
-                ", fPotPosPresent=" + fPotPosPresent +
-                ", fPotNegPresent=" + fPotNegPresent +
-                ", fPotPosPast=" + fPotPosPast +
-                ", fPotNegPast=" + fPotNegPast + "\n" +
-                ", ifPotPosPresent=" + ifPotPosPresent +
-                ", ifPotNegPresent=" + ifPotNegPresent +
-                ", ifPotPosPast=" + ifPotPosPast +
-                ", ifPotNegPast=" + ifPotNegPast + "\n" +
-                ", potTeForm=" + potTeForm + "\n" +
-                ", fVolForm=" + fVolForm +
-                ", ifVolForm=" + ifVolForm + "\n" +
-                '}';
     }
 }

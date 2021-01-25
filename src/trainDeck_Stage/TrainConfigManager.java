@@ -4,6 +4,7 @@ import cardGui.CardGuiManager;
 import cardPackage.BasicCard;
 import cardPackage.Card;
 import cardPackage.VerbCard;
+import conjugation.Conjugation;
 import main.MainController;
 import trainConfig.TrainConfig;
 import trainConfig.VerbConfig;
@@ -105,7 +106,7 @@ public class TrainConfigManager {
                 verbForm, tempCard.getEng2(), tempCard.getType());*/
 
         String newJap2 = verbForm;
-        String newEng2 = tempCard.getEng2() + "\n" + verbFormTemplate;
+        String newEng2 = tempCard.getEng2() + "\n" + "{" + Conjugation.VERB_FORMS_NAMES_MAP.get(verbFormTemplate) + "}";
         conjugatedCard = new VerbCard(tempCard.getId(), tempCard.getJap1(), newJap2,
                 tempCard.getEng1(), newEng2, tempCard.getType());
 

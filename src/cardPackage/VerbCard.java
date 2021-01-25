@@ -48,17 +48,24 @@ public class VerbCard extends BasicCard{
     public Conjugation getConjugation() {
         Conjugation conjugation = null;
 
+        String infinitive = "";
+        if (BasicCard.hasJap2(this)) {
+            infinitive = this.getJap2();
+        } else {
+            infinitive = this.getJap1();
+        }
+
         switch (this.type){
             case RU: {
-                conjugation = new RU_Conjugation(this.getJap2());
+                conjugation = new RU_Conjugation(infinitive);
                 break;
             }
             case U: {
-                conjugation = new U_Conjugation(this.getJap2());
+                conjugation = new U_Conjugation(infinitive);
                 break;
             }
             case IRREGULAR: {
-                conjugation = new IRR_Conjugation(this.getJap2());
+                conjugation = new IRR_Conjugation(infinitive);
                 break;
             }
             case UNKNOWN: {

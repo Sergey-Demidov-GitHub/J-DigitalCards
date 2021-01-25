@@ -1,5 +1,6 @@
 package conjugation;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,39 +18,41 @@ import java.util.Map;
 public class Conjugation {
     protected String infinitive;
 
-    public static final String IF_POS_PRESENT_NAME = "short present";
-    public static final String IF_NEG_PRESENT_NAME = "short negative present";
-    public static final String IF_POS_PAST_NAME = "short past";
-    public static final String IF_NEG_PAST_NAME = "short negative past";
+    public static final Map<String, String> VERB_FORMS_NAMES_MAP = Collections.unmodifiableMap(new HashMap<String, String>() {
+        {
+            put("ifPosPresent", "short present");
+            put("ifNegPresent", "short negative present");
+            put("ifPosPast", "short past");
+            put("ifNegPast", "short negative past");
 
-    public static final String F_POS_PRESENT_NAME = "long present";
-    public static final String F_NEG_PRESENT_NAME = "long negative present";
-    public static final String F_POS_PAST_NAME = "long past";
-    public static final String F_NEG_PAST_NAME = "long negative past";
+            put("fPosPresent", "long present");
+            put("fNegPresent", "long negative present");
+            put("fPosPast", "long past");
+            put("fNegPast", "long negative past");
 
-    public static final String TE_FORM = "て-Form";
+            put("taiPosPresent", "たい present");
+            put("taiNegPresent", "たい negative present");
+            put("taiPosPast", "たい past");
+            put("taiNegPast", "たい negative past");
 
-    public static final String TAI_POS_PRESENT_NAME = "たい present";
-    public static final String TAI_NEG_PRESENT_NAME = "たい negative present";
-    public static final String TAI_POS_PAST_NAME = "たい past";
-    public static final String TAI_NEG_PAST_NAME = "たい negative past";
+            put("teForm", "て-Form");
 
-    public static final String IF_POT_POS_PRESENT_NAME = "short potential present";
-    public static final String IF_POT_NEG_PRESENT_NAME = "short potential negative present";
-    public static final String IF_POT_POS_PAST_NAME = "short potential past";
-    public static final String IF_POT_NEG_PAST_NAME = "short potential negative past";
+            put("ifPotPosPresent", "short potential present");
+            put("ifPotNegPresent", "short potential negative present");
+            put("ifPotPosPast", "short potential past");
+            put("ifPotNegPast", "short potential negative past");
 
-    public static final String F_POT_POS_PRESENT_NAME = "long potential present";
-    public static final String F_POT_NEG_PRESENT_NAME = "long potential negative present";
-    public static final String F_POT_POS_PAST_NAME = "long potential past";
-    public static final String F_POT_NEG_PAST_NAME = "long potential negative past";
+            put("fPotPosPresent", "long potential present");
+            put("fPotNegPresent", "long potential negative present");
+            put("fPotPosPast", "long potential past");
+            put("fPotNegPast", "long potential negative past");
 
-    public static final String POT_TE_FORM = "potential て-Form";
+            put("potTeForm", "potential て-Form");
 
-    public static final String IF_VOL_FORM = "short volitional form";
-    public static final String F_VOL_FORM = "long volitional form";
-
-
+            put("ifVolForm", "short volitional form");
+            put("fVolForm", "long volitional form");
+        }
+    });
 
     protected String ifPosPresent;
     protected String ifNegPresent;
