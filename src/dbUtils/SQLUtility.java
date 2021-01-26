@@ -1,6 +1,9 @@
 package dbUtils;
 
 import cardPackage.*;
+import cardPackage.Types.AdjectiveType;
+import cardPackage.Types.CardType;
+import cardPackage.Types.VerbType;
 import deckPackage.Deck;
 
 import java.sql.Connection;

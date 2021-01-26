@@ -1,14 +1,14 @@
 package main;
 
 import cardPackage.BasicCard;
-import cardPackage.CardType;
+import cardPackage.Types.CardType;
 import cardPackage.Score;
 import dbUtils.DBComm;
 import dbUtils.DBCommInterface;
 import dbUtils.SQLUtility;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import legacyPatcher.LegacyConverter;
+import legacy.legacyPatcher.LegacyConverter;
 
 public class Main extends Application {
     public MainController mainController;

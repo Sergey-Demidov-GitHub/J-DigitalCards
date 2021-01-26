@@ -1,6 +1,7 @@
 package cardPackage;
 
-import cardGui.NounCardGui;
+import cardPackage.Types.CardType;
+import flashCards.NounFlashCard;
 
 /**
  * adds noun specific flags and such
@@ -28,8 +29,8 @@ public class NounCard extends BasicCard {
         return valid_b;
     }
 
-    public static NounCardGui getNounCardGui(NounCard card) {
-        return new NounCardGui(card);
+    public static NounFlashCard getNounCardGui(NounCard card) {
+        return new NounFlashCard(card);
     }
 
     @Override

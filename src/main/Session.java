@@ -2,7 +2,7 @@ package main;
 
 import cardPackage.Card;
 import cardPackage.VerbCard;
-import cardPackage.VerbType;
+import cardPackage.Types.VerbType;
 import dbUtils.DBComm;
 import dbUtils.DBCommInterface;
 import deckPackage.Deck;

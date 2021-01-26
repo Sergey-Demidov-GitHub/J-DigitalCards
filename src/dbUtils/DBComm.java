@@ -1,6 +1,7 @@
 package dbUtils;
 
 import cardPackage.*;
+import cardPackage.Types.CardType;
 import deckPackage.Deck;
 
 public class DBComm implements DBCommInterface {

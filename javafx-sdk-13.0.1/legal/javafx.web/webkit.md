@@ -497,7 +497,7 @@ redistribution under these terms (or, alternatively, under the terms of the
 ordinary General Public License).
 
   To apply these terms, attach the following notices to the library.  It is
-safest to attach them to the gui.startApplication_Stage of each source file to most effectively
+safest to attach them to the gui.startApplicationPane of each source file to most effectively
 convey the exclusion of warranty; and each file should have at least the
 "copyright" line and a pointer to where the full notice is found.
 

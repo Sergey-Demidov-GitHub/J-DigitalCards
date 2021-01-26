@@ -1,7 +1,7 @@
 package deckPackage;
 
 import cardPackage.Card;
-import cardPackage.CardType;
+import cardPackage.Types.CardType;
 import cardPackage.BasicCard;
 import dbUtils.DBComm;
 import dbUtils.DBCommInterface;

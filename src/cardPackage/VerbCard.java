@@ -1,6 +1,8 @@
 package cardPackage;
 
-import cardGui.VerbCardGui;
+import cardPackage.Types.CardType;
+import cardPackage.Types.VerbType;
+import flashCards.VerbFlashCard;
 import conjugation.Conjugation;
 import conjugation.IRR_Conjugation;
 import conjugation.RU_Conjugation;
@@ -40,9 +42,9 @@ public class VerbCard extends BasicCard{
         return valid_b;
     }
 
-    public static VerbCardGui getVerbCardGui(VerbCard card) {
+    public static VerbFlashCard getVerbCardGui(VerbCard card) {
         //System.out.println(card.type);
-        return new VerbCardGui(card);
+        return new VerbFlashCard(card);
     }
 
     public Conjugation getConjugation() {

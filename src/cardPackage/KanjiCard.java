@@ -1,6 +1,7 @@
 package cardPackage;
 
-import cardGui.KanjiCardGui;
+import cardPackage.Types.CardType;
+import flashCards.KanjiFlashCard;
 import misc.Misc;
 
 public class KanjiCard extends Card{
@@ -56,12 +57,12 @@ public class KanjiCard extends Card{
         return valid_b;
     }
 
-    public static KanjiCardGui getKanjiCardGui(KanjiCard card) {
-        return new KanjiCardGui(card);
+    public static KanjiFlashCard getKanjiCardGui(KanjiCard card) {
+        return new KanjiFlashCard(card);
     }
 
-    public static KanjiCardGui getKanjiCardGui_translationMode(KanjiCard card) {
-        return new KanjiCardGui(card, false);
+    public static KanjiFlashCard getKanjiCardGui_translationMode(KanjiCard card) {
+        return new KanjiFlashCard(card, false);
     }
 
     @Override

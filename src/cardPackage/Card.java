@@ -1,5 +1,7 @@
 package cardPackage;
 
+import cardPackage.Types.CardType;
+
 /**
  * only id and score
  */

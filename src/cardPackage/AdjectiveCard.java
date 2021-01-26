@@ -1,6 +1,8 @@
 package cardPackage;
 
-import cardGui.AdjectiveCardGui;
+import cardPackage.Types.AdjectiveType;
+import cardPackage.Types.CardType;
+import flashCards.AdjectiveFlashCard;
 import javafx.collections.ObservableList;
 
 public class AdjectiveCard extends BasicCard{
@@ -36,8 +38,8 @@ public class AdjectiveCard extends BasicCard{
         return valid_b;
     }
 
-    public static AdjectiveCardGui getAdjectiveCardGui(AdjectiveCard card) {
-        return new AdjectiveCardGui(card);
+    public static AdjectiveFlashCard getAdjectiveCardGui(AdjectiveCard card) {
+        return new AdjectiveFlashCard(card);
     }
 
     public AdjectiveType getType() {

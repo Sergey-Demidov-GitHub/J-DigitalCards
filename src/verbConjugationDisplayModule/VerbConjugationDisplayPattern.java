@@ -5,12 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import trainDeck_Stage.TrainDeck_Controller;
+import trainDeckPane.TrainDeckController;
 
 import java.io.IOException;
 
 public class VerbConjugationDisplayPattern extends AnchorPane {
-    private TrainDeck_Controller trainDeckController;
+    private TrainDeckController trainDeckController;
 
     @FXML
     private GridPane shortFormGrid;
@@ -41,7 +41,7 @@ public class VerbConjugationDisplayPattern extends AnchorPane {
         }
     }
 
-    public void setTrainDeckController(TrainDeck_Controller trainDeckController){
+    public void setTrainDeckController(TrainDeckController trainDeckController){
         this.trainDeckController = trainDeckController;
     }
 

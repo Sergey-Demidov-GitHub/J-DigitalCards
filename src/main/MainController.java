@@ -1,10 +1,10 @@
 package main;
 
-import chooseDeck_Stage.ChooseDeck_Controller;
+import chooseDeckPane.ChooseDeckController;
 import dbUtils.DBComm;
 import dbUtils.DBCommInterface;
 import deckPackage.Deck;
-import editDeck_Stage.EditDeck_Controller;
+import editDeckPane.EditDeckController;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -18,8 +18,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import misc.Misc;
-import startApplication_Stage.StartStage_Controller;
-import trainDeck_Stage.TrainDeck_Controller;
+import startApplicationPane.StartStageController;
+import trainDeckPane.TrainDeckController;
 
 import java.io.IOException;
 
@@ -81,8 +81,8 @@ public class MainController {
     private AnchorPane getNext_StartPane() {
         try {
             loader = new FXMLLoader();
-            AnchorPane pane = loader.load(getClass().getClassLoader().getResource("startApplication_Stage/startStage.fxml").openStream());
-            StartStage_Controller startStageController = (StartStage_Controller) loader.getController();
+            AnchorPane pane = loader.load(getClass().getClassLoader().getResource("startApplicationPane/startPane.fxml").openStream());
+            StartStageController startStageController = (StartStageController) loader.getController();
             startStageController.setMainController(this);
             stage.setTitle("Start");
             stage.show();
@@ -97,8 +97,8 @@ public class MainController {
     private AnchorPane getNext_ChooseDeckPane() {
         try {
             loader = new FXMLLoader();
-            AnchorPane pane = loader.load(getClass().getClassLoader().getResource("chooseDeck_Stage/chooseDeckStage.fxml").openStream());
-            ChooseDeck_Controller chooseDeck_controller = (ChooseDeck_Controller) loader.getController();
+            AnchorPane pane = loader.load(getClass().getClassLoader().getResource("chooseDeckPane/chooseDeckPane.fxml").openStream());
+            ChooseDeckController chooseDeck_controller = (ChooseDeckController) loader.getController();
             chooseDeck_controller.setMainController(this);
             stage.setTitle("Choose Deck Stage");
             stage.show();
@@ -113,8 +113,8 @@ public class MainController {
     private AnchorPane getNext_EditDeckPane() {
         try {
             loader = new FXMLLoader();
-            AnchorPane pane = loader.load(getClass().getClassLoader().getResource("editDeck_Stage/editDeckStage.fxml").openStream());
-            EditDeck_Controller editDeck_controller = (EditDeck_Controller) loader.getController();
+            AnchorPane pane = loader.load(getClass().getClassLoader().getResource("editDeckPane/editDeckPane.fxml").openStream());
+            EditDeckController editDeck_controller = (EditDeckController) loader.getController();
             editDeck_controller.setMainController(this);
             stage.setTitle("Edit Deck Stage");
             stage.show();
@@ -128,8 +128,8 @@ public class MainController {
     private AnchorPane getNext_TrainDeckPane() {
         try {
             loader = new FXMLLoader();
-            AnchorPane pane = loader.load(getClass().getClassLoader().getResource("trainDeck_Stage/trainDeckStage.fxml").openStream());
-            TrainDeck_Controller trainDeck_controller = (TrainDeck_Controller) loader.getController();
+            AnchorPane pane = loader.load(getClass().getClassLoader().getResource("trainDeckPane/trainDeckPane.fxml").openStream());
+            TrainDeckController trainDeck_controller = (TrainDeckController) loader.getController();
             trainDeck_controller.setMainController(this);
             stage.setTitle("Train Deck Stage");
             stage.show();

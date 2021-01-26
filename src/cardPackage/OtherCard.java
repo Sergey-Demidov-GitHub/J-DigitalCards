@@ -1,6 +1,7 @@
 package cardPackage;
 
-import cardGui.OtherCardGui;
+import cardPackage.Types.CardType;
+import flashCards.OtherFlashCard;
 
 public class OtherCard extends BasicCard{
     public OtherCard(int id, Score score, String jap1, String jap2, String eng1, String eng2) {
@@ -25,8 +26,8 @@ public class OtherCard extends BasicCard{
         return valid_b;
     }
 
-    public static OtherCardGui getOtherCardGui(OtherCard card){
-        return new OtherCardGui(card);
+    public static OtherFlashCard getOtherCardGui(OtherCard card){
+        return new OtherFlashCard(card);
     }
 
     @Override
