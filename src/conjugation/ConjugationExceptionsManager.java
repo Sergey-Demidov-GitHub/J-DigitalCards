@@ -1,7 +1,11 @@
 package conjugation;
 
+import misc.Misc;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * This class has a list of conjugation exceptions.
@@ -9,18 +13,27 @@ import java.util.List;
  * substituting the verb forms which need to be changed.
  */
 public class ConjugationExceptionsManager {
-    private List<String> exceptions;
+    private List<String> explicitExceptions;
+    private Pattern があるPattern;
 
     public ConjugationExceptionsManager() {
-        exceptions = new ArrayList<String>();
-        exceptions.add("ある");
-        exceptions.add("いく");
-        exceptions.add("行く");
-        //exceptions.add("する");
+        explicitExceptions = new ArrayList<String>();
+        explicitExceptions.add("ある");
+        explicitExceptions.add("いく");
+        explicitExceptions.add("行く");
+        explicitExceptions.add("もっていく");
+        explicitExceptions.add("持っていく");
+
+        があるPattern = Pattern.compile(".+ある");
     }
 
     public boolean isException(String infinitive) {
-        return exceptions.contains(infinitive);
+        return explicitExceptions.contains(infinitive) || isがあるPattern(infinitive);
+    }
+
+    private boolean isがあるPattern(String infinitive) {
+        Matcher matcher = があるPattern.matcher(infinitive);
+        return matcher.matches();
     }
 
     /**
@@ -42,28 +55,32 @@ public class ConjugationExceptionsManager {
                 行く_exceptions(conjugation);
                 break;
             }
-            case "する": {
-                する_exceptions(conjugation);
+            case "もっていく": {
+                もっていく_exceptions(conjugation);
                 break;
             }
-            case "来る": {
+            case "持っていく": {
+                持っていく_exceptions(conjugation);
                 break;
             }
-            case "くる": {
-                break;
+            default : {
+                if (isがあるPattern(infinitive)){
+                    がある_exceptions(infinitive, conjugation);
+                }
             }
-            case "連れてくる": {
-                break;
-            }
-            case "つれてくる": {
-                break;
-            }
-            case "持ってくる": {
-                break;
-            }
-            case "もってくる": {
-                break;
-            }
+        }
+    }
+
+    private void がある_exceptions(String infinitive, Conjugation conjugation) {
+        String ending = infinitive.substring(infinitive.length() - 2);
+        if (Misc.equalsJap(ending, "ある")){
+            String stem = infinitive.substring(0, infinitive.length() - 2);
+            conjugation.changeLookUpMap("ifNegPresent", stem + "ない");
+            conjugation.changeLookUpMap("ifNegPast", stem + "なかった");
+        } else {
+            System.err.println("[WARNING] 'ConjugationExceptionsManager.がある_exceptions' wrong ending: " + ending);
+            conjugation.changeLookUpMap("ifNegPresent", "");
+            conjugation.changeLookUpMap("ifNegPast", "");
         }
     }
 
@@ -82,9 +99,14 @@ public class ConjugationExceptionsManager {
         conjugation.changeLookUpMap("teForm", "行って");
     }
 
-    private void する_exceptions(Conjugation conjugation) {
+    private void もっていく_exceptions(Conjugation conjugation) {
+        conjugation.changeLookUpMap("ifPosPast", "もっていった");
+        conjugation.changeLookUpMap("teForm", "もっていって");
+    }
 
-
+    private void 持っていく_exceptions(Conjugation conjugation) {
+        conjugation.changeLookUpMap("ifPosPast", "持っていった");
+        conjugation.changeLookUpMap("teForm", "持っていって");
     }
 
 

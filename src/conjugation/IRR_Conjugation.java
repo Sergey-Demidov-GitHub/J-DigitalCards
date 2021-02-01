@@ -1,5 +1,7 @@
 package conjugation;
 
+import misc.Misc;
+
 public class IRR_Conjugation extends Conjugation{
     private String stem;
     private String ending;
@@ -13,6 +15,8 @@ public class IRR_Conjugation extends Conjugation{
     private void splitStemEnding() {
         stem = infinitive;
         ending = stem.substring(stem.length() - 2);
+        //TODO: sometimes the acquired number of characters doesn't fit the request
+        // due to different character representations => Collator based approach needed
         stem = stem.substring(0, stem.length() - 2);
     }
 
@@ -85,10 +89,10 @@ public class IRR_Conjugation extends Conjugation{
     }
 
     public void conjugate() {
-        if(ending.equals("する")){
+        if(Misc.equalsJap(ending, "する")){
             genSURU_Conjugation();
             super.fillLookUpMap();
-        } else if (ending.equals("くる")) {
+        } else if (Misc.equalsJap(ending,"くる")) {
             genKURU_Conjugation();
             super.fillLookUpMap();
         } else {

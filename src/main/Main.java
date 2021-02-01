@@ -1,14 +1,15 @@
 package main;
 
 import cardPackage.BasicCard;
-import cardPackage.Types.CardType;
 import cardPackage.Score;
+import cardPackage.Types.CardType;
 import dbUtils.DBComm;
 import dbUtils.DBCommInterface;
 import dbUtils.SQLUtility;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import legacy.legacyPatcher.LegacyConverter;
+import misc.Misc;
 
 public class Main extends Application {
     public MainController mainController;
@@ -96,6 +97,8 @@ public class Main extends Application {
         //RU_Conjugation.testRuConjugation();
         //U_Conjugation.testUConjugation();
 
+        //test_japStringMatching();
+
     }
 
     private static void test_Card() {
@@ -170,6 +173,14 @@ public class Main extends Application {
 
     private static void test_DBComm_getDeck() {
         System.out.println(dBCommunicator.getDeck(4).toString());
+    }
+
+    private static void test_japStringMatching() {
+        // those 2 strings actually have different representations
+        String a = "もっ​て​く​る";
+        String b = "もってくる";
+        boolean match = Misc.equalsJap(a, b);
+        System.out.println("[TEST] matching: (" + a + " | " + b + ") => " + match );
     }
 
 

@@ -3,6 +3,7 @@ package flashCards;
 import cardPackage.BasicCard;
 import flashCards.flashCardModule.FlashCardModule;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -11,7 +12,7 @@ import javafx.scene.text.TextAlignment;
 import misc.Misc;
 
 /**
- * build up to 4 label gui for basic card:
+ * build up to 4 label gui for basic flash card:
  * jap1, jap2, eng1, eng2
  */
 public class BasicFlashCard extends FlashCard {
@@ -63,6 +64,7 @@ public class BasicFlashCard extends FlashCard {
         j1.setPrefSize(LABEL_WIDTH, AVAILABLE_HEIGHT);
         j1.setMaxSize(LABEL_WIDTH, AVAILABLE_HEIGHT);
         j1.setTextAlignment(TextAlignment.CENTER);
+        j1.setAlignment(Pos.CENTER);
         j1.setPadding(new Insets(5, 5, 5, 5));
         j1.setWrapText(true);
         j1.getStyleClass().add("card-label-single");
@@ -86,6 +88,7 @@ public class BasicFlashCard extends FlashCard {
 
         j1.setPrefSize(LABEL_WIDTH, availableHeight * 0.5);
         j1.setTextAlignment(TextAlignment.CENTER);
+        j1.setAlignment(Pos.CENTER);
         j1.setPadding(new Insets(5, 5, 5, 5));
         j1.setWrapText(true);
         j1.getStyleClass().add("card-label-single");
@@ -93,6 +96,7 @@ public class BasicFlashCard extends FlashCard {
 
         j2.setPrefSize(LABEL_WIDTH, availableHeight * 0.5);
         j2.setTextAlignment(TextAlignment.CENTER);
+        j2.setAlignment(Pos.CENTER);
         j2.setPadding(new Insets(5, 5, 5, 5));
         j2.setWrapText(true);
         j2.getStyleClass().add("card-label-single");
@@ -114,6 +118,7 @@ public class BasicFlashCard extends FlashCard {
         e1.setPrefSize(LABEL_WIDTH, AVAILABLE_HEIGHT);
         e1.setMaxSize(LABEL_WIDTH, AVAILABLE_HEIGHT);
         e1.setTextAlignment(TextAlignment.CENTER);
+        e1.setAlignment(Pos.CENTER);
         e1.setPadding(new Insets(5, 5, 5, 5));
         e1.setWrapText(true);
         e1.getStyleClass().add("card-label-single-romaji");
@@ -137,6 +142,7 @@ public class BasicFlashCard extends FlashCard {
 
         e1.setPrefSize(LABEL_WIDTH, availableHeight * 0.5);
         e1.setTextAlignment(TextAlignment.CENTER);
+        e1.setAlignment(Pos.CENTER);
         e1.setPadding(new Insets(5, 5, 5, 5));
         e1.setWrapText(true);
         e1.getStyleClass().add("card-label-single-romaji");
@@ -144,6 +150,7 @@ public class BasicFlashCard extends FlashCard {
 
         e2.setPrefSize(LABEL_WIDTH, availableHeight * 0.5);
         e2.setTextAlignment(TextAlignment.CENTER);
+        e2.setAlignment(Pos.CENTER);
         e2.setPadding(new Insets(5, 5, 5, 5));
         e2.setWrapText(true);
         e2.getStyleClass().add("card-label-single");

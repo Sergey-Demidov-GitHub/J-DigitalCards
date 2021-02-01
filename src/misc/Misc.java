@@ -2,8 +2,10 @@ package misc;
 
 import javafx.scene.control.Label;
 
+import java.text.Collator;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Misc {
     //public static final String CSS_NOUNCARDGUI = "-fx-background: ";
@@ -108,6 +110,17 @@ public class Misc {
         }
 
         return max;
+    }
+
+    /**
+     * Compares two japanese strings
+     * @param a first String
+     * @param b second String
+     * @return true if same japanese character sequences
+     */
+    public static boolean equalsJap(String a, String b) {
+        Collator japCollator = Collator.getInstance(Locale.JAPANESE);
+        return japCollator.equals(a, b);
     }
 
 }

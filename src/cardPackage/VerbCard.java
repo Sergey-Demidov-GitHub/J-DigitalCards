@@ -9,6 +9,8 @@ import conjugation.RU_Conjugation;
 import conjugation.U_Conjugation;
 import javafx.collections.ObservableList;
 
+import java.util.Locale;
+
 public class VerbCard extends BasicCard{
     private VerbType type;
 
@@ -52,9 +54,9 @@ public class VerbCard extends BasicCard{
 
         String infinitive = "";
         if (BasicCard.hasJap2(this)) {
-            infinitive = this.getJap2();
+            infinitive = String.format(Locale.JAPANESE, this.getJap2().trim());
         } else {
-            infinitive = this.getJap1();
+            infinitive = String.format(Locale.JAPANESE, this.getJap1().trim());
         }
 
         switch (this.type){
