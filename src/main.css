@@ -1,5 +1,6 @@
+/*  Copyright (C) 2021 Sergey Demidov   */
 
-/* comment */
+
 .shadow-simple {
     -fx-effect: innershadow(gaussian, #030303, 20, 0.08, 0, 0);
 }

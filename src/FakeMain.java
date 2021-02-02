@@ -1,3 +1,5 @@
+/*  Copyright (C) 2021 Sergey Demidov   */
+
 import main.Main;
 
 public class FakeMain {

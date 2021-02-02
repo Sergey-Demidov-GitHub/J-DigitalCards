@@ -1,3 +1,5 @@
+/*  Copyright (C) 2021 Sergey Demidov   */
+
 package cardPackage;
 
 import cardPackage.Types.CardType;

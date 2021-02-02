@@ -1,3 +1,5 @@
+/*  Copyright (C) 2021 Sergey Demidov   */
+
 package dbUtils;
 
 import cardPackage.Card;

@@ -1,3 +1,5 @@
+/*  Copyright (C) 2021 Sergey Demidov   */
+
 package main;
 
 import chooseDeckPane.ChooseDeckController;
@@ -39,7 +41,10 @@ public class MainController {
             //root.setPrefHeight(Misc.WINDOW_HEIGHT);
             Scene scene = new Scene(root);
             root.getStyleClass().add("clean");
-            stage.setMaximized(true);
+            //stage.setMaximized(true);
+            stage.setWidth(1920);
+            stage.setHeight(1080);
+            stage.setResizable(false);
             stage.setScene(scene);
 
 
@@ -246,7 +251,7 @@ public class MainController {
     }
 
     /**
-     * Updates existing session or creates new if not yet created.
+     * Updates existing session or creates new if it doesn't exist.
      * @param newDeck_id new deck's id if not already loaded
      */
     public void updateSession(int newDeck_id) {

@@ -1,3 +1,5 @@
+/*  Copyright (C) 2021 Sergey Demidov   */
+
 package misc;
 
 import javafx.scene.control.Label;
