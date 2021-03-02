@@ -163,6 +163,7 @@ This is the run configuration I am using:
 Start class: FakeMain  
 VM options: ```--module-path "$MODULE_DIR$\vendor\javafx-sdk-15.0.1\lib" --add-modules  javafx.base,javafx.controls,javafx.fxml```  
 
+Libraries in the vendor folder have to be linked manually.  
 
 ## License & Copyright
 Copyright (C) 2021 Sergey Demidov
