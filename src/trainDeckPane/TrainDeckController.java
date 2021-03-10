@@ -81,6 +81,8 @@ public class TrainDeckController implements Initializable {
         trainConfig = new TrainConfig();
         trainConfigManager = new TrainConfigManager(mainController, this, trainConfig);
 
+        conjugationHolder.setVisible(false);
+
         reloadCurrentCard();
         reloadScore();
         setCardsLeft();
@@ -112,6 +114,8 @@ public class TrainDeckController implements Initializable {
     @FXML
     public void onAction_lock() {
         toggleLock();
+        if (locked_b)
+            conjugationHolder.setVisible(true);
     }
     @FXML
     public void onAction_settings() {
@@ -120,10 +124,14 @@ public class TrainDeckController implements Initializable {
     @FXML
     public void onAction_left() {
         loadPreviousCard();
+        if (!locked_b)
+            conjugationHolder.setVisible(false);
     }
     @FXML
     public void onAction_right() {
         loadNextCard();
+        if (!locked_b)
+            conjugationHolder.setVisible(false);
     }
     @FXML
     public void onAction_correct() {
@@ -138,6 +146,7 @@ public class TrainDeckController implements Initializable {
     @FXML
     public void onAction_flip() {
         this.flashCardModule.flipCard();
+        conjugationHolder.setVisible(true);
     }
 
     public void reloadScore() {
