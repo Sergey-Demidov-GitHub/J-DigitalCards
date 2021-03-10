@@ -61,7 +61,7 @@
                   <Insets right="2.0" />
                </padding>
             </Label>
-            <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="120.0" styleClass="display-label" text="relative:" HBox.hgrow="ALWAYS">
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="120.0" styleClass="display-label" text="streak:" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="18.0" />
                </font>

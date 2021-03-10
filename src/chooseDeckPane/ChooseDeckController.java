@@ -33,6 +33,9 @@ public class ChooseDeckController implements Initializable {
     @FXML
     private TableColumn wordCount_col;
 
+    @FXML
+    private Button refresh_B;
+
     private static DBCommInterface dBCommunicator = new DBComm();
     private ObservableList<DeckForTableView> deckTableData;
     private int selectedTableIndex = -1;
@@ -59,6 +62,8 @@ public class ChooseDeckController implements Initializable {
         AnchorPane.setTopAnchor(root, 0.0);
         AnchorPane.setLeftAnchor(root, 0.0);
         AnchorPane.setRightAnchor(root, 0.0);
+
+        refresh_B.setVisible(false);
 
         loadTableView();
     }

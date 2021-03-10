@@ -105,7 +105,7 @@ public class MainController {
             AnchorPane pane = loader.load(getClass().getClassLoader().getResource("chooseDeckPane/chooseDeckPane.fxml").openStream());
             ChooseDeckController chooseDeck_controller = (ChooseDeckController) loader.getController();
             chooseDeck_controller.setMainController(this);
-            stage.setTitle("Choose Deck Stage");
+            stage.setTitle("Choose Deck Page");
             stage.show();
             return pane;
         } catch (IOException exception) {
@@ -121,7 +121,7 @@ public class MainController {
             AnchorPane pane = loader.load(getClass().getClassLoader().getResource("editDeckPane/editDeckPane.fxml").openStream());
             EditDeckController editDeck_controller = (EditDeckController) loader.getController();
             editDeck_controller.setMainController(this);
-            stage.setTitle("Edit Deck Stage");
+            stage.setTitle("Edit Deck Page");
             stage.show();
             return pane;
         } catch (IOException exception) {
@@ -136,7 +136,7 @@ public class MainController {
             AnchorPane pane = loader.load(getClass().getClassLoader().getResource("trainDeckPane/trainDeckPane.fxml").openStream());
             TrainDeckController trainDeck_controller = (TrainDeckController) loader.getController();
             trainDeck_controller.setMainController(this);
-            stage.setTitle("Train Deck Stage");
+            stage.setTitle("Train Deck Page");
             stage.show();
             return pane;
         } catch (IOException exception) {
