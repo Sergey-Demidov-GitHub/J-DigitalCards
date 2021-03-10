@@ -4,8 +4,8 @@ tried to double check everything very carefully, I cannot fully guarantee that n
 The database provided together with the application has 14 decks with flash cards. Those cards are based on the text books 
 I used at the time (*GENKI: An Integrated Course in Elementary Japanese(second edition) volume 1&2*).
 
-Also, keep in mind that this program is still at a relatively early stage (from a technical standpoint). Therefor, if you 
-really try to break it, you will probably succeed. Extensive module testing has yet to be done.
+Also, keep in mind that this program is still at a relatively early stage (from a technical standpoint). 
+Extensive module testing has yet to be done. Eventually, I will  port it to Maven and use JUnit for testing.
 
 ## General Overview
 J-DigitalCards is a desktop application for learning japanese vocabulary. It allows the user to create flash cards and
