@@ -46,6 +46,7 @@ public class ChooseDeckController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.mainController = MainController.getInstance();
 
         root.getStylesheets().add("main.css");
         //root.getStyleClass().add("clean-effect");
@@ -66,10 +67,6 @@ public class ChooseDeckController implements Initializable {
         refresh_B.setVisible(false);
 
         loadTableView();
-    }
-
-    public void setMainController(MainController mainController) {
-        this.mainController = mainController;
     }
 
     @FXML

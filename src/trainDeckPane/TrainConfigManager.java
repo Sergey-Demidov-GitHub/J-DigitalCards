@@ -22,8 +22,8 @@ public class TrainConfigManager {
 
     private Set<Integer> verbIds;
 
-    TrainConfigManager(MainController mainController, TrainDeckController trainDeckController, TrainConfig trainConfig) {
-        this.mainController = mainController;
+    TrainConfigManager(TrainDeckController trainDeckController, TrainConfig trainConfig) {
+        this.mainController = MainController.getInstance();
         this.trainDeckController = trainDeckController;
         this.trainConfig = trainConfig;
 

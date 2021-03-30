@@ -55,22 +55,11 @@ public class TrainDeckController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        root.getStylesheets().add("main.css");
-        AnchorPane.setBottomAnchor(root, 0.0);
-        AnchorPane.setTopAnchor(root, 0.0);
-        AnchorPane.setLeftAnchor(root, 0.0);
-        AnchorPane.setRightAnchor(root, 0.0);
-        //root.getStyleClass().add("shadow-simple");
-    }
-
-    public void setMainController(MainController mainController) {
-        this.mainController = mainController;
+        this.mainController = MainController.getInstance();
         this.mainController.getSession().initCallMask();
         deckName_L.setText(this.mainController.getSession().getDeck().getName());
 
-        this.filterModule = new FilterModule();
-        this.filterModule.setMainController(mainController);
-        this.filterModule.setTrainDeckController(this);
+        this.filterModule = new FilterModule(this);
         filterModuleHolder.getChildren().add(this.filterModule);
 
         this.keyEventHandler = new KeyEventHandler(this);
@@ -79,13 +68,20 @@ public class TrainDeckController implements Initializable {
         this.conjugationExceptionsManager = new ConjugationExceptionsManager();
 
         trainConfig = new TrainConfig();
-        trainConfigManager = new TrainConfigManager(mainController, this, trainConfig);
+        trainConfigManager = new TrainConfigManager(this, trainConfig);
 
         conjugationHolder.setVisible(false);
 
         reloadCurrentCard();
         reloadScore();
         setCardsLeft();
+
+        root.getStylesheets().add("main.css");
+        AnchorPane.setBottomAnchor(root, 0.0);
+        AnchorPane.setTopAnchor(root, 0.0);
+        AnchorPane.setLeftAnchor(root, 0.0);
+        AnchorPane.setRightAnchor(root, 0.0);
+        //root.getStyleClass().add("shadow-simple");
     }
 
     @FXML
@@ -274,7 +270,7 @@ public class TrainDeckController implements Initializable {
 
     public void reloadConfiguration() {
         mainController.getSession().initCallMask();
-        trainConfigManager = new TrainConfigManager(mainController, this, trainConfig);
+        trainConfigManager = new TrainConfigManager(this, trainConfig);
         reloadCurrentCard();
         reloadScore();
         setCardsLeft();

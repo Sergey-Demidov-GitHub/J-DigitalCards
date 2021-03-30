@@ -47,6 +47,9 @@ public class EditDeckController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.mainController = MainController.getInstance();;
+        setupSubModules();
+
         AnchorPane.setBottomAnchor(root, 0.0);
         AnchorPane.setTopAnchor(root, 0.0);
         AnchorPane.setLeftAnchor(root, 0.0);
@@ -141,11 +144,6 @@ public class EditDeckController implements Initializable {
         }
     }
 
-    public void setMainController(MainController mainController) {
-        this.mainController = mainController;
-        setupSubModules();
-    }
-
     private void reloadFancyTableView() {
         fancyTableView.setDeck(this.mainController.getSession().getDeck());
         fancyTableView.loadTableView();
@@ -169,15 +167,11 @@ public class EditDeckController implements Initializable {
         });
         fancyTableViewHolder.getChildren().add(fancyTableView);
 
-        editCardModule = new EditCardModule();
-        editCardModule.setMainController(mainController);
-        editCardModule.setEditDeckController(this);
+        editCardModule = new EditCardModule(this);
         editCardModuleHolder.getChildren().add(editCardModule);
         editCardModuleHolder.getStyleClass().add("clean");
 
-        chooseCardModule = new ChooseCardModule();
-        chooseCardModule.setMainController(mainController);
-        chooseCardModule.setEditDeckController(this);
+        chooseCardModule = new ChooseCardModule(this);
         chooseCardModuleHolder.getChildren().add(chooseCardModule);
         chooseCardModuleHolder.getStyleClass().add("clean");
     }
@@ -196,7 +190,7 @@ public class EditDeckController implements Initializable {
 
         if (!isNew) {
             this.mainController.getSession().addChangedIds(card.getId());
-            System.out.println("[TRIGGER] EditDeck_Controller.processCardChange()");
+            //System.out.println("[INFO] EditDeck_Controller.processCardChange()");
         }
 
         mainController.getSession().addNewCardToDeck(card);     // overrides if card exists

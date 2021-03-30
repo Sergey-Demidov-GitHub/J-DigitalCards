@@ -27,13 +27,11 @@ public class StartStageController implements Initializable {
     @FXML
     private ImageView centerPic_IV;
 
-    public void setMainController(MainController mainController) {
-        this.mainController = mainController;
-    }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.mainController = MainController.getInstance();
+
         root.getStylesheets().add("main.css");
         AnchorPane.setBottomAnchor(root, 0.0);
         AnchorPane.setTopAnchor(root, 0.0);

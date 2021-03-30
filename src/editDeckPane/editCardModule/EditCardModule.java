@@ -44,12 +44,15 @@ public class EditCardModule extends AnchorPane {
 
 
 
-    public EditCardModule() {
+    public EditCardModule(EditDeckController editDeckController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("editCardModule.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
             fxmlLoader.load();
+            this.mainController = MainController.getInstance();
+            this.editDeckController = editDeckController;
+            init();
         } catch (IOException exception) {
             exception.printStackTrace();
         }
@@ -83,15 +86,6 @@ public class EditCardModule extends AnchorPane {
 
     }
 
-    public void setMainController(MainController mainController) {
-        this.mainController = mainController;
-        init();
-    }
-
-    public void setEditDeckController(EditDeckController editDeckController) {
-        this.editDeckController = editDeckController;
-    }
-
     private void init() {
         leftCard_kanji.getStyleClass().add("card-class-kanji");
         rightCard_kanji.getStyleClass().add("card-class-kanji");
@@ -111,7 +105,7 @@ public class EditCardModule extends AnchorPane {
             if (card instanceof VerbCard){
                 VerbType verbType =  ((VerbCard) card).getType();
                 this.verbType = verbType;
-                System.out.println("verbType: " + verbType);
+                //System.out.println("verbType: " + verbType);
                 updateForm(verbType);
             }
             if (card instanceof AdjectiveCard) {
@@ -305,7 +299,7 @@ public class EditCardModule extends AnchorPane {
                 card = new NounCard(currentCard_id, j1, j2, e1, e2);
                 break;
             case VERB:
-                System.out.println("[DEBUG] verbType: " + verbType);
+                //System.out.println("[DEBUG] verbType: " + verbType);
                 card = new VerbCard(currentCard_id, j1, j2, e1, e2, verbType);
                 break;
             case ADJECTIVE:

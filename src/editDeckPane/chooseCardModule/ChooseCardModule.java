@@ -53,12 +53,16 @@ public class ChooseCardModule extends AnchorPane {
     private ChooseCardFilterModule filterModule;
 
 
-    public ChooseCardModule() {
+    public ChooseCardModule(EditDeckController editDeckController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("chooseCardModule.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
             fxmlLoader.load();
+            this.mainController = MainController.getInstance();
+            this.editDeckController = editDeckController;
+            init();
+
             AnchorPane.setBottomAnchor(root, 0.0);
             AnchorPane.setTopAnchor(root, 0.0);
             AnchorPane.setLeftAnchor(root, 0.0);
@@ -66,15 +70,6 @@ public class ChooseCardModule extends AnchorPane {
         } catch (IOException exception) {
             exception.printStackTrace();
         }
-    }
-
-    public void setMainController(MainController mainController) {
-        this.mainController = mainController;
-        init();
-    }
-
-    public void setEditDeckController(EditDeckController editDeckController) {
-        this.editDeckController = editDeckController;
     }
 
     private void init() {

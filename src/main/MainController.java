@@ -26,19 +26,34 @@ import trainDeckPane.TrainDeckController;
 import java.io.IOException;
 
 public class MainController {
+    private static MainController instance;
+
     private FXMLLoader loader;
     private Stage stage;
     private AnchorPane root;
     private Session session;
     private DBCommInterface DBCommunicator;
 
-    public MainController(Stage stage) {
+    // stage can be null, but it would be better to use the other getInstance() function
+    public static MainController getInstance(Stage stage) {
+        if (instance == null && stage != null) {
+            instance = new MainController(stage);
+            instance.loadFirstPane();
+        }
+        return instance;
+    }
+
+    public static MainController getInstance() {
+        if (instance == null) {
+            System.err.println("[ERROR] 'MainController.getInstance()': requested instance is not initialized");
+        }
+        return instance;
+    }
+
+    private MainController(Stage stage) {
         try {
             this.stage = stage;
             root = new AnchorPane();
-            //root.setStyle("-fx-background-color: red;");
-            //root.setPrefWidth(Misc.WINDOW_WIDTH);
-            //root.setPrefHeight(Misc.WINDOW_HEIGHT);
             Scene scene = new Scene(root);
             root.getStyleClass().add("clean");
             //stage.setMaximized(true);
@@ -50,10 +65,6 @@ public class MainController {
 
             this.session = null;
             this.DBCommunicator = new DBComm();
-
-            load_Pane(getNext_StartPane());
-
-            initCloseRequestHandle();
         } catch (Exception exception){
             exception.printStackTrace();
         }
@@ -83,12 +94,17 @@ public class MainController {
     }
 
 
+    private void loadFirstPane () {
+        load_Pane(getNext_StartPane());
+        initCloseRequestHandle();
+    }
+
+
     private AnchorPane getNext_StartPane() {
         try {
             loader = new FXMLLoader();
             AnchorPane pane = loader.load(getClass().getClassLoader().getResource("startApplicationPane/startPane.fxml").openStream());
             StartStageController startStageController = (StartStageController) loader.getController();
-            startStageController.setMainController(this);
             stage.setTitle("Start");
             stage.show();
             return pane;
@@ -104,7 +120,6 @@ public class MainController {
             loader = new FXMLLoader();
             AnchorPane pane = loader.load(getClass().getClassLoader().getResource("chooseDeckPane/chooseDeckPane.fxml").openStream());
             ChooseDeckController chooseDeck_controller = (ChooseDeckController) loader.getController();
-            chooseDeck_controller.setMainController(this);
             stage.setTitle("Choose Deck Page");
             stage.show();
             return pane;
@@ -120,7 +135,6 @@ public class MainController {
             loader = new FXMLLoader();
             AnchorPane pane = loader.load(getClass().getClassLoader().getResource("editDeckPane/editDeckPane.fxml").openStream());
             EditDeckController editDeck_controller = (EditDeckController) loader.getController();
-            editDeck_controller.setMainController(this);
             stage.setTitle("Edit Deck Page");
             stage.show();
             return pane;
@@ -135,7 +149,6 @@ public class MainController {
             loader = new FXMLLoader();
             AnchorPane pane = loader.load(getClass().getClassLoader().getResource("trainDeckPane/trainDeckPane.fxml").openStream());
             TrainDeckController trainDeck_controller = (TrainDeckController) loader.getController();
-            trainDeck_controller.setMainController(this);
             stage.setTitle("Train Deck Page");
             stage.show();
             return pane;

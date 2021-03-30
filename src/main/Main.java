@@ -26,7 +26,7 @@ public class Main extends Application {
     }
 
     public void start(Stage stage) throws Exception {
-        this.mainController = new MainController(stage);
+        this.mainController = MainController.getInstance(stage);
     }
 
     private static void legacyPatch() {

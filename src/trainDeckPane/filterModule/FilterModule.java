@@ -29,25 +29,21 @@ public class FilterModule extends AnchorPane {
     @FXML
     private TextField absoluteMin_T, absoluteMax_T, streakMin_T, streakMax_T;
 
-    public FilterModule() {
+    public FilterModule(TrainDeckController trainDeckController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("filterModule.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
             fxmlLoader.load();
+            this.mainController = MainController.getInstance();
+            this.trainDeckController = trainDeckController;
+            status_L.setText(status_OK);
         } catch (IOException exception) {
             exception.printStackTrace();
         }
     }
 
-    public void setMainController(MainController mainController) {
-        this.mainController = mainController;
-        status_L.setText(status_OK);
-    }
 
-    public void setTrainDeckController(TrainDeckController trainDeckController) {
-        this.trainDeckController = trainDeckController;
-    }
 
     @FXML
     public void onAction_ok(ActionEvent event) {
@@ -150,9 +146,9 @@ public class FilterModule extends AnchorPane {
         }
 
 
-        System.out.println("filter_1: " + filter_1);
-        System.out.println("filter_2: " + filter_2);
-        System.out.println("combined: " + filtered_Set);
+        //System.out.println("filter_1: " + filter_1);
+        //System.out.println("filter_2: " + filter_2);
+        //System.out.println("combined: " + filtered_Set);
 
         return filtered_Set;
     }
