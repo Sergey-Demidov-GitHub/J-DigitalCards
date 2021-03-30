@@ -2,29 +2,27 @@
 
 package editDeckPane;
 
-import cardPackage.BasicCard;
 import cardPackage.Card;
-import cardPackage.CardTableElement;
-import editDeckPane.chooseCardModule.ChooseCardModule;
 import dbUtils.DBComm;
 import dbUtils.DBCommInterface;
+import editDeckPane.chooseCardModule.ChooseCardModule;
 import editDeckPane.editCardModule.EditCardModule;
 import fancyTableView.FancyTableView;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.TabPane;
+import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import main.MainController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class EditDeckController implements Initializable {
     private static DBCommInterface dBCommunicator = new DBComm();
-    private MainController mainController;
+    private EditDeckDelegator delegator;
+    private EditDeckDataHandler dataHandler;
     private Boolean pendingChanges_b = false;
 
     @FXML
@@ -47,110 +45,51 @@ public class EditDeckController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        this.mainController = MainController.getInstance();;
+        delegator = new EditDeckDelegator(this);
+        dataHandler = new EditDeckDataHandler(this);
         setupSubModules();
-
-        AnchorPane.setBottomAnchor(root, 0.0);
-        AnchorPane.setTopAnchor(root, 0.0);
-        AnchorPane.setLeftAnchor(root, 0.0);
-        AnchorPane.setRightAnchor(root, 0.0);
-        root.getStylesheets().add("main.css");
+        adjustUI();
     }
 
     @FXML
-    public void onAction_back(ActionEvent event) {
+    public void onAction_back() {
         if (pendingChanges_b) {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setHeaderText(null);
-            alert.setGraphic(null);
-            alert.setTitle("Unsaved Changes");
-            alert.setContentText("You have unsaved changes! \nDo you want to save them before leaving?");
-            ButtonType save_BT = new ButtonType("Save and leave", ButtonBar.ButtonData.YES);
-            ButtonType leave_BT = new ButtonType("Leave without saving", ButtonBar.ButtonData.NO);
-            ButtonType cancel_BT = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
-            alert.getButtonTypes().setAll(save_BT, leave_BT, cancel_BT);
-            alert.showAndWait().ifPresent(type -> {
-                if (type == save_BT) {
-                    onAction_save();
-                    mainController.transition_EditDeck_ChooseDeck();
-                } else if (type == leave_BT) {
-                    mainController.transition_EditDeck_ChooseDeck();
-                } else {
-
-                }
-            });
+            delegator.alertUnsavedChanges();
         } else {
-            mainController.transition_EditDeck_ChooseDeck();
+            delegator.switchToChooseDeck();
         }
     }
 
     @FXML
     public void onAction_save() {
         pendingChanges_b = false;
-        mainController.getSession().applySessionChanges();
-        onAction_refresh(new ActionEvent());
+        dataHandler.applySessionChanges();
+        reloadFancyTableView();
     }
 
-    @FXML void onAction_delete(ActionEvent event) {
-        removeSelection();
-        onAction_refresh(new ActionEvent());
-    }
-
-    @FXML // deprecated
-    public void onAction_new(ActionEvent event) {
-        addNewCard();
-        onAction_refresh(new ActionEvent());
-    }
-
-    @FXML
-    public void onAction_refresh(ActionEvent event) {
+    @FXML void onAction_delete() {
+        dataHandler.removeSelection(fancyTableView);
         reloadFancyTableView();
     }
 
     //=================================================================================================================
+    // Wrapper function -> also used in submodule
     public void addExistingCard(Card card) {
-        boolean isNew = !mainController.getSession().getDeck().checkCardInDeckById(card.getId());
-        if(isNew) {
-            mainController.getSession().addNewRelation(card.getId());
-            mainController.getSession().addNewCardToDeck(card);
-        } else {
-            System.out.println("[INFO] Card is already in deck!");
-        }
-
-        reloadFancyTableView();
-        pendingChanges_b = true;
+         dataHandler.addExistingCard(card);
     }
 
-    // deprecated
-    private void addNewCard() {
-        int card_id = mainController.getSession().addNewIds();
-        BasicCard card = new BasicCard(card_id, "j1", "", "e1", "");
-        mainController.getSession().addNewCardToDeck(card);
-
-        CardTableElement cardTableElement = new CardTableElement(card);
-        fancyTableView.addElementToTable(cardTableElement);
-
-        System.out.println(mainController.getSession().getDeck().toString());
-
+    // Wrapper function -> also used in submodule
+    public void processCardChange(Card card){
+        dataHandler.processCardChange(card);
     }
 
-    private void removeSelection() {
-        int selectedCardIndex = fancyTableView.getSelectedCardIndex();
-        if (!fancyTableView.isEmpty() && selectedCardIndex != -1) {
-            this.mainController.getSession().addDeletedIds(selectedCardIndex);
-            this.mainController.getSession().getDeck().removeCard(selectedCardIndex);
-            fancyTableView.removeSelectedElementFromTable();
-            pendingChanges_b = true;
-        }
-    }
-
-    private void reloadFancyTableView() {
-        fancyTableView.setDeck(this.mainController.getSession().getDeck());
+    protected void reloadFancyTableView() {
+        fancyTableView.setDeck(dataHandler.getCurrentlyCachedDeck());
         fancyTableView.loadTableView();
     }
 
     private void setupSubModules() {
-        fancyTableView = new FancyTableView(this.mainController.getSession().getDeck());
+        fancyTableView = new FancyTableView(dataHandler.getCurrentlyCachedDeck());
         TableView tableView = fancyTableView.getTableView();
         tableView.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
@@ -185,18 +124,19 @@ public class EditDeckController implements Initializable {
     }
 
 
-    public void processCardChange(Card card){
-        boolean isNew = !mainController.getSession().getDeck().checkCardInDeckById(card.getId());
+    protected boolean hasPendingChanges() {
+        return pendingChanges_b;
+    }
 
-        if (!isNew) {
-            this.mainController.getSession().addChangedIds(card.getId());
-            //System.out.println("[INFO] EditDeck_Controller.processCardChange()");
-        }
+    protected void setPendingChanges(boolean pendingChanges_b) {
+        this.pendingChanges_b = pendingChanges_b;
+    }
 
-        mainController.getSession().addNewCardToDeck(card);     // overrides if card exists
-
-
-        onAction_refresh(new ActionEvent());
-        pendingChanges_b = true;
+    private void adjustUI() {
+        AnchorPane.setBottomAnchor(root, 0.0);
+        AnchorPane.setTopAnchor(root, 0.0);
+        AnchorPane.setLeftAnchor(root, 0.0);
+        AnchorPane.setRightAnchor(root, 0.0);
+        root.getStylesheets().add("main.css");
     }
 }

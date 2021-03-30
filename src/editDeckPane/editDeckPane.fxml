@@ -27,16 +27,6 @@
                   <Insets left="5.0" right="5.0" top="15.0" />
                </VBox.margin>
             </Button>
-            <Button layoutX="15.0" layoutY="25.0" mnemonicParsing="false" onAction="#onAction_new" prefHeight="25.0" prefWidth="317.0" text="New" visible="false">
-               <VBox.margin>
-                  <Insets left="5.0" right="5.0" top="15.0" />
-               </VBox.margin>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#onAction_refresh" prefHeight="25.0" prefWidth="572.0" text="Refresh" visible="false">
-               <VBox.margin>
-                  <Insets left="5.0" right="5.0" top="15.0" />
-               </VBox.margin>
-            </Button>
          </children>
       </VBox>
       <HBox layoutX="220.0" layoutY="29.0" prefHeight="454.0" prefWidth="1650.0" AnchorPane.bottomAnchor="606.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="20.0">
